@@ -1,0 +1,517 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{27EF8CFD-FB45-453E-ABEC-BABF13D266BE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TesourariaIFV</RootNamespace>
+    <AssemblyName>TesourariaIFV</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>D:\Drive\FDV\IFV Sistemas\TesProject\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <TargetCulture>pt-BR</TargetCulture>
+    <ProductName>IFV Controle Financeiro</ProductName>
+    <PublisherName>IFV</PublisherName>
+    <SuiteName>IFV</SuiteName>
+    <ApplicationRevision>19</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>0CEFD6676584B83B3715623538BC3BC8A2699D57</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>TesourariaIFV_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>output.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\FinancialForms\AdminEntriesDataGridView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FinancialForms\AdminEntriesDataGridView.Designer.cs">
+      <DependentUpon>AdminEntriesDataGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FinancialForms\AdminEntriesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FinancialForms\AdminEntriesForm.Designer.cs">
+      <DependentUpon>AdminEntriesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminForms\FormCidadeAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\FormCidadeAdd.Designer.cs">
+      <DependentUpon>FormCidadeAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminForms\FormCidadeRemove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\FormCidadeRemove.Designer.cs">
+      <DependentUpon>FormCidadeRemove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminForms\FormGrupoPlanoDeContasAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\FormGrupoPlanoDeContasAdd.Designer.cs">
+      <DependentUpon>FormGrupoPlanoDeContasAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminForms\FormGrupoPlanoDeContasRemove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\FormGrupoPlanoDeContasRemove.Designer.cs">
+      <DependentUpon>FormGrupoPlanoDeContasRemove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminForms\FormIgrejasAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\FormIgrejasAdd.Designer.cs">
+      <DependentUpon>FormIgrejasAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminForms\FormIgrejasRemove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\FormIgrejasRemove.Designer.cs">
+      <DependentUpon>FormIgrejasRemove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminForms\FormPlanoDeContasRemove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\FormPlanoDeContasRemove.Designer.cs">
+      <DependentUpon>FormPlanoDeContasRemove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminForms\FormPlanoDeContasAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\FormPlanoDeContasAdd.Designer.cs">
+      <DependentUpon>FormPlanoDeContasAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminForms\FormUserAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\FormUserAdd.Designer.cs">
+      <DependentUpon>FormUserAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminForms\FormUserRemove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\FormUserRemove.Designer.cs">
+      <DependentUpon>FormUserRemove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FinancialForms\TransferForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FinancialForms\TransferForm.Designer.cs">
+      <DependentUpon>TransferForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MembersControlForm\EnterContribForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MembersControlForm\EnterContribForm.Designer.cs">
+      <DependentUpon>EnterContribForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MembersControlForm\EditContrib.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MembersControlForm\EditContrib.Designer.cs">
+      <DependentUpon>EditContrib.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MembersControlForm\MembersAdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MembersControlForm\MembersAdminForm.Designer.cs">
+      <DependentUpon>MembersAdminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MembersControlForm\ReportMissoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MembersControlForm\ReportMissoes.Designer.cs">
+      <DependentUpon>ReportMissoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MembersControlForm\ReportPrimicias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MembersControlForm\ReportPrimicias.Designer.cs">
+      <DependentUpon>ReportPrimicias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MembersControlForm\ReportDizimos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MembersControlForm\ReportDizimos.Designer.cs">
+      <DependentUpon>ReportDizimos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReportForms\ReportCaixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReportForms\ReportCaixa.Designer.cs">
+      <DependentUpon>ReportCaixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReportForms\ReportLivroBanco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReportForms\ReportLivroBanco.Designer.cs">
+      <DependentUpon>ReportLivroBanco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReportForms\ReportLivroCaixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReportForms\ReportLivroCaixa.Designer.cs">
+      <DependentUpon>ReportLivroCaixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReportForms\ReportLivroCaixaBanco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReportForms\ReportLivroCaixaBanco.Designer.cs">
+      <DependentUpon>ReportLivroCaixaBanco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReportForms\ReportPlanoDeContas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReportForms\ReportPlanoDeContas.Designer.cs">
+      <DependentUpon>ReportPlanoDeContas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReportForms\ReportPlanodeContasFinal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReportForms\ReportPlanodeContasFinal.Designer.cs">
+      <DependentUpon>ReportPlanodeContasFinal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReportForms\ReportTotals.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReportForms\ReportTotals.Designer.cs">
+      <DependentUpon>ReportTotals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReportForms\ReportTotalsFinal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReportForms\ReportTotalsFinal.Designer.cs">
+      <DependentUpon>ReportTotalsFinal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="igrejafont11DataSet.cs">
+      <DependentUpon>igrejafont11DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="igrejafont11DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>igrejafont11DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="loginInfo.cs" />
+    <Compile Include="Forms\FinancialForms\FinControlForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FinancialForms\FinControlForm.Designer.cs">
+      <DependentUpon>FinControlForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\FinancialForms\AdminEntriesDataGridView.resx">
+      <DependentUpon>AdminEntriesDataGridView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FinancialForms\AdminEntriesForm.resx">
+      <DependentUpon>AdminEntriesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\FormCidadeAdd.resx">
+      <DependentUpon>FormCidadeAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\FormCidadeRemove.resx">
+      <DependentUpon>FormCidadeRemove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\FormIgrejasAdd.resx">
+      <DependentUpon>FormIgrejasAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\FormIgrejasRemove.resx">
+      <DependentUpon>FormIgrejasRemove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\FormUserAdd.resx">
+      <DependentUpon>FormUserAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\FormUserRemove.resx">
+      <DependentUpon>FormUserRemove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FinancialForms\TransferForm.resx">
+      <DependentUpon>TransferForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FinancialForms\FinControlForm.resx">
+      <DependentUpon>FinControlForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\FormGrupoPlanoDeContasAdd.resx">
+      <DependentUpon>FormGrupoPlanoDeContasAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\FormGrupoPlanoDeContasRemove.resx">
+      <DependentUpon>FormGrupoPlanoDeContasRemove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\FormPlanoDeContasAdd.resx">
+      <DependentUpon>FormPlanoDeContasAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\FormPlanoDeContasRemove.resx">
+      <DependentUpon>FormPlanoDeContasRemove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MembersControlForm\EnterContribForm.resx">
+      <DependentUpon>EnterContribForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MembersControlForm\EditContrib.resx">
+      <DependentUpon>EditContrib.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MembersControlForm\MembersAdminForm.resx">
+      <DependentUpon>MembersAdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MembersControlForm\ReportMissoes.resx">
+      <DependentUpon>ReportMissoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MembersControlForm\ReportPrimicias.resx">
+      <DependentUpon>ReportPrimicias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MembersControlForm\ReportDizimos.resx">
+      <DependentUpon>ReportDizimos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReportForms\ReportCaixa.resx">
+      <DependentUpon>ReportCaixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReportForms\ReportLivroBanco.resx">
+      <DependentUpon>ReportLivroBanco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReportForms\ReportLivroCaixa.resx">
+      <DependentUpon>ReportLivroCaixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReportForms\ReportLivroCaixaBanco.resx">
+      <DependentUpon>ReportLivroCaixaBanco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReportForms\ReportPlanoDeContas.resx">
+      <DependentUpon>ReportPlanoDeContas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReportForms\ReportPlanodeContasFinal.resx">
+      <DependentUpon>ReportPlanodeContasFinal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReportForms\ReportTotals.resx">
+      <DependentUpon>ReportTotals.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReportForms\ReportTotalsFinal.resx">
+      <DependentUpon>ReportTotalsFinal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reports\ReportLivroCaixaBanco.rdlc" />
+    <EmbeddedResource Include="Reports\ReportTotals.rdlc" />
+    <EmbeddedResource Include="Reports\ReportPlanoDeContas.rdlc" />
+    <EmbeddedResource Include="Reports\ReportLivroBanco.rdlc" />
+    <EmbeddedResource Include="Reports\ReportLivroCaixa.rdlc" />
+    <None Include="igrejafont11DataSet.xsc">
+      <DependentUpon>igrejafont11DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="igrejafont11DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>igrejafont11DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="igrejafont11DataSet.xss">
+      <DependentUpon>igrejafont11DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\TesourariaIFV.igrejafont11DataSetTableAdapters.ControleIndividualTableAdapter.datasource" />
+    <None Include="Properties\DataSources\TesourariaIFV.igrejafont11DataSetTableAdapters.MembrosTableAdapter.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fonte de vida marca dágua novo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.ReportViewer.12.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft Report Viewer 2014 Runtime</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SqlServer.SQLSysClrTypes.12.0.x64">
+      <Visible>False</Visible>
+      <ProductName>Microsoft® System CLR Types for SQL Server® 2014 %28x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SqlServer.SQLSysClrTypes.12.0.x86">
+      <Visible>False</Visible>
+      <ProductName>Microsoft® System CLR Types for SQL Server® 2014 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="Microsoft.ReportViewer.Common">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.DataVisualization">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.ProcessingObjectModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.WinForms">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.Types">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Fonte de vida novo.ico" />
+    <Content Include="output.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
