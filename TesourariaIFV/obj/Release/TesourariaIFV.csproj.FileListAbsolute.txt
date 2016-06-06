@@ -73,7 +73,6 @@ C:\Users\filvock\Documents\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Release\pt\
 C:\Users\filvock\Documents\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Release\ru\Microsoft.SqlServer.Types.resources.dll
 C:\Users\filvock\Documents\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Release\zh-Hans\Microsoft.SqlServer.Types.resources.dll
 C:\Users\filvock\Documents\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Release\zh-Hant\Microsoft.SqlServer.Types.resources.dll
-C:\Users\filvock\Documents\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Release\TesourariaIFV.csprojResolveAssemblyReference.cache
 C:\Users\filvock\Documents\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Release\TesourariaIFV.Forms.AdminEntriesDataGridView.resources
 C:\Users\filvock\Documents\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Release\TesourariaIFV.Forms.AdminEntriesForm.resources
 C:\Users\filvock\Documents\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Release\TesourariaIFV.Forms.Admin_Forms.FormCidadeAdd.resources
