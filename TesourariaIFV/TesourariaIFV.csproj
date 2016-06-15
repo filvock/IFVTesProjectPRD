@@ -31,7 +31,7 @@
     <ProductName>IFV Controle Financeiro</ProductName>
     <PublisherName>IFV</PublisherName>
     <SuiteName>IFV</SuiteName>
-    <ApplicationRevision>33</ApplicationRevision>
+    <ApplicationRevision>34</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -102,16 +102,16 @@
     <Compile Include="Forms\FinancialForms\AdminEntriesForm.Designer.cs">
       <DependentUpon>AdminEntriesForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AdminForms\FormCidadeAdd.cs">
+    <Compile Include="Forms\AdminForms\CidadeAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AdminForms\FormCidadeAdd.Designer.cs">
-      <DependentUpon>FormCidadeAdd.cs</DependentUpon>
+    <Compile Include="Forms\AdminForms\CidadeAdmin.Designer.cs">
+      <DependentUpon>CidadeAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AdminForms\FormCidadeRemove.cs">
+    <Compile Include="Forms\Old\FormCidadeRemove.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AdminForms\FormCidadeRemove.Designer.cs">
+    <Compile Include="Forms\Old\FormCidadeRemove.Designer.cs">
       <DependentUpon>FormCidadeRemove.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\AdminForms\FormGrupoPlanoDeContasAdd.cs">
@@ -126,16 +126,16 @@
     <Compile Include="Forms\AdminForms\FormGrupoPlanoDeContasRemove.Designer.cs">
       <DependentUpon>FormGrupoPlanoDeContasRemove.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AdminForms\FormIgrejasAdd.cs">
+    <Compile Include="Forms\AdminForms\IgrejasAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AdminForms\FormIgrejasAdd.Designer.cs">
-      <DependentUpon>FormIgrejasAdd.cs</DependentUpon>
+    <Compile Include="Forms\AdminForms\IgrejasAdmin.Designer.cs">
+      <DependentUpon>IgrejasAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AdminForms\FormIgrejasRemove.cs">
+    <Compile Include="Forms\Old\FormIgrejasRemove.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AdminForms\FormIgrejasRemove.Designer.cs">
+    <Compile Include="Forms\Old\FormIgrejasRemove.Designer.cs">
       <DependentUpon>FormIgrejasRemove.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\AdminForms\FormPlanoDeContasRemove.cs">
@@ -150,16 +150,16 @@
     <Compile Include="Forms\AdminForms\FormPlanoDeContasAdd.Designer.cs">
       <DependentUpon>FormPlanoDeContasAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AdminForms\FormUserAdd.cs">
+    <Compile Include="Forms\AdminForms\UserAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AdminForms\FormUserAdd.Designer.cs">
-      <DependentUpon>FormUserAdd.cs</DependentUpon>
+    <Compile Include="Forms\AdminForms\UserAdmin.Designer.cs">
+      <DependentUpon>UserAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AdminForms\FormUserRemove.cs">
+    <Compile Include="Forms\Old\FormUserRemove.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AdminForms\FormUserRemove.Designer.cs">
+    <Compile Include="Forms\Old\FormUserRemove.Designer.cs">
       <DependentUpon>FormUserRemove.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FinancialForms\TransferForm.cs">
@@ -292,22 +292,22 @@
     <EmbeddedResource Include="Forms\FinancialForms\AdminEntriesForm.resx">
       <DependentUpon>AdminEntriesForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminForms\FormCidadeAdd.resx">
-      <DependentUpon>FormCidadeAdd.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\AdminForms\CidadeAdmin.resx">
+      <DependentUpon>CidadeAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminForms\FormCidadeRemove.resx">
+    <EmbeddedResource Include="Forms\Old\FormCidadeRemove.resx">
       <DependentUpon>FormCidadeRemove.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminForms\FormIgrejasAdd.resx">
-      <DependentUpon>FormIgrejasAdd.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\AdminForms\IgrejasAdmin.resx">
+      <DependentUpon>IgrejasAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminForms\FormIgrejasRemove.resx">
+    <EmbeddedResource Include="Forms\Old\FormIgrejasRemove.resx">
       <DependentUpon>FormIgrejasRemove.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminForms\FormUserAdd.resx">
-      <DependentUpon>FormUserAdd.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\AdminForms\UserAdmin.resx">
+      <DependentUpon>UserAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminForms\FormUserRemove.resx">
+    <EmbeddedResource Include="Forms\Old\FormUserRemove.resx">
       <DependentUpon>FormUserRemove.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FinancialForms\TransferForm.resx">

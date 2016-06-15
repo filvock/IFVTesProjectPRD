@@ -67,42 +67,6 @@ namespace TesourariaIFV.Forms
             reportCaixaForm.Show();
         }
 
-        private void adicionarCidadeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            TesourariaIFV.Forms.Admin_Forms.FormCidadeAdd cidadeAdd = new Admin_Forms.FormCidadeAdd();
-            cidadeAdd.Show();
-        }
-
-        private void removerCidadeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            TesourariaIFV.Forms.Admin_Forms.FormCidadeRemove cidadeRemove = new Admin_Forms.FormCidadeRemove();
-            cidadeRemove.Show();
-        }
-
-        private void adicionarIgrejaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            TesourariaIFV.Forms.Admin_Forms.FormIgrejasAdd igrejasAdd = new Admin_Forms.FormIgrejasAdd();
-            igrejasAdd.Show();
-        }
-
-        private void removerIgrejaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            TesourariaIFV.Forms.Admin_Forms.FormIgrejasRemove igrejasRemove = new Admin_Forms.FormIgrejasRemove();
-            igrejasRemove.Show();
-        }
-
-        private void adicionarUsuárioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            TesourariaIFV.Forms.Admin_Forms.FormUserAdd userAdd = new Admin_Forms.FormUserAdd();
-            userAdd.Show();
-
-        }
-
-        private void removerUsuárioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            TesourariaIFV.Forms.Admin_Forms.FormUserRemove userRemove = new Admin_Forms.FormUserRemove();
-            userRemove.Show();
-        }
 
         private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -184,6 +148,24 @@ namespace TesourariaIFV.Forms
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void cidadesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            TesourariaIFV.Forms.Admin_Forms.CidadeAdmin window = new Admin_Forms.CidadeAdmin();
+            window.Show();
+        }
+
+        private void igrejasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TesourariaIFV.Forms.Admin_Forms.IgrejasAdmin window = new Admin_Forms.IgrejasAdmin();
+            window.Show();
+        }
+
+        private void usuáriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TesourariaIFV.Forms.Admin_Forms.UserAdmin window = new Admin_Forms.UserAdmin();
+            window.Show();
         }
     }
 }

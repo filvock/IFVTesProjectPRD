@@ -135,11 +135,8 @@ D:\drive\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\zh-Hans\Microsoft.SqlSe
 D:\drive\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
 D:\drive\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.Forms.AdminEntriesDataGridView.resources
 D:\drive\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.Forms.AdminEntriesForm.resources
-D:\drive\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.Forms.Admin_Forms.FormCidadeAdd.resources
 D:\drive\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.Forms.Admin_Forms.FormCidadeRemove.resources
-D:\drive\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.Forms.Admin_Forms.FormIgrejasAdd.resources
 D:\drive\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.Forms.Admin_Forms.FormIgrejasRemove.resources
-D:\drive\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.Forms.Admin_Forms.FormUserAdd.resources
 D:\drive\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.Forms.Admin_Forms.FormUserRemove.resources
 D:\drive\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.Forms.TransferForm.resources
 D:\drive\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.Forms.FinControlForm.resources
@@ -169,3 +166,7 @@ D:\drive\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.exe.manif
 D:\drive\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.application
 D:\drive\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.exe
 D:\drive\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.pdb
+D:\drive\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.csprojResolveAssemblyReference.cache
+D:\drive\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.Forms.Admin_Forms.CidadeAdmin.resources
+D:\drive\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.Forms.Admin_Forms.IgrejasAdmin.resources
+D:\drive\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.Forms.Admin_Forms.UserAdmin.resources

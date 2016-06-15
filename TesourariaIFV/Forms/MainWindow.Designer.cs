@@ -32,14 +32,8 @@
             this.mainWindowMenuStrip = new System.Windows.Forms.MenuStrip();
             this.administraçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cidadesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.adicionarCidadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.removerCidadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.igrejasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.adicionarIgrejaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.removerIgrejaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.adicionarUsuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.removerUsuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gruposDePlanosDeContasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adicionarGrupoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removerGrupoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,6 +42,7 @@
             this.removerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tesourariaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.entradaSaídaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.transferênciasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatóriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.livroCaixaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.planoDeContasEntradaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -62,7 +57,6 @@
             this.missõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editarLançamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.transferênciasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainWindowMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -94,72 +88,24 @@
             // 
             // cidadesToolStripMenuItem1
             // 
-            this.cidadesToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.adicionarCidadeToolStripMenuItem,
-            this.removerCidadeToolStripMenuItem});
             this.cidadesToolStripMenuItem1.Name = "cidadesToolStripMenuItem1";
             this.cidadesToolStripMenuItem1.Size = new System.Drawing.Size(309, 30);
             this.cidadesToolStripMenuItem1.Text = "Cidades";
-            // 
-            // adicionarCidadeToolStripMenuItem
-            // 
-            this.adicionarCidadeToolStripMenuItem.Name = "adicionarCidadeToolStripMenuItem";
-            this.adicionarCidadeToolStripMenuItem.Size = new System.Drawing.Size(219, 30);
-            this.adicionarCidadeToolStripMenuItem.Text = "Adicionar Cidade";
-            this.adicionarCidadeToolStripMenuItem.Click += new System.EventHandler(this.adicionarCidadeToolStripMenuItem_Click);
-            // 
-            // removerCidadeToolStripMenuItem
-            // 
-            this.removerCidadeToolStripMenuItem.Name = "removerCidadeToolStripMenuItem";
-            this.removerCidadeToolStripMenuItem.Size = new System.Drawing.Size(219, 30);
-            this.removerCidadeToolStripMenuItem.Text = "Remover Cidade";
-            this.removerCidadeToolStripMenuItem.Click += new System.EventHandler(this.removerCidadeToolStripMenuItem_Click);
+            this.cidadesToolStripMenuItem1.Click += new System.EventHandler(this.cidadesToolStripMenuItem1_Click);
             // 
             // igrejasToolStripMenuItem
             // 
-            this.igrejasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.adicionarIgrejaToolStripMenuItem,
-            this.removerIgrejaToolStripMenuItem});
             this.igrejasToolStripMenuItem.Name = "igrejasToolStripMenuItem";
             this.igrejasToolStripMenuItem.Size = new System.Drawing.Size(309, 30);
             this.igrejasToolStripMenuItem.Text = "Igrejas";
-            // 
-            // adicionarIgrejaToolStripMenuItem
-            // 
-            this.adicionarIgrejaToolStripMenuItem.Name = "adicionarIgrejaToolStripMenuItem";
-            this.adicionarIgrejaToolStripMenuItem.Size = new System.Drawing.Size(208, 30);
-            this.adicionarIgrejaToolStripMenuItem.Text = "Adicionar Igreja";
-            this.adicionarIgrejaToolStripMenuItem.Click += new System.EventHandler(this.adicionarIgrejaToolStripMenuItem_Click);
-            // 
-            // removerIgrejaToolStripMenuItem
-            // 
-            this.removerIgrejaToolStripMenuItem.Name = "removerIgrejaToolStripMenuItem";
-            this.removerIgrejaToolStripMenuItem.Size = new System.Drawing.Size(208, 30);
-            this.removerIgrejaToolStripMenuItem.Text = "Remover Igreja";
-            this.removerIgrejaToolStripMenuItem.Click += new System.EventHandler(this.removerIgrejaToolStripMenuItem_Click);
+            this.igrejasToolStripMenuItem.Click += new System.EventHandler(this.igrejasToolStripMenuItem_Click);
             // 
             // usuáriosToolStripMenuItem
             // 
-            this.usuáriosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.adicionarUsuárioToolStripMenuItem,
-            this.removerUsuárioToolStripMenuItem});
             this.usuáriosToolStripMenuItem.Name = "usuáriosToolStripMenuItem";
             this.usuáriosToolStripMenuItem.Size = new System.Drawing.Size(309, 30);
             this.usuáriosToolStripMenuItem.Text = "Usuários";
-            // 
-            // adicionarUsuárioToolStripMenuItem
-            // 
-            this.adicionarUsuárioToolStripMenuItem.Name = "adicionarUsuárioToolStripMenuItem";
-            this.adicionarUsuárioToolStripMenuItem.Size = new System.Drawing.Size(224, 30);
-            this.adicionarUsuárioToolStripMenuItem.Text = "Adicionar Usuário";
-            this.adicionarUsuárioToolStripMenuItem.Click += new System.EventHandler(this.adicionarUsuárioToolStripMenuItem_Click);
-            // 
-            // removerUsuárioToolStripMenuItem
-            // 
-            this.removerUsuárioToolStripMenuItem.Name = "removerUsuárioToolStripMenuItem";
-            this.removerUsuárioToolStripMenuItem.Size = new System.Drawing.Size(224, 30);
-            this.removerUsuárioToolStripMenuItem.Text = "Remover Usuário";
-            this.removerUsuárioToolStripMenuItem.Click += new System.EventHandler(this.removerUsuárioToolStripMenuItem_Click);
+            this.usuáriosToolStripMenuItem.Click += new System.EventHandler(this.usuáriosToolStripMenuItem_Click);
             // 
             // gruposDePlanosDeContasToolStripMenuItem
             // 
@@ -225,6 +171,13 @@
             this.entradaSaídaToolStripMenuItem.Size = new System.Drawing.Size(242, 30);
             this.entradaSaídaToolStripMenuItem.Text = "Entrada/Saída";
             this.entradaSaídaToolStripMenuItem.Click += new System.EventHandler(this.entradaSaídaToolStripMenuItem_Click);
+            // 
+            // transferênciasToolStripMenuItem
+            // 
+            this.transferênciasToolStripMenuItem.Name = "transferênciasToolStripMenuItem";
+            this.transferênciasToolStripMenuItem.Size = new System.Drawing.Size(242, 30);
+            this.transferênciasToolStripMenuItem.Text = "Transferências";
+            this.transferênciasToolStripMenuItem.Click += new System.EventHandler(this.transferênciasToolStripMenuItem_Click);
             // 
             // relatóriosToolStripMenuItem
             // 
@@ -336,13 +289,6 @@
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
-            // transferênciasToolStripMenuItem
-            // 
-            this.transferênciasToolStripMenuItem.Name = "transferênciasToolStripMenuItem";
-            this.transferênciasToolStripMenuItem.Size = new System.Drawing.Size(242, 30);
-            this.transferênciasToolStripMenuItem.Text = "Transferências";
-            this.transferênciasToolStripMenuItem.Click += new System.EventHandler(this.transferênciasToolStripMenuItem_Click);
-            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -384,12 +330,6 @@
         private System.Windows.Forms.ToolStripMenuItem livroCaixaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem planoDeContasEntradaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem totaisPorPeríodoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem adicionarCidadeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem removerCidadeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem adicionarIgrejaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem removerIgrejaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem adicionarUsuárioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem removerUsuárioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem excluirLançamentosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listaDeMembrosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem lançarContribuiçõesToolStripMenuItem;
