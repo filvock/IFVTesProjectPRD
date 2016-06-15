@@ -74,7 +74,7 @@
             this.loginFormUserTextBox.Location = new System.Drawing.Point(208, 41);
             this.loginFormUserTextBox.Name = "loginFormUserTextBox";
             this.loginFormUserTextBox.Size = new System.Drawing.Size(160, 29);
-            this.loginFormUserTextBox.TabIndex = 2;
+            this.loginFormUserTextBox.TabIndex = 0;
             // 
             // loginFormPasswordTextBox
             // 
@@ -82,7 +82,7 @@
             this.loginFormPasswordTextBox.Location = new System.Drawing.Point(208, 89);
             this.loginFormPasswordTextBox.Name = "loginFormPasswordTextBox";
             this.loginFormPasswordTextBox.Size = new System.Drawing.Size(160, 29);
-            this.loginFormPasswordTextBox.TabIndex = 3;
+            this.loginFormPasswordTextBox.TabIndex = 1;
             this.loginFormPasswordTextBox.UseSystemPasswordChar = true;
             this.loginFormPasswordTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.loginFormPasswordTextBox_KeyDown);
             // 
@@ -92,7 +92,7 @@
             this.loginFormCancelButton.Location = new System.Drawing.Point(487, 290);
             this.loginFormCancelButton.Name = "loginFormCancelButton";
             this.loginFormCancelButton.Size = new System.Drawing.Size(121, 45);
-            this.loginFormCancelButton.TabIndex = 4;
+            this.loginFormCancelButton.TabIndex = 3;
             this.loginFormCancelButton.Text = "Cancel";
             this.loginFormCancelButton.UseVisualStyleBackColor = true;
             this.loginFormCancelButton.Click += new System.EventHandler(this.loginFormCancelButton_Click);
@@ -103,7 +103,7 @@
             this.loginFormOkButton.Location = new System.Drawing.Point(357, 290);
             this.loginFormOkButton.Name = "loginFormOkButton";
             this.loginFormOkButton.Size = new System.Drawing.Size(124, 45);
-            this.loginFormOkButton.TabIndex = 5;
+            this.loginFormOkButton.TabIndex = 2;
             this.loginFormOkButton.Text = "Ok";
             this.loginFormOkButton.UseVisualStyleBackColor = true;
             this.loginFormOkButton.Click += new System.EventHandler(this.loginFormOkButton_Click);
@@ -150,7 +150,7 @@
             this.formLoginNewPwTextBox.Location = new System.Drawing.Point(279, 148);
             this.formLoginNewPwTextBox.Name = "formLoginNewPwTextBox";
             this.formLoginNewPwTextBox.Size = new System.Drawing.Size(160, 29);
-            this.formLoginNewPwTextBox.TabIndex = 8;
+            this.formLoginNewPwTextBox.TabIndex = 4;
             this.formLoginNewPwTextBox.UseSystemPasswordChar = true;
             this.formLoginNewPwTextBox.Visible = false;
             // 
@@ -160,7 +160,7 @@
             this.formLoginNewPw2TextBox.Location = new System.Drawing.Point(279, 193);
             this.formLoginNewPw2TextBox.Name = "formLoginNewPw2TextBox";
             this.formLoginNewPw2TextBox.Size = new System.Drawing.Size(160, 29);
-            this.formLoginNewPw2TextBox.TabIndex = 9;
+            this.formLoginNewPw2TextBox.TabIndex = 5;
             this.formLoginNewPw2TextBox.UseSystemPasswordChar = true;
             this.formLoginNewPw2TextBox.Visible = false;
             // 

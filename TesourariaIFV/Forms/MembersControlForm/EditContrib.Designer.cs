@@ -31,6 +31,13 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.codMembro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Data = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Dizimo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Primicia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Missoes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codLancamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.controleIndividual1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.igrejafont11DataSet = new TesourariaIFV.igrejafont11DataSet();
             this.label1 = new System.Windows.Forms.Label();
@@ -54,13 +61,15 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.codMembro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Data = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Dizimo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Primicia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Missoes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codLancamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codLancamentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codMembroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dizimoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.primiciaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.missoesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataColumn1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.igrejaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.controleIndividual1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.igrejafont11DataSet)).BeginInit();
@@ -90,7 +99,16 @@
             this.Dizimo,
             this.Primicia,
             this.Missoes,
-            this.codLancamento});
+            this.codLancamento,
+            this.codLancamentoDataGridViewTextBoxColumn,
+            this.codMembroDataGridViewTextBoxColumn,
+            this.dataDataGridViewTextBoxColumn,
+            this.dizimoDataGridViewTextBoxColumn,
+            this.primiciaDataGridViewTextBoxColumn,
+            this.missoesDataGridViewTextBoxColumn,
+            this.dataColumn1DataGridViewTextBoxColumn,
+            this.nomeDataGridViewTextBoxColumn,
+            this.igrejaDataGridViewTextBoxColumn});
             this.dataGridView.DataSource = this.controleIndividual1BindingSource;
             this.dataGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridView.Location = new System.Drawing.Point(0, 228);
@@ -100,6 +118,58 @@
             this.dataGridView.Size = new System.Drawing.Size(899, 402);
             this.dataGridView.TabIndex = 9;
             this.dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.membersListDataGridView_CellClick);
+            // 
+            // codMembro
+            // 
+            this.codMembro.DataPropertyName = "codMembro";
+            this.codMembro.HeaderText = "Cod";
+            this.codMembro.Name = "codMembro";
+            this.codMembro.ReadOnly = true;
+            // 
+            // Nome
+            // 
+            this.Nome.DataPropertyName = "Nome";
+            this.Nome.HeaderText = "Nome";
+            this.Nome.Name = "Nome";
+            this.Nome.ReadOnly = true;
+            this.Nome.Width = 250;
+            // 
+            // Data
+            // 
+            this.Data.DataPropertyName = "Data";
+            this.Data.HeaderText = "Data";
+            this.Data.Name = "Data";
+            this.Data.ReadOnly = true;
+            this.Data.Width = 150;
+            // 
+            // Dizimo
+            // 
+            this.Dizimo.DataPropertyName = "Dizimo";
+            this.Dizimo.HeaderText = "Dizimo";
+            this.Dizimo.Name = "Dizimo";
+            this.Dizimo.ReadOnly = true;
+            // 
+            // Primicia
+            // 
+            this.Primicia.DataPropertyName = "Primicia";
+            this.Primicia.HeaderText = "Primicia";
+            this.Primicia.Name = "Primicia";
+            this.Primicia.ReadOnly = true;
+            // 
+            // Missoes
+            // 
+            this.Missoes.DataPropertyName = "Missoes";
+            this.Missoes.HeaderText = "Missoes";
+            this.Missoes.Name = "Missoes";
+            this.Missoes.ReadOnly = true;
+            // 
+            // codLancamento
+            // 
+            this.codLancamento.DataPropertyName = "codLancamento";
+            this.codLancamento.HeaderText = "codLancamento";
+            this.codLancamento.Name = "codLancamento";
+            this.codLancamento.ReadOnly = true;
+            this.codLancamento.Visible = false;
             // 
             // controleIndividual1BindingSource
             // 
@@ -172,7 +242,7 @@
             this.codeTextBox.Location = new System.Drawing.Point(93, 63);
             this.codeTextBox.Name = "codeTextBox";
             this.codeTextBox.Size = new System.Drawing.Size(111, 29);
-            this.codeTextBox.TabIndex = 5;
+            this.codeTextBox.TabIndex = 2;
             // 
             // nameTextBox
             // 
@@ -181,7 +251,7 @@
             this.nameTextBox.Location = new System.Drawing.Point(292, 66);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(416, 29);
-            this.nameTextBox.TabIndex = 6;
+            this.nameTextBox.TabIndex = 3;
             // 
             // membersListSaveButton
             // 
@@ -189,7 +259,7 @@
             this.membersListSaveButton.Location = new System.Drawing.Point(602, 180);
             this.membersListSaveButton.Name = "membersListSaveButton";
             this.membersListSaveButton.Size = new System.Drawing.Size(144, 42);
-            this.membersListSaveButton.TabIndex = 7;
+            this.membersListSaveButton.TabIndex = 8;
             this.membersListSaveButton.Text = "Salvar";
             this.membersListSaveButton.UseVisualStyleBackColor = true;
             this.membersListSaveButton.Click += new System.EventHandler(this.membersListSaveButton_Click);
@@ -200,7 +270,7 @@
             this.membersListCancelButton.Location = new System.Drawing.Point(752, 180);
             this.membersListCancelButton.Name = "membersListCancelButton";
             this.membersListCancelButton.Size = new System.Drawing.Size(144, 42);
-            this.membersListCancelButton.TabIndex = 8;
+            this.membersListCancelButton.TabIndex = 9;
             this.membersListCancelButton.Text = "Cancelar";
             this.membersListCancelButton.UseVisualStyleBackColor = true;
             this.membersListCancelButton.Click += new System.EventHandler(this.membersListCancelButton_Click);
@@ -246,7 +316,7 @@
             this.dizimoTextBox.Location = new System.Drawing.Point(93, 146);
             this.dizimoTextBox.Name = "dizimoTextBox";
             this.dizimoTextBox.Size = new System.Drawing.Size(111, 29);
-            this.dizimoTextBox.TabIndex = 12;
+            this.dizimoTextBox.TabIndex = 5;
             this.dizimoTextBox.Enter += new System.EventHandler(this.enterContribDizimoTextBox_Enter);
             this.dizimoTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.enterContribDizimoTextBox_KeyPress);
             this.dizimoTextBox.Leave += new System.EventHandler(this.enterContribDizimoTextBox_Leave);
@@ -257,7 +327,7 @@
             this.primiciaTextBox.Location = new System.Drawing.Point(292, 146);
             this.primiciaTextBox.Name = "primiciaTextBox";
             this.primiciaTextBox.Size = new System.Drawing.Size(111, 29);
-            this.primiciaTextBox.TabIndex = 13;
+            this.primiciaTextBox.TabIndex = 6;
             this.primiciaTextBox.Enter += new System.EventHandler(this.enterContribPrimiciaTextBox_Enter);
             this.primiciaTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.enterContribPrimiciaTextBox_KeyPress);
             this.primiciaTextBox.Leave += new System.EventHandler(this.enterContribPrimiciaTextBox_Leave);
@@ -268,7 +338,7 @@
             this.missoesTextBox.Location = new System.Drawing.Point(494, 147);
             this.missoesTextBox.Name = "missoesTextBox";
             this.missoesTextBox.Size = new System.Drawing.Size(111, 29);
-            this.missoesTextBox.TabIndex = 14;
+            this.missoesTextBox.TabIndex = 7;
             this.missoesTextBox.Enter += new System.EventHandler(this.enterContribMissoesTextBox_Enter);
             this.missoesTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.enterContribMissoesTextBox_KeyPress);
             this.missoesTextBox.Leave += new System.EventHandler(this.enterContribMissoesTextBox_Leave);
@@ -302,59 +372,70 @@
             this.dateTimePicker.Location = new System.Drawing.Point(93, 104);
             this.dateTimePicker.Name = "dateTimePicker";
             this.dateTimePicker.Size = new System.Drawing.Size(144, 29);
-            this.dateTimePicker.TabIndex = 17;
+            this.dateTimePicker.TabIndex = 4;
             // 
-            // codMembro
+            // codLancamentoDataGridViewTextBoxColumn
             // 
-            this.codMembro.DataPropertyName = "codMembro";
-            this.codMembro.HeaderText = "Cod";
-            this.codMembro.Name = "codMembro";
-            this.codMembro.ReadOnly = true;
+            this.codLancamentoDataGridViewTextBoxColumn.DataPropertyName = "codLancamento";
+            this.codLancamentoDataGridViewTextBoxColumn.HeaderText = "codLancamento";
+            this.codLancamentoDataGridViewTextBoxColumn.Name = "codLancamentoDataGridViewTextBoxColumn";
+            this.codLancamentoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // Nome
+            // codMembroDataGridViewTextBoxColumn
             // 
-            this.Nome.DataPropertyName = "Nome";
-            this.Nome.HeaderText = "Nome";
-            this.Nome.Name = "Nome";
-            this.Nome.ReadOnly = true;
-            this.Nome.Width = 250;
+            this.codMembroDataGridViewTextBoxColumn.DataPropertyName = "codMembro";
+            this.codMembroDataGridViewTextBoxColumn.HeaderText = "codMembro";
+            this.codMembroDataGridViewTextBoxColumn.Name = "codMembroDataGridViewTextBoxColumn";
+            this.codMembroDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // Data
+            // dataDataGridViewTextBoxColumn
             // 
-            this.Data.DataPropertyName = "Data";
-            this.Data.HeaderText = "Data";
-            this.Data.Name = "Data";
-            this.Data.ReadOnly = true;
-            this.Data.Width = 150;
+            this.dataDataGridViewTextBoxColumn.DataPropertyName = "Data";
+            this.dataDataGridViewTextBoxColumn.HeaderText = "Data";
+            this.dataDataGridViewTextBoxColumn.Name = "dataDataGridViewTextBoxColumn";
+            this.dataDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // Dizimo
+            // dizimoDataGridViewTextBoxColumn
             // 
-            this.Dizimo.DataPropertyName = "Dizimo";
-            this.Dizimo.HeaderText = "Dizimo";
-            this.Dizimo.Name = "Dizimo";
-            this.Dizimo.ReadOnly = true;
+            this.dizimoDataGridViewTextBoxColumn.DataPropertyName = "Dizimo";
+            this.dizimoDataGridViewTextBoxColumn.HeaderText = "Dizimo";
+            this.dizimoDataGridViewTextBoxColumn.Name = "dizimoDataGridViewTextBoxColumn";
+            this.dizimoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // Primicia
+            // primiciaDataGridViewTextBoxColumn
             // 
-            this.Primicia.DataPropertyName = "Primicia";
-            this.Primicia.HeaderText = "Primicia";
-            this.Primicia.Name = "Primicia";
-            this.Primicia.ReadOnly = true;
+            this.primiciaDataGridViewTextBoxColumn.DataPropertyName = "Primicia";
+            this.primiciaDataGridViewTextBoxColumn.HeaderText = "Primicia";
+            this.primiciaDataGridViewTextBoxColumn.Name = "primiciaDataGridViewTextBoxColumn";
+            this.primiciaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // Missoes
+            // missoesDataGridViewTextBoxColumn
             // 
-            this.Missoes.DataPropertyName = "Missoes";
-            this.Missoes.HeaderText = "Missoes";
-            this.Missoes.Name = "Missoes";
-            this.Missoes.ReadOnly = true;
+            this.missoesDataGridViewTextBoxColumn.DataPropertyName = "Missoes";
+            this.missoesDataGridViewTextBoxColumn.HeaderText = "Missoes";
+            this.missoesDataGridViewTextBoxColumn.Name = "missoesDataGridViewTextBoxColumn";
+            this.missoesDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // codLancamento
+            // dataColumn1DataGridViewTextBoxColumn
             // 
-            this.codLancamento.DataPropertyName = "codLancamento";
-            this.codLancamento.HeaderText = "codLancamento";
-            this.codLancamento.Name = "codLancamento";
-            this.codLancamento.ReadOnly = true;
-            this.codLancamento.Visible = false;
+            this.dataColumn1DataGridViewTextBoxColumn.DataPropertyName = "DataColumn1";
+            this.dataColumn1DataGridViewTextBoxColumn.HeaderText = "DataColumn1";
+            this.dataColumn1DataGridViewTextBoxColumn.Name = "dataColumn1DataGridViewTextBoxColumn";
+            this.dataColumn1DataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nomeDataGridViewTextBoxColumn
+            // 
+            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "Nome";
+            this.nomeDataGridViewTextBoxColumn.HeaderText = "Nome";
+            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
+            this.nomeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // igrejaDataGridViewTextBoxColumn
+            // 
+            this.igrejaDataGridViewTextBoxColumn.DataPropertyName = "Igreja";
+            this.igrejaDataGridViewTextBoxColumn.HeaderText = "Igreja";
+            this.igrejaDataGridViewTextBoxColumn.Name = "igrejaDataGridViewTextBoxColumn";
+            this.igrejaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // EditContrib
             // 
@@ -427,5 +508,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Primicia;
         private System.Windows.Forms.DataGridViewTextBoxColumn Missoes;
         private System.Windows.Forms.DataGridViewTextBoxColumn codLancamento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codLancamentoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codMembroDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dizimoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn primiciaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn missoesDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataColumn1DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn igrejaDataGridViewTextBoxColumn;
     }
 }

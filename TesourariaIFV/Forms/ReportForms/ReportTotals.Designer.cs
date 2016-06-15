@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.reportTotalsComboBox = new System.Windows.Forms.ComboBox();
+            this.igrejasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.igrejafont11DataSet = new TesourariaIFV.igrejafont11DataSet();
             this.label4 = new System.Windows.Forms.Label();
             this.reportTotalsCancelButton = new System.Windows.Forms.Button();
             this.reportTotalsOkButton = new System.Windows.Forms.Button();
@@ -41,11 +43,9 @@
             this.reportTotalsMonthRadioButton = new System.Windows.Forms.RadioButton();
             this.reportTotalsMonthDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
-            this.igrejafont11DataSet = new TesourariaIFV.igrejafont11DataSet();
-            this.igrejasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.igrejasTableAdapter = new TesourariaIFV.igrejafont11DataSetTableAdapters.IgrejasTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.igrejafont11DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.igrejasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.igrejafont11DataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // reportTotalsComboBox
@@ -56,8 +56,18 @@
             this.reportTotalsComboBox.Location = new System.Drawing.Point(188, 270);
             this.reportTotalsComboBox.Name = "reportTotalsComboBox";
             this.reportTotalsComboBox.Size = new System.Drawing.Size(407, 32);
-            this.reportTotalsComboBox.TabIndex = 37;
+            this.reportTotalsComboBox.TabIndex = 5;
             this.reportTotalsComboBox.ValueMember = "Nome";
+            // 
+            // igrejasBindingSource
+            // 
+            this.igrejasBindingSource.DataMember = "Igrejas";
+            this.igrejasBindingSource.DataSource = this.igrejafont11DataSet;
+            // 
+            // igrejafont11DataSet
+            // 
+            this.igrejafont11DataSet.DataSetName = "igrejafont11DataSet";
+            this.igrejafont11DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label4
             // 
@@ -73,7 +83,7 @@
             this.reportTotalsCancelButton.Location = new System.Drawing.Point(645, 372);
             this.reportTotalsCancelButton.Name = "reportTotalsCancelButton";
             this.reportTotalsCancelButton.Size = new System.Drawing.Size(132, 38);
-            this.reportTotalsCancelButton.TabIndex = 39;
+            this.reportTotalsCancelButton.TabIndex = 7;
             this.reportTotalsCancelButton.Text = "Cancel";
             this.reportTotalsCancelButton.UseVisualStyleBackColor = true;
             this.reportTotalsCancelButton.Click += new System.EventHandler(this.reportTotalsCancelButton_Click);
@@ -83,7 +93,7 @@
             this.reportTotalsOkButton.Location = new System.Drawing.Point(507, 372);
             this.reportTotalsOkButton.Name = "reportTotalsOkButton";
             this.reportTotalsOkButton.Size = new System.Drawing.Size(132, 38);
-            this.reportTotalsOkButton.TabIndex = 38;
+            this.reportTotalsOkButton.TabIndex = 6;
             this.reportTotalsOkButton.Text = "Ok";
             this.reportTotalsOkButton.UseVisualStyleBackColor = true;
             this.reportTotalsOkButton.Click += new System.EventHandler(this.reportTotalsOkButton_Click);
@@ -112,7 +122,7 @@
             this.reportTotalsFinalDateTimePicker.Location = new System.Drawing.Point(438, 206);
             this.reportTotalsFinalDateTimePicker.Name = "reportTotalsFinalDateTimePicker";
             this.reportTotalsFinalDateTimePicker.Size = new System.Drawing.Size(157, 29);
-            this.reportTotalsFinalDateTimePicker.TabIndex = 36;
+            this.reportTotalsFinalDateTimePicker.TabIndex = 4;
             // 
             // reportTotalsInitialDateTimePicker
             // 
@@ -120,7 +130,7 @@
             this.reportTotalsInitialDateTimePicker.Location = new System.Drawing.Point(227, 207);
             this.reportTotalsInitialDateTimePicker.Name = "reportTotalsInitialDateTimePicker";
             this.reportTotalsInitialDateTimePicker.Size = new System.Drawing.Size(161, 29);
-            this.reportTotalsInitialDateTimePicker.TabIndex = 35;
+            this.reportTotalsInitialDateTimePicker.TabIndex = 3;
             // 
             // reportTotalsPeriodRadioButton
             // 
@@ -128,7 +138,7 @@
             this.reportTotalsPeriodRadioButton.Location = new System.Drawing.Point(49, 206);
             this.reportTotalsPeriodRadioButton.Name = "reportTotalsPeriodRadioButton";
             this.reportTotalsPeriodRadioButton.Size = new System.Drawing.Size(94, 28);
-            this.reportTotalsPeriodRadioButton.TabIndex = 33;
+            this.reportTotalsPeriodRadioButton.TabIndex = 2;
             this.reportTotalsPeriodRadioButton.TabStop = true;
             this.reportTotalsPeriodRadioButton.Text = "Período";
             this.reportTotalsPeriodRadioButton.UseVisualStyleBackColor = true;
@@ -139,7 +149,7 @@
             this.reportTotalsMonthRadioButton.Location = new System.Drawing.Point(49, 164);
             this.reportTotalsMonthRadioButton.Name = "reportTotalsMonthRadioButton";
             this.reportTotalsMonthRadioButton.Size = new System.Drawing.Size(114, 28);
-            this.reportTotalsMonthRadioButton.TabIndex = 30;
+            this.reportTotalsMonthRadioButton.TabIndex = 0;
             this.reportTotalsMonthRadioButton.TabStop = true;
             this.reportTotalsMonthRadioButton.Text = "Mês / Ano";
             this.reportTotalsMonthRadioButton.UseVisualStyleBackColor = true;
@@ -151,7 +161,7 @@
             this.reportTotalsMonthDateTimePicker.Location = new System.Drawing.Point(188, 164);
             this.reportTotalsMonthDateTimePicker.Name = "reportTotalsMonthDateTimePicker";
             this.reportTotalsMonthDateTimePicker.Size = new System.Drawing.Size(200, 29);
-            this.reportTotalsMonthDateTimePicker.TabIndex = 31;
+            this.reportTotalsMonthDateTimePicker.TabIndex = 1;
             // 
             // label1
             // 
@@ -162,16 +172,6 @@
             this.label1.Size = new System.Drawing.Size(150, 24);
             this.label1.TabIndex = 29;
             this.label1.Text = "Defina o Período";
-            // 
-            // igrejafont11DataSet
-            // 
-            this.igrejafont11DataSet.DataSetName = "igrejafont11DataSet";
-            this.igrejafont11DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // igrejasBindingSource
-            // 
-            this.igrejasBindingSource.DataMember = "Igrejas";
-            this.igrejasBindingSource.DataSource = this.igrejafont11DataSet;
             // 
             // igrejasTableAdapter
             // 
@@ -201,8 +201,8 @@
             this.Name = "ReportTotals";
             this.Text = "Relatório de Totais";
             this.Load += new System.EventHandler(this.ReportTotals_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.igrejafont11DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.igrejasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.igrejafont11DataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -73,7 +73,7 @@
             this.reportDizimoComboBox.Location = new System.Drawing.Point(158, 6);
             this.reportDizimoComboBox.Name = "reportDizimoComboBox";
             this.reportDizimoComboBox.Size = new System.Drawing.Size(294, 32);
-            this.reportDizimoComboBox.TabIndex = 5;
+            this.reportDizimoComboBox.TabIndex = 1;
             this.reportDizimoComboBox.ValueMember = "Nome";
             this.reportDizimoComboBox.SelectedIndexChanged += new System.EventHandler(this.reportDizimoComboBox_SelectedIndexChanged);
             // 
@@ -257,7 +257,7 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.ShowUpDown = true;
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 29);
-            this.dateTimePicker1.TabIndex = 11;
+            this.dateTimePicker1.TabIndex = 2;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // label2

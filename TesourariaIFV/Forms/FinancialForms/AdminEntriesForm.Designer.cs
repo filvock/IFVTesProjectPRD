@@ -117,7 +117,7 @@
             this.adminEntriesComboBox.Location = new System.Drawing.Point(197, 291);
             this.adminEntriesComboBox.Name = "adminEntriesComboBox";
             this.adminEntriesComboBox.Size = new System.Drawing.Size(407, 32);
-            this.adminEntriesComboBox.TabIndex = 53;
+            this.adminEntriesComboBox.TabIndex = 9;
             this.adminEntriesComboBox.ValueMember = "Nome";
             // 
             // igrejasBindingSource
@@ -144,7 +144,7 @@
             this.adminEntriesCancelButton.Location = new System.Drawing.Point(696, 349);
             this.adminEntriesCancelButton.Name = "adminEntriesCancelButton";
             this.adminEntriesCancelButton.Size = new System.Drawing.Size(132, 38);
-            this.adminEntriesCancelButton.TabIndex = 55;
+            this.adminEntriesCancelButton.TabIndex = 11;
             this.adminEntriesCancelButton.Text = "Cancel";
             this.adminEntriesCancelButton.UseVisualStyleBackColor = true;
             this.adminEntriesCancelButton.Click += new System.EventHandler(this.adminEntriesCancelButton_Click);
@@ -154,7 +154,7 @@
             this.adminEntriesOkButton.Location = new System.Drawing.Point(559, 349);
             this.adminEntriesOkButton.Name = "adminEntriesOkButton";
             this.adminEntriesOkButton.Size = new System.Drawing.Size(132, 38);
-            this.adminEntriesOkButton.TabIndex = 54;
+            this.adminEntriesOkButton.TabIndex = 10;
             this.adminEntriesOkButton.Text = "Ok";
             this.adminEntriesOkButton.UseVisualStyleBackColor = true;
             this.adminEntriesOkButton.Click += new System.EventHandler(this.adminEntriesOkButton_Click);
@@ -183,7 +183,7 @@
             this.adminEntriesFinalDateTimePicker.Location = new System.Drawing.Point(447, 227);
             this.adminEntriesFinalDateTimePicker.Name = "adminEntriesFinalDateTimePicker";
             this.adminEntriesFinalDateTimePicker.Size = new System.Drawing.Size(157, 29);
-            this.adminEntriesFinalDateTimePicker.TabIndex = 52;
+            this.adminEntriesFinalDateTimePicker.TabIndex = 8;
             // 
             // adminEntriesInitialDateTimePicker
             // 
@@ -191,7 +191,7 @@
             this.adminEntriesInitialDateTimePicker.Location = new System.Drawing.Point(236, 228);
             this.adminEntriesInitialDateTimePicker.Name = "adminEntriesInitialDateTimePicker";
             this.adminEntriesInitialDateTimePicker.Size = new System.Drawing.Size(161, 29);
-            this.adminEntriesInitialDateTimePicker.TabIndex = 51;
+            this.adminEntriesInitialDateTimePicker.TabIndex = 7;
             // 
             // adminEntriesPeriodRadioButton
             // 
@@ -199,7 +199,7 @@
             this.adminEntriesPeriodRadioButton.Location = new System.Drawing.Point(58, 227);
             this.adminEntriesPeriodRadioButton.Name = "adminEntriesPeriodRadioButton";
             this.adminEntriesPeriodRadioButton.Size = new System.Drawing.Size(94, 28);
-            this.adminEntriesPeriodRadioButton.TabIndex = 49;
+            this.adminEntriesPeriodRadioButton.TabIndex = 6;
             this.adminEntriesPeriodRadioButton.TabStop = true;
             this.adminEntriesPeriodRadioButton.Text = "Período";
             this.adminEntriesPeriodRadioButton.UseVisualStyleBackColor = true;
@@ -210,7 +210,7 @@
             this.adminEntriesMonthRadioButton.Location = new System.Drawing.Point(58, 185);
             this.adminEntriesMonthRadioButton.Name = "adminEntriesMonthRadioButton";
             this.adminEntriesMonthRadioButton.Size = new System.Drawing.Size(114, 28);
-            this.adminEntriesMonthRadioButton.TabIndex = 46;
+            this.adminEntriesMonthRadioButton.TabIndex = 4;
             this.adminEntriesMonthRadioButton.TabStop = true;
             this.adminEntriesMonthRadioButton.Text = "Mês / Ano";
             this.adminEntriesMonthRadioButton.UseVisualStyleBackColor = true;
@@ -222,7 +222,7 @@
             this.adminEntriesMonthDateTimePicker.Location = new System.Drawing.Point(197, 185);
             this.adminEntriesMonthDateTimePicker.Name = "adminEntriesMonthDateTimePicker";
             this.adminEntriesMonthDateTimePicker.Size = new System.Drawing.Size(200, 29);
-            this.adminEntriesMonthDateTimePicker.TabIndex = 47;
+            this.adminEntriesMonthDateTimePicker.TabIndex = 5;
             // 
             // label1
             // 

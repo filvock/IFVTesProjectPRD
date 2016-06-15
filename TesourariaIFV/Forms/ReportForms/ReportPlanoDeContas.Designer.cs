@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.reportPlanoDeContasComboBox = new System.Windows.Forms.ComboBox();
+            this.igrejasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.igrejafont11DataSet = new TesourariaIFV.igrejafont11DataSet();
             this.label4 = new System.Windows.Forms.Label();
             this.reportPlanoDeContasCancelButton = new System.Windows.Forms.Button();
             this.reportPlanoDeContasOkButton = new System.Windows.Forms.Button();
@@ -41,11 +43,9 @@
             this.reportPlanoDeContasMonthRadioButton = new System.Windows.Forms.RadioButton();
             this.reportPlanoDeContasMonthDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
-            this.igrejafont11DataSet = new TesourariaIFV.igrejafont11DataSet();
-            this.igrejasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.igrejasTableAdapter = new TesourariaIFV.igrejafont11DataSetTableAdapters.IgrejasTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.igrejafont11DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.igrejasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.igrejafont11DataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // reportPlanoDeContasComboBox
@@ -56,8 +56,18 @@
             this.reportPlanoDeContasComboBox.Location = new System.Drawing.Point(241, 240);
             this.reportPlanoDeContasComboBox.Name = "reportPlanoDeContasComboBox";
             this.reportPlanoDeContasComboBox.Size = new System.Drawing.Size(407, 32);
-            this.reportPlanoDeContasComboBox.TabIndex = 35;
+            this.reportPlanoDeContasComboBox.TabIndex = 5;
             this.reportPlanoDeContasComboBox.ValueMember = "Nome";
+            // 
+            // igrejasBindingSource
+            // 
+            this.igrejasBindingSource.DataMember = "Igrejas";
+            this.igrejasBindingSource.DataSource = this.igrejafont11DataSet;
+            // 
+            // igrejafont11DataSet
+            // 
+            this.igrejafont11DataSet.DataSetName = "igrejafont11DataSet";
+            this.igrejafont11DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label4
             // 
@@ -73,7 +83,7 @@
             this.reportPlanoDeContasCancelButton.Location = new System.Drawing.Point(668, 378);
             this.reportPlanoDeContasCancelButton.Name = "reportPlanoDeContasCancelButton";
             this.reportPlanoDeContasCancelButton.Size = new System.Drawing.Size(132, 38);
-            this.reportPlanoDeContasCancelButton.TabIndex = 33;
+            this.reportPlanoDeContasCancelButton.TabIndex = 7;
             this.reportPlanoDeContasCancelButton.Text = "Cancel";
             this.reportPlanoDeContasCancelButton.UseVisualStyleBackColor = true;
             this.reportPlanoDeContasCancelButton.Click += new System.EventHandler(this.reportPlanoDeContasCancelButton_Click);
@@ -83,7 +93,7 @@
             this.reportPlanoDeContasOkButton.Location = new System.Drawing.Point(530, 378);
             this.reportPlanoDeContasOkButton.Name = "reportPlanoDeContasOkButton";
             this.reportPlanoDeContasOkButton.Size = new System.Drawing.Size(132, 38);
-            this.reportPlanoDeContasOkButton.TabIndex = 32;
+            this.reportPlanoDeContasOkButton.TabIndex = 6;
             this.reportPlanoDeContasOkButton.Text = "Ok";
             this.reportPlanoDeContasOkButton.UseVisualStyleBackColor = true;
             this.reportPlanoDeContasOkButton.Click += new System.EventHandler(this.reportPlanoDeContasOkButton_Click);
@@ -112,7 +122,7 @@
             this.reportPlanoDeContasFinalDateTimePicker.Location = new System.Drawing.Point(491, 176);
             this.reportPlanoDeContasFinalDateTimePicker.Name = "reportPlanoDeContasFinalDateTimePicker";
             this.reportPlanoDeContasFinalDateTimePicker.Size = new System.Drawing.Size(157, 29);
-            this.reportPlanoDeContasFinalDateTimePicker.TabIndex = 29;
+            this.reportPlanoDeContasFinalDateTimePicker.TabIndex = 4;
             // 
             // reportPlanoDeContasInitialDateTimePicker
             // 
@@ -120,7 +130,7 @@
             this.reportPlanoDeContasInitialDateTimePicker.Location = new System.Drawing.Point(280, 177);
             this.reportPlanoDeContasInitialDateTimePicker.Name = "reportPlanoDeContasInitialDateTimePicker";
             this.reportPlanoDeContasInitialDateTimePicker.Size = new System.Drawing.Size(161, 29);
-            this.reportPlanoDeContasInitialDateTimePicker.TabIndex = 28;
+            this.reportPlanoDeContasInitialDateTimePicker.TabIndex = 3;
             // 
             // reportPlanoDeContasPeriodRadioButton
             // 
@@ -128,7 +138,7 @@
             this.reportPlanoDeContasPeriodRadioButton.Location = new System.Drawing.Point(102, 176);
             this.reportPlanoDeContasPeriodRadioButton.Name = "reportPlanoDeContasPeriodRadioButton";
             this.reportPlanoDeContasPeriodRadioButton.Size = new System.Drawing.Size(94, 28);
-            this.reportPlanoDeContasPeriodRadioButton.TabIndex = 27;
+            this.reportPlanoDeContasPeriodRadioButton.TabIndex = 2;
             this.reportPlanoDeContasPeriodRadioButton.TabStop = true;
             this.reportPlanoDeContasPeriodRadioButton.Text = "Período";
             this.reportPlanoDeContasPeriodRadioButton.UseVisualStyleBackColor = true;
@@ -139,7 +149,7 @@
             this.reportPlanoDeContasMonthRadioButton.Location = new System.Drawing.Point(102, 134);
             this.reportPlanoDeContasMonthRadioButton.Name = "reportPlanoDeContasMonthRadioButton";
             this.reportPlanoDeContasMonthRadioButton.Size = new System.Drawing.Size(114, 28);
-            this.reportPlanoDeContasMonthRadioButton.TabIndex = 26;
+            this.reportPlanoDeContasMonthRadioButton.TabIndex = 0;
             this.reportPlanoDeContasMonthRadioButton.TabStop = true;
             this.reportPlanoDeContasMonthRadioButton.Text = "Mês / Ano";
             this.reportPlanoDeContasMonthRadioButton.UseVisualStyleBackColor = true;
@@ -151,7 +161,7 @@
             this.reportPlanoDeContasMonthDateTimePicker.Location = new System.Drawing.Point(241, 134);
             this.reportPlanoDeContasMonthDateTimePicker.Name = "reportPlanoDeContasMonthDateTimePicker";
             this.reportPlanoDeContasMonthDateTimePicker.Size = new System.Drawing.Size(200, 29);
-            this.reportPlanoDeContasMonthDateTimePicker.TabIndex = 25;
+            this.reportPlanoDeContasMonthDateTimePicker.TabIndex = 1;
             // 
             // label1
             // 
@@ -162,16 +172,6 @@
             this.label1.Size = new System.Drawing.Size(150, 24);
             this.label1.TabIndex = 24;
             this.label1.Text = "Defina o Período";
-            // 
-            // igrejafont11DataSet
-            // 
-            this.igrejafont11DataSet.DataSetName = "igrejafont11DataSet";
-            this.igrejafont11DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // igrejasBindingSource
-            // 
-            this.igrejasBindingSource.DataMember = "Igrejas";
-            this.igrejasBindingSource.DataSource = this.igrejafont11DataSet;
             // 
             // igrejasTableAdapter
             // 
@@ -201,8 +201,8 @@
             this.Name = "ReportPlanoDeContas";
             this.Text = "ReportPlanoDeContas";
             this.Load += new System.EventHandler(this.ReportPlanoDeContas_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.igrejafont11DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.igrejasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.igrejafont11DataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -139,7 +139,7 @@
             this.valorTextBox.Location = new System.Drawing.Point(223, 284);
             this.valorTextBox.Name = "valorTextBox";
             this.valorTextBox.Size = new System.Drawing.Size(146, 29);
-            this.valorTextBox.TabIndex = 7;
+            this.valorTextBox.TabIndex = 5;
             this.valorTextBox.Enter += new System.EventHandler(this.finControlFormCaixaTextBox_Enter);
             this.valorTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.finControlFormCaixaTextBox_KeyPress);
             this.valorTextBox.Leave += new System.EventHandler(this.finControlFormCaixaTextBox_Leave);
@@ -150,7 +150,7 @@
             this.finControlFormObsTextBox.Location = new System.Drawing.Point(223, 368);
             this.finControlFormObsTextBox.Name = "finControlFormObsTextBox";
             this.finControlFormObsTextBox.Size = new System.Drawing.Size(403, 29);
-            this.finControlFormObsTextBox.TabIndex = 9;
+            this.finControlFormObsTextBox.TabIndex = 6;
             // 
             // finControlFormOkButton
             // 
@@ -158,7 +158,7 @@
             this.finControlFormOkButton.Location = new System.Drawing.Point(610, 446);
             this.finControlFormOkButton.Name = "finControlFormOkButton";
             this.finControlFormOkButton.Size = new System.Drawing.Size(113, 36);
-            this.finControlFormOkButton.TabIndex = 10;
+            this.finControlFormOkButton.TabIndex = 7;
             this.finControlFormOkButton.Text = "Ok";
             this.finControlFormOkButton.UseVisualStyleBackColor = true;
             this.finControlFormOkButton.Click += new System.EventHandler(this.finControlFormOkButton_Click);
@@ -169,7 +169,7 @@
             this.finControlFormCancelButton.Location = new System.Drawing.Point(750, 446);
             this.finControlFormCancelButton.Name = "finControlFormCancelButton";
             this.finControlFormCancelButton.Size = new System.Drawing.Size(113, 36);
-            this.finControlFormCancelButton.TabIndex = 11;
+            this.finControlFormCancelButton.TabIndex = 8;
             this.finControlFormCancelButton.Text = "Cancel";
             this.finControlFormCancelButton.UseVisualStyleBackColor = true;
             this.finControlFormCancelButton.Click += new System.EventHandler(this.finControlFormCancelButton_Click);
