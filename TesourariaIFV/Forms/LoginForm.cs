@@ -39,13 +39,17 @@ namespace TesourariaIFV.Forms
             this.Close();
         }
 
-         private void loginFormPasswordTextBox_KeyDown(object sender, KeyEventArgs e)
-        {
-            
+        private void loginFormPasswordTextBox_KeyDown(object sender, KeyEventArgs e)
+        {            
             if (e.KeyCode == Keys.Enter)
             {
                 ExecuteLogin();
             }
+        }
+
+        private void loginFormOkButton_Click(object sender, EventArgs e)
+        {
+            ExecuteLogin();
         }
 
         private void ExecuteLogin()
@@ -54,32 +58,8 @@ namespace TesourariaIFV.Forms
 
             if (formLoginNewPwTextBox.Visible == false)
             {
-                igrejafont11DataSet igrejafont11DataSet = new igrejafont11DataSet();
-                SqlDataReader usrRdr = null;
-                String firstLogin = "no";
-
-
-                SqlConnection conn = new SqlConnection(info.GetStringConnection());
-                conn.Open();
-
-                SqlCommand comm1 = new SqlCommand("SELECT * FROM usuarios WHERE Nome = @usuario", conn);
-                comm1.Parameters.Add("@usuario", SqlDbType.VarChar).Value = loginFormUserTextBox.Text;
-                usrRdr = comm1.ExecuteReader();
-
-                if (usrRdr.HasRows)
-                {
-                    while (usrRdr.Read())
-                    {
-                        info.SetNome(usrRdr.GetString(0));
-                        info.SetSenha(usrRdr.GetString(1));
-                        info.SetIgreja(usrRdr.GetString(2));
-                        info.SetRole(usrRdr.GetString(3));
-                        info.SetIsLogged(usrRdr.GetString(4));
-                        if (usrRdr.GetString(5) != null) firstLogin = usrRdr.GetString(5);
-                        info.SetCidade(usrRdr.GetString(6));
-                        info.SetEstado(usrRdr.GetString(7));
-                    }
-                }
+                String firstLogin = SetInfo();
+                SetRegiao();
 
                 if ((info.GetNome().ToLower() == loginFormUserTextBox.Text.ToLower()) && (info.GetSenha() == loginFormPasswordTextBox.Text))
                 {
@@ -89,16 +69,8 @@ namespace TesourariaIFV.Forms
                     }
                     else
                     {
-                        //if (info.GetIsLogged() == "yes")
-                        //{
-                        //    MessageBox.Show("Usuário já está logado. Tente com outro usuário.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        //}
-                        //else
-                        //{
-                        info.SetLoggedToYes();
                         DialogResult = DialogResult.OK;
                         Close();
-                        //}
                     }
                 }
                 else
@@ -113,6 +85,8 @@ namespace TesourariaIFV.Forms
                 {
                     SqlConnection conn = new SqlConnection(info.GetStringConnection());
                     conn.Open();
+                    string temp = SetInfo();
+                    SetRegiao();
 
                     SqlCommand comm1 = new SqlCommand("update Usuarios set Senha=@Senha where nome=@Nome", conn);
                     comm1.Parameters.Add("@Senha", SqlDbType.VarChar).Value = formLoginNewPwTextBox.Text;
@@ -131,7 +105,7 @@ namespace TesourariaIFV.Forms
 
                     MessageBox.Show("Senha alterada com sucesso!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    info.SetLoggedToYes();
+                    //info.SetLoggedToYes();
 
                     DialogResult = DialogResult.OK;
                     Close();
@@ -147,104 +121,57 @@ namespace TesourariaIFV.Forms
 
         }
 
-        private void loginFormOkButton_Click(object sender, EventArgs e)
+        private String SetInfo()
         {
-            ExecuteLogin();
+            loginInfo info = new loginInfo();
+            igrejafont11DataSet igrejafont11DataSet = new igrejafont11DataSet();
+            SqlDataReader usrRdr = null;
+            String firstLogin = "no";
 
-            //loginInfo info = new loginInfo();
-            //if (formLoginNewPwTextBox.Visible == false)
-            //{
-            //    igrejafont11DataSet igrejafont11DataSet = new igrejafont11DataSet();
-            //    SqlDataReader usrRdr = null;
-            //    String firstLogin = "no";
+            SqlConnection conn = new SqlConnection(info.GetStringConnection());
+            conn.Open();
 
-            //    SqlConnection conn = new SqlConnection(info.GetStringConnection());
-            //    conn.Open();
+            SqlCommand comm1 = new SqlCommand("SELECT * FROM usuarios WHERE Nome = @usuario", conn);
+            comm1.Parameters.Add("@usuario", SqlDbType.VarChar).Value = loginFormUserTextBox.Text;
+            usrRdr = comm1.ExecuteReader();
 
-            //    SqlCommand comm1 = new SqlCommand("SELECT * FROM usuarios WHERE Nome = @usuario", conn);
-            //    comm1.Parameters.Add("@usuario", SqlDbType.VarChar).Value = loginFormUserTextBox.Text;
-            //    usrRdr = comm1.ExecuteReader();
+            if (usrRdr.HasRows)
+            {
+                while (usrRdr.Read())
+                {
+                    info.SetNome(usrRdr.GetString(0));
+                    info.SetSenha(usrRdr.GetString(1));
+                    info.SetIgreja(usrRdr.GetString(2));
+                    info.SetRole(usrRdr.GetString(3));
+                    info.SetIsLogged(usrRdr.GetString(4));
+                    if (usrRdr.GetString(5) != null) firstLogin = usrRdr.GetString(5);
+                    info.SetCidade(usrRdr.GetString(6));
+                    info.SetEstado(usrRdr.GetString(7));
+                }
+            }
+            return firstLogin;
 
-            //    if (usrRdr.HasRows)
-            //    {
-            //        while (usrRdr.Read())
-            //        {
-            //            info.SetNome(usrRdr.GetString(0));
-            //            info.SetSenha(usrRdr.GetString(1));
-            //            info.SetIgreja(usrRdr.GetString(2));
-            //            info.SetRole(usrRdr.GetString(3));
-            //            info.SetIsLogged(usrRdr.GetString(4));
-            //            if (usrRdr.GetString(5) != null) firstLogin = usrRdr.GetString(5);
-            //            info.SetCidade(usrRdr.GetString(6));
-            //            info.SetEstado(usrRdr.GetString(7));
-            //        }
-            //    }
+        }
 
-            //    if ((info.GetNome().ToLower() == loginFormUserTextBox.Text.ToLower()) && (info.GetSenha() == loginFormPasswordTextBox.Text))
-            //    {
-            //        if (firstLogin.Contains("yes"))
-            //        {
-            //            TrocaSenhaUser();
-            //        }
+        private void SetRegiao()
+        {
+            loginInfo info = new loginInfo();
+            SqlDataReader usrRdr = null;
+            
+            SqlConnection conn = new SqlConnection(info.GetStringConnection());
+            conn.Open();
 
-            //        else
-            //        {
-            //            if (info.GetIsLogged() == "yes")
-            //            {
-            //                MessageBox.Show("Usuário já está logado. Tente com outro usuário.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //            }
-            //            else
-            //            {
-            //                info.SetLoggedToYes();
-            //                DialogResult = DialogResult.OK;
-            //                Close();
-            //            }
-            //        }
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Senha ou usuário inválidos, tente novamente", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //        loginFormPasswordTextBox.Text = "";
-            //    }
-            //}
+            SqlCommand comm1 = new SqlCommand("SELECT * FROM Estados WHERE Sigla = @estado", conn);
+            comm1.Parameters.Add("@estado", SqlDbType.VarChar).Value = info.GetEstado();
+            usrRdr = comm1.ExecuteReader();
 
-            //else
-            // {
-            //    if (formLoginNewPwTextBox.Text == formLoginNewPw2TextBox.Text)
-            //    {
-            //        SqlConnection conn = new SqlConnection(info.GetStringConnection());
-            //        conn.Open();
-
-            //        SqlCommand comm1 = new SqlCommand("update Usuarios set Senha=@Senha where nome=@Nome", conn);
-            //        comm1.Parameters.Add("@Senha", SqlDbType.VarChar).Value = formLoginNewPwTextBox.Text;
-            //        comm1.Parameters.Add("@Nome", SqlDbType.VarChar).Value = loginFormUserTextBox.Text;
-
-            //        comm1.ExecuteReader();
-
-            //        SqlConnection conn1 = new SqlConnection(info.GetStringConnection());
-            //        conn1.Open();
-
-            //        SqlCommand comm2 = new SqlCommand("update Usuarios set FirstLogin=@No where nome=@Nome", conn1);
-            //        comm2.Parameters.Add("@No", SqlDbType.VarChar).Value = "No";
-            //        comm2.Parameters.Add("@Nome", SqlDbType.VarChar).Value = loginFormUserTextBox.Text;
-
-            //        comm2.ExecuteReader();
-
-            //        MessageBox.Show("Senha alterada com sucesso!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            //        info.SetLoggedToYes();
-
-            //        DialogResult = DialogResult.OK;
-            //        Close();
-            //    }
-
-            //    else
-            //    {
-            //        MessageBox.Show("As senhas digitadas não são idênticas!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //        formLoginNewPwTextBox.Text = "";
-            //        formLoginNewPw2TextBox.Text = "";
-            //    }
-            //}
+            if (usrRdr.HasRows)
+            {
+                while (usrRdr.Read())
+                {
+                    info.SetRegiao(usrRdr.GetString(2));                    
+                }
+            }
         }
 
         private void LoginForm_Load_1(object sender, EventArgs e)

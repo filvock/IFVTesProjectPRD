@@ -43,12 +43,12 @@
             this.formUserAddRoleComboBox = new System.Windows.Forms.ComboBox();
             this.igrejasTableAdapter = new TesourariaIFV.igrejafont11DataSetTableAdapters.IgrejasTableAdapter();
             this.formUserAddCidadeComboBox = new System.Windows.Forms.ComboBox();
+            this.cidadesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label5 = new System.Windows.Forms.Label();
             this.formUserAddEstadoComboBox = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.cidadesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cidadesTableAdapter = new TesourariaIFV.igrejafont11DataSetTableAdapters.CidadesTableAdapter();
             this.estadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label6 = new System.Windows.Forms.Label();
+            this.cidadesTableAdapter = new TesourariaIFV.igrejafont11DataSetTableAdapters.CidadesTableAdapter();
             this.estadosTableAdapter = new TesourariaIFV.igrejafont11DataSetTableAdapters.EstadosTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.igrejasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.igrejafont11DataSet)).BeginInit();
@@ -108,9 +108,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(82, 235);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 24);
+            this.label4.Size = new System.Drawing.Size(75, 24);
             this.label4.TabIndex = 17;
-            this.label4.Text = "Role";
+            this.label4.Text = "Função";
             // 
             // formUserAddNomeTextBox
             // 
@@ -152,8 +152,9 @@
             this.formUserAddRoleComboBox.FormattingEnabled = true;
             this.formUserAddRoleComboBox.Items.AddRange(new object[] {
             "Administrador",
-            "Coord Nacional",
-            "Coord Estadual",
+            "Presidente Nacional",
+            "Presidente Estadual",
+            "Presidente Regional",
             "Igreja Local"});
             this.formUserAddRoleComboBox.Location = new System.Drawing.Point(246, 227);
             this.formUserAddRoleComboBox.Name = "formUserAddRoleComboBox";
@@ -175,6 +176,11 @@
             this.formUserAddCidadeComboBox.TabIndex = 23;
             this.formUserAddCidadeComboBox.ValueMember = "Nome";
             // 
+            // cidadesBindingSource
+            // 
+            this.cidadesBindingSource.DataMember = "Cidades";
+            this.cidadesBindingSource.DataSource = this.igrejafont11DataSet;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -195,6 +201,11 @@
             this.formUserAddEstadoComboBox.TabIndex = 25;
             this.formUserAddEstadoComboBox.ValueMember = "Sigla";
             // 
+            // estadosBindingSource
+            // 
+            this.estadosBindingSource.DataMember = "Estados";
+            this.estadosBindingSource.DataSource = this.igrejafont11DataSet;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -204,19 +215,9 @@
             this.label6.TabIndex = 24;
             this.label6.Text = "Estado";
             // 
-            // cidadesBindingSource
-            // 
-            this.cidadesBindingSource.DataMember = "Cidades";
-            this.cidadesBindingSource.DataSource = this.igrejafont11DataSet;
-            // 
             // cidadesTableAdapter
             // 
             this.cidadesTableAdapter.ClearBeforeFill = true;
-            // 
-            // estadosBindingSource
-            // 
-            this.estadosBindingSource.DataMember = "Estados";
-            this.estadosBindingSource.DataSource = this.igrejafont11DataSet;
             // 
             // estadosTableAdapter
             // 

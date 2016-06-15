@@ -109,8 +109,8 @@ namespace TesourariaIFV.Forms
             MessageBox.Show("ATENÇÂO!!! \n Lançamentos do mês anterior devem ser lançados \n até o dia 15 do mês corrente.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
-            loginInfo info = new loginInfo();
-            info.SetLoggedToNo();
+            //loginInfo info = new loginInfo();
+            //info.SetLoggedToNo();
         }
 
         private void planoDeContasEntradaToolStripMenuItem_Click(object sender, EventArgs e)

@@ -32,16 +32,20 @@ namespace TesourariaIFV.Forms
         {
             loginInfo info = new loginInfo();
 
-            if (info.GetRole() == "Coord Estadual")
+            if (info.GetRole() == "Presidente Estadual")
             {
                 igrejasBindingSource.Filter = "Estado = '" + info.GetEstado() + "'";
+            }
+            else if (info.GetRole() == "Presidente Regional")
+            {
+                igrejasBindingSource.Filter = "Regiao = '" + info.GetRegiao() + "'";
             }
         }
 
         private void AdminEntriesForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'igrejafont11DataSet.Igrejas' table. You can move, or remove it, as needed.
-            this.igrejasTableAdapter.Fill(this.igrejafont11DataSet.Igrejas);
+            this.igrejasTableAdapter.FillBy(this.igrejafont11DataSet.Igrejas);
             // TODO: This line of code loads data into the 'igrejafont11DataSet.TesourariaGeral' table. You can move, or remove it, as needed.
             this.tesourariaGeralTableAdapter.Fill(this.igrejafont11DataSet.TesourariaGeral);
 

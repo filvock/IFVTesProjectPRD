@@ -1568,6 +1568,8 @@ namespace TesourariaIFV {
             
             private global::System.Data.DataColumn columnEstado;
             
+            private global::System.Data.DataColumn columnRegiao;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public IgrejasDataTable() {
@@ -1627,6 +1629,14 @@ namespace TesourariaIFV {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn RegiaoColumn {
+                get {
+                    return this.columnRegiao;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1662,12 +1672,13 @@ namespace TesourariaIFV {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public IgrejasRow AddIgrejasRow(string Nome, string Cidade, string Estado) {
+            public IgrejasRow AddIgrejasRow(string Nome, string Cidade, string Estado, string Regiao) {
                 IgrejasRow rowIgrejasRow = ((IgrejasRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Nome,
                         Cidade,
-                        Estado};
+                        Estado,
+                        Regiao};
                 rowIgrejasRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowIgrejasRow);
                 return rowIgrejasRow;
@@ -1700,6 +1711,7 @@ namespace TesourariaIFV {
                 this.columnNome = base.Columns["Nome"];
                 this.columnCidade = base.Columns["Cidade"];
                 this.columnEstado = base.Columns["Estado"];
+                this.columnRegiao = base.Columns["Regiao"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1711,6 +1723,8 @@ namespace TesourariaIFV {
                 base.Columns.Add(this.columnCidade);
                 this.columnEstado = new global::System.Data.DataColumn("Estado", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEstado);
+                this.columnRegiao = new global::System.Data.DataColumn("Regiao", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRegiao);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnNome}, true));
                 this.columnNome.AllowDBNull = false;
@@ -5410,6 +5424,34 @@ namespace TesourariaIFV {
                     this[this.tableIgrejas.EstadoColumn] = value;
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Regiao {
+                get {
+                    try {
+                        return ((string)(this[this.tableIgrejas.RegiaoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Regiao\' in table \'Igrejas\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableIgrejas.RegiaoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsRegiaoNull() {
+                return this.IsNull(this.tableIgrejas.RegiaoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetRegiaoNull() {
+                this[this.tableIgrejas.RegiaoColumn] = global::System.Convert.DBNull;
+            }
         }
         
         /// <summary>
@@ -8257,11 +8299,17 @@ namespace TesourariaIFV.igrejafont11DataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT Nome, Cidade, Estado FROM dbo.Igrejas";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT [igrejas].[Nome]\r\n      ,[igrejas].[Cidade]\r\n      ,[igrejas].[Estado]\r\n\t " +
+                " ,[estados].[Regiao]\r\n  FROM [dbo].[Igrejas]\r\n  join estados on igrejas.estado=e" +
+                "stados.Sigla";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8283,6 +8331,30 @@ namespace TesourariaIFV.igrejafont11DataSetTableAdapters {
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual igrejafont11DataSet.IgrejasDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            igrejafont11DataSet.IgrejasDataTable dataTable = new igrejafont11DataSet.IgrejasDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy(igrejafont11DataSet.IgrejasDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual igrejafont11DataSet.IgrejasDataTable GetDataBy() {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
             igrejafont11DataSet.IgrejasDataTable dataTable = new igrejafont11DataSet.IgrejasDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

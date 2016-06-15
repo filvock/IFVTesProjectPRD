@@ -27,9 +27,13 @@ namespace TesourariaIFV.Forms.MembersControlForm
         {
             loginInfo info = new loginInfo();
 
-            if (info.GetRole() == "Coord Estadual")
+            if (info.GetRole() == "Presidente Estadual")
             {
                 igrejasBindingSource.Filter = "Estado = '" + info.GetEstado() + "'";
+            }
+            else if (info.GetRole() == "Presidente Regional")
+            {
+                igrejasBindingSource.Filter = "Regiao = '" + info.GetRegiao() + "'";
             }
         }
 
@@ -38,7 +42,7 @@ namespace TesourariaIFV.Forms.MembersControlForm
             // TODO: This line of code loads data into the 'igrejafont11DataSet.Membros' table. You can move, or remove it, as needed.
             this.membrosTableAdapter.Fill(this.igrejafont11DataSet.Membros);
             this.controleIndividualTableAdapter.Fill(this.igrejafont11DataSet.ControleIndividual);
-            this.igrejasTableAdapter.Fill(this.igrejafont11DataSet.Igrejas);
+            this.igrejasTableAdapter.FillBy(this.igrejafont11DataSet.Igrejas);
 
             loginInfo info = new loginInfo();
 

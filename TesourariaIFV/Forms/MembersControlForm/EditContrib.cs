@@ -25,18 +25,22 @@ namespace TesourariaIFV.Forms.MembersControlForm
         {
             loginInfo info = new loginInfo();
 
-            if (info.GetRole() == "Coord Estadual")
+            if (info.GetRole() == "Presidente Estadual")
             {
                 igrejasBindingSource.Filter = "Estado = '" + info.GetEstado() + "'";
             }
-            
+            else if (info.GetRole() == "Presidente Regional")
+            {
+                igrejasBindingSource.Filter = "Regiao = '" + info.GetRegiao() + "'";
+            }
+
         }
 
         private void MembersAdminForm_Load(object sender, EventArgs e)
         {
             this.controleIndividual1TableAdapter.FillBy(this.igrejafont11DataSet.ControleIndividual1);
             this.controleIndividualTableAdapter.Fill(this.igrejafont11DataSet.ControleIndividual);
-            this.igrejasTableAdapter.Fill(this.igrejafont11DataSet.Igrejas);
+            this.igrejasTableAdapter.FillBy(this.igrejafont11DataSet.Igrejas);
             
             loginInfo info = new loginInfo();
 
