@@ -43,14 +43,93 @@ namespace TesourariaIFV.Forms
         {            
             if (e.KeyCode == Keys.Enter)
             {
-                ExecuteLogin();
+                LoginWithBinding();
+                //ExecuteLogin();
             }
         }
 
         private void loginFormOkButton_Click(object sender, EventArgs e)
         {
-            ExecuteLogin();
+            LoginWithBinding();
+            //ExecuteLogin();
         }
+
+        private void LoginWithBinding()
+        {
+            if (formLoginNewPwTextBox.Visible)
+            {
+                String login = loginFormUserTextBox.Text;
+                String pw1 = formLoginNewPwTextBox.Text;
+                String pw2 = formLoginNewPw2TextBox.Text;
+
+                if (pw1.Equals(pw2))
+                {
+                    int pos = usuariosBindingSource.Find("Nome", login);
+                    DataRowView row = (DataRowView)usuariosBindingSource.Current;
+
+                    row["Senha"] = pw1;
+                    row["FirstLogin"] = "No";
+                    usuariosBindingSource.EndEdit();
+                    usuariosTableAdapter.Update(this.igrejafont11DataSet);
+
+                    DialogResult = DialogResult.OK;
+                    Close();
+                }
+                else
+                {
+                    MessageBox.Show("Senhas não coincidem, tente novamente", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    formLoginNewPwTextBox.Text = "";
+                    formLoginNewPw2TextBox.Text = "";
+
+                }
+            }
+            else
+            {
+
+                String login = loginFormUserTextBox.Text;
+                String pw = loginFormPasswordTextBox.Text;
+                int pos = usuariosBindingSource.Find("Nome", login);
+                                
+                if (pos < 0) MessageBox.Show("Usuário Inválido, tente novamente", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                {
+                    usuariosBindingSource.Position = pos;
+                    DataRowView row = (DataRowView)usuariosBindingSource.Current;
+                    if (row["Senha"].ToString().Equals(pw))
+                    {
+                        loginInfo info = new loginInfo();
+                        info.SetNome(row["Nome"].ToString());
+                        info.SetSenha(row["Senha"].ToString());
+                        info.SetIgreja(row["Igreja"].ToString());
+                        info.SetRole(row["Role"].ToString());
+                        info.SetCidade(row["Cidade"].ToString());
+                        info.SetEstado(row["Estado"].ToString());
+
+                        estadosBindingSource.Position = estadosBindingSource.Find("Sigla", row["Estado"].ToString());
+                        DataRowView row1 = (DataRowView)estadosBindingSource.Current;
+                        info.SetRegiao(row1["Regiao"].ToString());
+
+                        if (row["FirstLogin"].ToString().Contains("y"))
+                        {
+                            TrocaSenhaUser();
+                        }
+                        else
+                        {                         
+                            DialogResult = DialogResult.OK;
+                            Close();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Senha Inválida, tente novamente", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
+
+
+
 
         private void ExecuteLogin()
         {
@@ -175,10 +254,9 @@ namespace TesourariaIFV.Forms
         }
 
         private void LoginForm_Load_1(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'igrejafont11DataSet.Usuarios' table. You can move, or remove it, as needed.
-            //this.usuariosTableAdapter.Fill(this.igrejafont11DataSet.Usuarios);
-
+        {            
+            this.usuariosTableAdapter.Fill(this.igrejafont11DataSet.Usuarios);
+            this.estadosTableAdapter.Fill(this.igrejafont11DataSet.Estados);
         }
     }
 }

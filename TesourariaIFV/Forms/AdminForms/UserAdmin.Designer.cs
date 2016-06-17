@@ -31,25 +31,19 @@
             this.components = new System.ComponentModel.Container();
             this.label15 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.igrejasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usersAdminIgrejaComboBox = new System.Windows.Forms.ComboBox();
+            this.igrejasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.igrejafont11DataSet = new TesourariaIFV.igrejafont11DataSet();
             this.usersAdminRoleComboBox = new System.Windows.Forms.ComboBox();
             this.usersAdminSenhaTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.cidadesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usersAdminCidadeComboBox = new System.Windows.Forms.ComboBox();
-            this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cidadesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cellMembersLabel = new System.Windows.Forms.Label();
             this.usersAdminDataGridView = new System.Windows.Forms.DataGridView();
-            this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.igrejaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.roleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usuariosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.igrejafont11DataSet = new TesourariaIFV.igrejafont11DataSet();
             this.usersAdminLoginTextBox = new System.Windows.Forms.TextBox();
             this.usersAdminEstadoComboBox = new System.Windows.Forms.ComboBox();
             this.estadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -61,12 +55,20 @@
             this.usersAdminAddButton = new System.Windows.Forms.Button();
             this.usersAdminEditButton = new System.Windows.Forms.Button();
             this.usuariosTableAdapter = new TesourariaIFV.igrejafont11DataSetTableAdapters.UsuariosTableAdapter();
+            this.igrejasTableAdapter = new TesourariaIFV.igrejafont11DataSetTableAdapters.IgrejasTableAdapter();
+            this.cidadesTableAdapter = new TesourariaIFV.igrejafont11DataSetTableAdapters.CidadesTableAdapter();
+            this.estadosTableAdapter = new TesourariaIFV.igrejafont11DataSetTableAdapters.EstadosTableAdapter();
+            this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.igrejaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Senha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.igrejasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.igrejafont11DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cidadesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersAdminDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.igrejafont11DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.estadosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,10 +92,6 @@
             this.label6.TabIndex = 68;
             this.label6.Text = "Igreja";
             // 
-            // igrejasBindingSource
-            // 
-            this.igrejasBindingSource.DataMember = "Igrejas";
-            // 
             // usersAdminIgrejaComboBox
             // 
             this.usersAdminIgrejaComboBox.DataSource = this.igrejasBindingSource;
@@ -104,7 +102,18 @@
             this.usersAdminIgrejaComboBox.Name = "usersAdminIgrejaComboBox";
             this.usersAdminIgrejaComboBox.Size = new System.Drawing.Size(408, 32);
             this.usersAdminIgrejaComboBox.TabIndex = 69;
-            this.usersAdminIgrejaComboBox.ValueMember = "Nome";
+            this.usersAdminIgrejaComboBox.ValueMember = "Cidade";
+            this.usersAdminIgrejaComboBox.SelectedIndexChanged += new System.EventHandler(this.usersAdminIgrejaComboBox_SelectedIndexChanged);
+            // 
+            // igrejasBindingSource
+            // 
+            this.igrejasBindingSource.DataMember = "Igrejas";
+            this.igrejasBindingSource.DataSource = this.igrejafont11DataSet;
+            // 
+            // igrejafont11DataSet
+            // 
+            this.igrejafont11DataSet.DataSetName = "igrejafont11DataSet";
+            this.igrejafont11DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // usersAdminRoleComboBox
             // 
@@ -159,10 +168,6 @@
             this.label3.TabIndex = 62;
             this.label3.Text = "Cidade";
             // 
-            // cidadesBindingSource
-            // 
-            this.cidadesBindingSource.DataMember = "Cidades";
-            // 
             // usersAdminCidadeComboBox
             // 
             this.usersAdminCidadeComboBox.DataSource = this.cidadesBindingSource;
@@ -173,11 +178,12 @@
             this.usersAdminCidadeComboBox.Name = "usersAdminCidadeComboBox";
             this.usersAdminCidadeComboBox.Size = new System.Drawing.Size(433, 32);
             this.usersAdminCidadeComboBox.TabIndex = 63;
-            this.usersAdminCidadeComboBox.ValueMember = "Nome";
+            this.usersAdminCidadeComboBox.ValueMember = "Estado";
             // 
-            // usuariosBindingSource
+            // cidadesBindingSource
             // 
-            this.usuariosBindingSource.DataMember = "Usuarios";
+            this.cidadesBindingSource.DataMember = "Cidades";
+            this.cidadesBindingSource.DataSource = this.igrejafont11DataSet;
             // 
             // cellMembersLabel
             // 
@@ -202,7 +208,8 @@
             this.igrejaDataGridViewTextBoxColumn,
             this.roleDataGridViewTextBoxColumn,
             this.cidadeDataGridViewTextBoxColumn,
-            this.estadoDataGridViewTextBoxColumn});
+            this.estadoDataGridViewTextBoxColumn,
+            this.Senha});
             this.usersAdminDataGridView.DataSource = this.usuariosBindingSource1;
             this.usersAdminDataGridView.Location = new System.Drawing.Point(12, 297);
             this.usersAdminDataGridView.Name = "usersAdminDataGridView";
@@ -211,54 +218,10 @@
             this.usersAdminDataGridView.TabIndex = 61;
             this.usersAdminDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.usersAdminDataGridView_CellClick);
             // 
-            // nomeDataGridViewTextBoxColumn
-            // 
-            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "Nome";
-            this.nomeDataGridViewTextBoxColumn.HeaderText = "Nome";
-            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
-            this.nomeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nomeDataGridViewTextBoxColumn.Width = 300;
-            // 
-            // igrejaDataGridViewTextBoxColumn
-            // 
-            this.igrejaDataGridViewTextBoxColumn.DataPropertyName = "Igreja";
-            this.igrejaDataGridViewTextBoxColumn.HeaderText = "Igreja";
-            this.igrejaDataGridViewTextBoxColumn.Name = "igrejaDataGridViewTextBoxColumn";
-            this.igrejaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.igrejaDataGridViewTextBoxColumn.Width = 300;
-            // 
-            // roleDataGridViewTextBoxColumn
-            // 
-            this.roleDataGridViewTextBoxColumn.DataPropertyName = "Role";
-            this.roleDataGridViewTextBoxColumn.HeaderText = "Função";
-            this.roleDataGridViewTextBoxColumn.Name = "roleDataGridViewTextBoxColumn";
-            this.roleDataGridViewTextBoxColumn.ReadOnly = true;
-            this.roleDataGridViewTextBoxColumn.Width = 300;
-            // 
-            // cidadeDataGridViewTextBoxColumn
-            // 
-            this.cidadeDataGridViewTextBoxColumn.DataPropertyName = "Cidade";
-            this.cidadeDataGridViewTextBoxColumn.HeaderText = "Cidade";
-            this.cidadeDataGridViewTextBoxColumn.Name = "cidadeDataGridViewTextBoxColumn";
-            this.cidadeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.cidadeDataGridViewTextBoxColumn.Width = 300;
-            // 
-            // estadoDataGridViewTextBoxColumn
-            // 
-            this.estadoDataGridViewTextBoxColumn.DataPropertyName = "Estado";
-            this.estadoDataGridViewTextBoxColumn.HeaderText = "Estado";
-            this.estadoDataGridViewTextBoxColumn.Name = "estadoDataGridViewTextBoxColumn";
-            this.estadoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // usuariosBindingSource1
             // 
             this.usuariosBindingSource1.DataMember = "Usuarios";
             this.usuariosBindingSource1.DataSource = this.igrejafont11DataSet;
-            // 
-            // igrejafont11DataSet
-            // 
-            this.igrejafont11DataSet.DataSetName = "igrejafont11DataSet";
-            this.igrejafont11DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // usersAdminLoginTextBox
             // 
@@ -283,6 +246,7 @@
             // estadosBindingSource
             // 
             this.estadosBindingSource.DataMember = "Estados";
+            this.estadosBindingSource.DataSource = this.igrejafont11DataSet;
             // 
             // label2
             // 
@@ -363,6 +327,65 @@
             // 
             this.usuariosTableAdapter.ClearBeforeFill = true;
             // 
+            // igrejasTableAdapter
+            // 
+            this.igrejasTableAdapter.ClearBeforeFill = true;
+            // 
+            // cidadesTableAdapter
+            // 
+            this.cidadesTableAdapter.ClearBeforeFill = true;
+            // 
+            // estadosTableAdapter
+            // 
+            this.estadosTableAdapter.ClearBeforeFill = true;
+            // 
+            // nomeDataGridViewTextBoxColumn
+            // 
+            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "Nome";
+            this.nomeDataGridViewTextBoxColumn.HeaderText = "Nome";
+            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
+            this.nomeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nomeDataGridViewTextBoxColumn.Width = 300;
+            // 
+            // igrejaDataGridViewTextBoxColumn
+            // 
+            this.igrejaDataGridViewTextBoxColumn.DataPropertyName = "Igreja";
+            this.igrejaDataGridViewTextBoxColumn.HeaderText = "Igreja";
+            this.igrejaDataGridViewTextBoxColumn.Name = "igrejaDataGridViewTextBoxColumn";
+            this.igrejaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.igrejaDataGridViewTextBoxColumn.Width = 300;
+            // 
+            // roleDataGridViewTextBoxColumn
+            // 
+            this.roleDataGridViewTextBoxColumn.DataPropertyName = "Role";
+            this.roleDataGridViewTextBoxColumn.HeaderText = "Role";
+            this.roleDataGridViewTextBoxColumn.Name = "roleDataGridViewTextBoxColumn";
+            this.roleDataGridViewTextBoxColumn.ReadOnly = true;
+            this.roleDataGridViewTextBoxColumn.Width = 300;
+            // 
+            // cidadeDataGridViewTextBoxColumn
+            // 
+            this.cidadeDataGridViewTextBoxColumn.DataPropertyName = "Cidade";
+            this.cidadeDataGridViewTextBoxColumn.HeaderText = "Cidade";
+            this.cidadeDataGridViewTextBoxColumn.Name = "cidadeDataGridViewTextBoxColumn";
+            this.cidadeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cidadeDataGridViewTextBoxColumn.Width = 300;
+            // 
+            // estadoDataGridViewTextBoxColumn
+            // 
+            this.estadoDataGridViewTextBoxColumn.DataPropertyName = "Estado";
+            this.estadoDataGridViewTextBoxColumn.HeaderText = "Estado";
+            this.estadoDataGridViewTextBoxColumn.Name = "estadoDataGridViewTextBoxColumn";
+            this.estadoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // Senha
+            // 
+            this.Senha.DataPropertyName = "Senha";
+            this.Senha.HeaderText = "Senha";
+            this.Senha.Name = "Senha";
+            this.Senha.ReadOnly = true;
+            this.Senha.Visible = false;
+            // 
             // UserAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -397,11 +420,10 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormUserAdd_Load);
             ((System.ComponentModel.ISupportInitialize)(this.igrejasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.igrejafont11DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cidadesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersAdminDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.igrejafont11DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.estadosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -412,21 +434,17 @@
 
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.BindingSource igrejasBindingSource;
         private System.Windows.Forms.ComboBox usersAdminIgrejaComboBox;
         private System.Windows.Forms.ComboBox usersAdminRoleComboBox;
         private System.Windows.Forms.TextBox usersAdminSenhaTextBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.BindingSource cidadesBindingSource;
         private System.Windows.Forms.ComboBox usersAdminCidadeComboBox;
-        private System.Windows.Forms.BindingSource usuariosBindingSource;
         private System.Windows.Forms.Label cellMembersLabel;
         private System.Windows.Forms.DataGridView usersAdminDataGridView;
         private System.Windows.Forms.TextBox usersAdminLoginTextBox;
         private System.Windows.Forms.ComboBox usersAdminEstadoComboBox;
-        private System.Windows.Forms.BindingSource estadosBindingSource;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button usersAdminCancelButton;
@@ -435,12 +453,19 @@
         private System.Windows.Forms.Button usersAdminAddButton;
         private System.Windows.Forms.Button usersAdminEditButton;
         private igrejafont11DataSet igrejafont11DataSet;
-        private System.Windows.Forms.BindingSource usuariosBindingSource1;
         private igrejafont11DataSetTableAdapters.UsuariosTableAdapter usuariosTableAdapter;
+        private System.Windows.Forms.BindingSource usuariosBindingSource1;
+        private System.Windows.Forms.BindingSource igrejasBindingSource;
+        private igrejafont11DataSetTableAdapters.IgrejasTableAdapter igrejasTableAdapter;
+        private System.Windows.Forms.BindingSource cidadesBindingSource;
+        private igrejafont11DataSetTableAdapters.CidadesTableAdapter cidadesTableAdapter;
+        private System.Windows.Forms.BindingSource estadosBindingSource;
+        private igrejafont11DataSetTableAdapters.EstadosTableAdapter estadosTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn igrejaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn roleDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cidadeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn estadoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Senha;
     }
 }

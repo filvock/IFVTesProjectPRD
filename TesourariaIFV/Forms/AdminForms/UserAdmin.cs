@@ -33,7 +33,13 @@ namespace TesourariaIFV.Forms.Admin_Forms
 
 
         private void FormUserAdd_Load(object sender, EventArgs e)
-        {            
+        {
+            // TODO: This line of code loads data into the 'igrejafont11DataSet.Estados' table. You can move, or remove it, as needed.
+            this.estadosTableAdapter.Fill(this.igrejafont11DataSet.Estados);
+            // TODO: This line of code loads data into the 'igrejafont11DataSet.Cidades' table. You can move, or remove it, as needed.
+            this.cidadesTableAdapter.Fill(this.igrejafont11DataSet.Cidades);
+            // TODO: This line of code loads data into the 'igrejafont11DataSet.Igrejas' table. You can move, or remove it, as needed.
+            this.igrejasTableAdapter.Fill(this.igrejafont11DataSet.Igrejas);
             this.usuariosTableAdapter.Fill(this.igrejafont11DataSet.Usuarios);
             cellMembersLabel.Text = usersAdminDataGridView.RowCount.ToString();
 
@@ -58,8 +64,8 @@ namespace TesourariaIFV.Forms.Admin_Forms
             {
                 usersAdminLoginTextBox.Enabled = true;
                 usersAdminSenhaTextBox.Enabled = true;
-                usersAdminCidadeComboBox.Enabled = true;
-                usersAdminEstadoComboBox.Enabled = true;
+                //usersAdminCidadeComboBox.Enabled = true;
+                //usersAdminEstadoComboBox.Enabled = true;
                 usersAdminIgrejaComboBox.Enabled = true;
                 usersAdminRoleComboBox.Enabled = true;
                 isEdit = 1;
@@ -70,8 +76,8 @@ namespace TesourariaIFV.Forms.Admin_Forms
         {
             usersAdminLoginTextBox.Enabled = true;
             usersAdminSenhaTextBox.Enabled = true;
-            usersAdminCidadeComboBox.Enabled = true;
-            usersAdminEstadoComboBox.Enabled = true;
+            //usersAdminCidadeComboBox.Enabled = true;
+            //usersAdminEstadoComboBox.Enabled = true;
             usersAdminIgrejaComboBox.Enabled = true;
             usersAdminRoleComboBox.Enabled = true;
             usersAdminIgrejaComboBox.Text = "";
@@ -137,9 +143,7 @@ namespace TesourariaIFV.Forms.Admin_Forms
         private void usersAdminSaveButton_Click(object sender, EventArgs e)
         {
             TesourariaIFV.igrejafont11DataSet.UsuariosRow newRow = igrejafont11DataSet.Usuarios.NewUsuariosRow();
-            igrejafont11DataSetTableAdapters.UsuariosTableAdapter tableAdapter = new igrejafont11DataSetTableAdapters.UsuariosTableAdapter();
-
-
+            
             if (isEdit == 0)
             {
                 newRow.Nome = usersAdminLoginTextBox.Text;
@@ -153,9 +157,9 @@ namespace TesourariaIFV.Forms.Admin_Forms
 
                 try
                 {
-                    usuariosBindingSource.EndEdit();
+                    usuariosBindingSource1.EndEdit();
                     igrejafont11DataSet.Usuarios.AddUsuariosRow(newRow);
-                    tableAdapter.Update(igrejafont11DataSet.Usuarios);
+                    usuariosTableAdapter.Update(igrejafont11DataSet.Usuarios);
                     usersAdminLoginTextBox.Enabled = false;
                     usersAdminSenhaTextBox.Enabled = false;
                     usersAdminCidadeComboBox.Enabled = false;
@@ -184,8 +188,10 @@ namespace TesourariaIFV.Forms.Admin_Forms
                     usersAdminDataGridView.CurrentRow.Cells[3].Value = usersAdminCidadeComboBox.Text;
                     usersAdminDataGridView.CurrentRow.Cells[4].Value = usersAdminEstadoComboBox.Text;
 
-                    usuariosBindingSource.EndEdit();
-                    tableAdapter.Update(igrejafont11DataSet.Usuarios);
+                    if (usersAdminSenhaTextBox.Text.Length != 0) usersAdminDataGridView.CurrentRow.Cells[5].Value = usersAdminSenhaTextBox.Text;
+
+                    usuariosBindingSource1.EndEdit();
+                    usuariosTableAdapter.Update(igrejafont11DataSet.Usuarios);
                     usersAdminLoginTextBox.Enabled = false;
                     usersAdminSenhaTextBox.Enabled = false;
                     usersAdminCidadeComboBox.Enabled = false;
@@ -215,6 +221,12 @@ namespace TesourariaIFV.Forms.Admin_Forms
         {
             this.Close();
 
+        }
+
+        private void usersAdminIgrejaComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cidadesBindingSource.Filter = "Nome ='" + usersAdminIgrejaComboBox.SelectedValue + "'";
+            estadosBindingSource.Filter = "sigla ='" + usersAdminCidadeComboBox.SelectedValue + "'"; 
         }
     }
 }

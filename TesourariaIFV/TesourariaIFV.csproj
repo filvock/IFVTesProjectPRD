@@ -90,6 +90,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\AdminForms\PlanoDeContasSaidaAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\PlanoDeContasSaidaAdmin.Designer.cs">
+      <DependentUpon>PlanoDeContasSaidaAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FinancialForms\AdminEntriesDataGridView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,16 +120,16 @@
     <Compile Include="Forms\Old\FormCidadeRemove.Designer.cs">
       <DependentUpon>FormCidadeRemove.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AdminForms\FormGrupoPlanoDeContasAdd.cs">
+    <Compile Include="Forms\Old\FormGrupoPlanoDeContasAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AdminForms\FormGrupoPlanoDeContasAdd.Designer.cs">
+    <Compile Include="Forms\Old\FormGrupoPlanoDeContasAdd.Designer.cs">
       <DependentUpon>FormGrupoPlanoDeContasAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AdminForms\FormGrupoPlanoDeContasRemove.cs">
+    <Compile Include="Forms\Old\FormGrupoPlanoDeContasRemove.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AdminForms\FormGrupoPlanoDeContasRemove.Designer.cs">
+    <Compile Include="Forms\Old\FormGrupoPlanoDeContasRemove.Designer.cs">
       <DependentUpon>FormGrupoPlanoDeContasRemove.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\AdminForms\IgrejasAdmin.cs">
@@ -138,17 +144,17 @@
     <Compile Include="Forms\Old\FormIgrejasRemove.Designer.cs">
       <DependentUpon>FormIgrejasRemove.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AdminForms\FormPlanoDeContasRemove.cs">
+    <Compile Include="Forms\Old\FormPlanoDeContasRemove.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AdminForms\FormPlanoDeContasRemove.Designer.cs">
+    <Compile Include="Forms\Old\FormPlanoDeContasRemove.Designer.cs">
       <DependentUpon>FormPlanoDeContasRemove.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AdminForms\FormPlanoDeContasAdd.cs">
+    <Compile Include="Forms\AdminForms\PlanoDeContasEntradaAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AdminForms\FormPlanoDeContasAdd.Designer.cs">
-      <DependentUpon>FormPlanoDeContasAdd.cs</DependentUpon>
+    <Compile Include="Forms\AdminForms\PlanoDeContasEntradaAdmin.Designer.cs">
+      <DependentUpon>PlanoDeContasEntradaAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\AdminForms\UserAdmin.cs">
       <SubType>Form</SubType>
@@ -286,46 +292,58 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\AdminForms\PlanoDeContasSaidaAdmin.resx">
+      <DependentUpon>PlanoDeContasSaidaAdmin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FinancialForms\AdminEntriesDataGridView.resx">
       <DependentUpon>AdminEntriesDataGridView.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FinancialForms\AdminEntriesForm.resx">
       <DependentUpon>AdminEntriesForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminForms\CidadeAdmin.resx">
       <DependentUpon>CidadeAdmin.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Old\FormCidadeRemove.resx">
       <DependentUpon>FormCidadeRemove.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminForms\IgrejasAdmin.resx">
       <DependentUpon>IgrejasAdmin.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Old\FormIgrejasRemove.resx">
       <DependentUpon>FormIgrejasRemove.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminForms\UserAdmin.resx">
       <DependentUpon>UserAdmin.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Old\FormUserRemove.resx">
       <DependentUpon>FormUserRemove.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FinancialForms\TransferForm.resx">
       <DependentUpon>TransferForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FinancialForms\FinControlForm.resx">
       <DependentUpon>FinControlForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminForms\FormGrupoPlanoDeContasAdd.resx">
+    <EmbeddedResource Include="Forms\Old\FormGrupoPlanoDeContasAdd.resx">
       <DependentUpon>FormGrupoPlanoDeContasAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminForms\FormGrupoPlanoDeContasRemove.resx">
+    <EmbeddedResource Include="Forms\Old\FormGrupoPlanoDeContasRemove.resx">
       <DependentUpon>FormGrupoPlanoDeContasRemove.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminForms\FormPlanoDeContasAdd.resx">
-      <DependentUpon>FormPlanoDeContasAdd.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\AdminForms\PlanoDeContasEntradaAdmin.resx">
+      <DependentUpon>PlanoDeContasEntradaAdmin.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AdminForms\FormPlanoDeContasRemove.resx">
+    <EmbeddedResource Include="Forms\Old\FormPlanoDeContasRemove.resx">
       <DependentUpon>FormPlanoDeContasRemove.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">
@@ -333,6 +351,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MembersControlForm\EnterContribForm.resx">
       <DependentUpon>EnterContribForm.cs</DependentUpon>

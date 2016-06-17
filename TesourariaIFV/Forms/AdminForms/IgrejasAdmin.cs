@@ -50,7 +50,7 @@ namespace TesourariaIFV.Forms.Admin_Forms
             {
                 igrejasAdminTextBox.Enabled = true;
                 igrejasAdminCidadeComboBox.Enabled = true;
-                igrejasAdminEstadoComboBox.Enabled = true;
+                //igrejasAdminEstadoComboBox.Enabled = true;
                 isEdit = 1;
             }
         }
@@ -59,7 +59,7 @@ namespace TesourariaIFV.Forms.Admin_Forms
         {
             igrejasAdminTextBox.Enabled = true;
             igrejasAdminCidadeComboBox.Enabled = true;
-            igrejasAdminEstadoComboBox.Enabled = true;
+            //igrejasAdminEstadoComboBox.Enabled = true;
             igrejasAdminEstadoComboBox.Text = "";
             igrejasAdminTextBox.Text = "";
             igrejasAdminCidadeComboBox.Text = "";
@@ -164,6 +164,11 @@ namespace TesourariaIFV.Forms.Admin_Forms
             igrejasAdminCidadeComboBox.Text = igrejasAdminDataGridView.CurrentRow.Cells[1].Value.ToString();
             igrejasAdminEstadoComboBox.Text = igrejasAdminDataGridView.CurrentRow.Cells[2].Value.ToString();
 
+        }
+
+        private void igrejasAdminCidadeComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            estadosBindingSource.Filter = "sigla ='" + igrejasAdminCidadeComboBox.SelectedValue +"'";
         }
     }
 }

@@ -4,7 +4,7 @@
   <description asmv2:iconFile="output.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="TesourariaIFV" version="2.0.0.1" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="TesourariaIFV" version="2.0.0.2" language="neutral" processorArchitecture="msil" />
     <commandLine file="TesourariaIFV.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -82,14 +82,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TesourariaIFV.exe" size="909312">
-      <assemblyIdentity name="TesourariaIFV" version="2.0.0.1" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TesourariaIFV.exe" size="941056">
+      <assemblyIdentity name="TesourariaIFV" version="2.0.0.2" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>FinaPGYzEqdfHCRgrQhiIioSRId3bSmG7Deig5Ducf4=</dsig:DigestValue>
+        <dsig:DigestValue>2AstcGsWyoBUSWX5OSgGHlkwJkZQJW2esAOjh+g3LNc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

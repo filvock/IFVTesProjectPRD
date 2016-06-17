@@ -39,6 +39,9 @@
             this.igrejafont11DataSet = new TesourariaIFV.igrejafont11DataSet();
             this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usuariosTableAdapter = new TesourariaIFV.igrejafont11DataSetTableAdapters.UsuariosTableAdapter();
+            this.estadosTableAdapter = new TesourariaIFV.igrejafont11DataSetTableAdapters.EstadosTableAdapter();
+
+            this.estadosBindingSource= new System.Windows.Forms.BindingSource(this.components);
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.formLoginNewPwTextBox = new System.Windows.Forms.TextBox();
@@ -46,6 +49,8 @@
             this.versionLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.igrejafont11DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estadosBindingSource)).BeginInit();
+
             this.SuspendLayout();
             // 
             // label1
@@ -117,10 +122,14 @@
             // 
             this.usuariosBindingSource.DataMember = "Usuarios";
             this.usuariosBindingSource.DataSource = this.igrejafont11DataSet;
+            this.estadosBindingSource.DataMember = "Estados";
+            this.estadosBindingSource.DataSource = this.igrejafont11DataSet;
             // 
             // usuariosTableAdapter
             // 
             this.usuariosTableAdapter.ClearBeforeFill = true;
+            this.estadosTableAdapter.ClearBeforeFill = true;
+
             // 
             // label3
             // 
@@ -199,6 +208,7 @@
             this.Load += new System.EventHandler(this.LoginForm_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.igrejafont11DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estadosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -220,8 +230,7 @@
         private System.Windows.Forms.TextBox formLoginNewPwTextBox;
         private System.Windows.Forms.TextBox formLoginNewPw2TextBox;
         private System.Windows.Forms.Label versionLabel;
-        //private igrejafont11DataSet igrejafont11DataSet;
-        //private System.Windows.Forms.BindingSource usuariosBindingSource;
-        //private igrejafont11DataSetTableAdapters.UsuariosTableAdapter usuariosTableAdapter;
+        private System.Windows.Forms.BindingSource estadosBindingSource;
+        private igrejafont11DataSetTableAdapters.EstadosTableAdapter estadosTableAdapter;
     }
 }

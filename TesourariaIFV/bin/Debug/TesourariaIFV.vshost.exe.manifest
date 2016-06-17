@@ -82,14 +82,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TesourariaIFV.exe" size="909312">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TesourariaIFV.exe" size="941056">
       <assemblyIdentity name="TesourariaIFV" version="2.0.0.1" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>FinaPGYzEqdfHCRgrQhiIioSRId3bSmG7Deig5Ducf4=</dsig:DigestValue>
+        <dsig:DigestValue>34Er09T6zyQ5dl/wscKf/4k3jnHCkSBRBg8kid+5O8M=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

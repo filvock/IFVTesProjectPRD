@@ -1013,6 +1013,8 @@ namespace TesourariaIFV {
             
             private global::System.Data.DataColumn columnNome;
             
+            private global::System.Data.DataColumn columnRegiao;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public EstadosDataTable() {
@@ -1064,6 +1066,14 @@ namespace TesourariaIFV {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn RegiaoColumn {
+                get {
+                    return this.columnRegiao;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1099,11 +1109,12 @@ namespace TesourariaIFV {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public EstadosRow AddEstadosRow(string Sigla, string Nome) {
+            public EstadosRow AddEstadosRow(string Sigla, string Nome, string Regiao) {
                 EstadosRow rowEstadosRow = ((EstadosRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Sigla,
-                        Nome};
+                        Nome,
+                        Regiao};
                 rowEstadosRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowEstadosRow);
                 return rowEstadosRow;
@@ -1135,6 +1146,7 @@ namespace TesourariaIFV {
             internal void InitVars() {
                 this.columnSigla = base.Columns["Sigla"];
                 this.columnNome = base.Columns["Nome"];
+                this.columnRegiao = base.Columns["Regiao"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1144,6 +1156,8 @@ namespace TesourariaIFV {
                 base.Columns.Add(this.columnSigla);
                 this.columnNome = new global::System.Data.DataColumn("Nome", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNome);
+                this.columnRegiao = new global::System.Data.DataColumn("Regiao", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRegiao);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnSigla}, true));
                 this.columnSigla.AllowDBNull = false;
@@ -1151,6 +1165,7 @@ namespace TesourariaIFV {
                 this.columnSigla.MaxLength = 10;
                 this.columnNome.AllowDBNull = false;
                 this.columnNome.MaxLength = 50;
+                this.columnRegiao.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5339,6 +5354,34 @@ namespace TesourariaIFV {
                     this[this.tableEstados.NomeColumn] = value;
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Regiao {
+                get {
+                    try {
+                        return ((string)(this[this.tableEstados.RegiaoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Regiao\' in table \'Estados\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableEstados.RegiaoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsRegiaoNull() {
+                return this.IsNull(this.tableEstados.RegiaoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetRegiaoNull() {
+                this[this.tableEstados.RegiaoColumn] = global::System.Convert.DBNull;
+            }
         }
         
         /// <summary>
@@ -7597,31 +7640,38 @@ namespace TesourariaIFV.igrejafont11DataSetTableAdapters {
             tableMapping.DataSetTable = "Estados";
             tableMapping.ColumnMappings.Add("Sigla", "Sigla");
             tableMapping.ColumnMappings.Add("Nome", "Nome");
+            tableMapping.ColumnMappings.Add("Regiao", "Regiao");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Estados] WHERE (([Sigla] = @Original_Sigla) AND ([Nome] = @Ori" +
-                "ginal_Nome))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [Estados] WHERE (([Sigla] = @Original_Sigla) AND ([Nome] = @Original_" +
+                "Nome) AND ((@IsNull_Regiao = 1 AND [Regiao] IS NULL) OR ([Regiao] = @Original_Re" +
+                "giao)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Sigla", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sigla", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nome", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nome", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Regiao", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Regiao", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Regiao", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Regiao", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Estados] ([Sigla], [Nome]) VALUES (@Sigla, @Nome);\r\nSELECT Sig" +
-                "la, Nome FROM Estados WHERE (Sigla = @Sigla)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [Estados] ([Sigla], [Nome], [Regiao]) VALUES (@Sigla, @Nome, @Regiao)" +
+                ";\r\nSELECT Sigla, Nome, Regiao FROM Estados WHERE (Sigla = @Sigla)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sigla", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sigla", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nome", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nome", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Regiao", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Regiao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Estados] SET [Sigla] = @Sigla, [Nome] = @Nome WHERE (([Sigla] = @Or" +
-                "iginal_Sigla) AND ([Nome] = @Original_Nome));\r\nSELECT Sigla, Nome FROM Estados W" +
-                "HERE (Sigla = @Sigla)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Estados] SET [Sigla] = @Sigla, [Nome] = @Nome, [Regiao] = @Regiao WHERE (([Sigla] = @Original_Sigla) AND ([Nome] = @Original_Nome) AND ((@IsNull_Regiao = 1 AND [Regiao] IS NULL) OR ([Regiao] = @Original_Regiao)));
+SELECT Sigla, Nome, Regiao FROM Estados WHERE (Sigla = @Sigla)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sigla", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sigla", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nome", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nome", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Regiao", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Regiao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Sigla", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sigla", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nome", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nome", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Regiao", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Regiao", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Regiao", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Regiao", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7637,7 +7687,7 @@ namespace TesourariaIFV.igrejafont11DataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Sigla, Nome FROM dbo.Estados";
+            this._commandCollection[0].CommandText = "SELECT Sigla, Nome, Regiao FROM Estados";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -7698,7 +7748,7 @@ namespace TesourariaIFV.igrejafont11DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_Sigla, string Original_Nome) {
+        public virtual int Delete(string Original_Sigla, string Original_Nome, string Original_Regiao) {
             if ((Original_Sigla == null)) {
                 throw new global::System.ArgumentNullException("Original_Sigla");
             }
@@ -7710,6 +7760,14 @@ namespace TesourariaIFV.igrejafont11DataSetTableAdapters {
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Nome));
+            }
+            if ((Original_Regiao == null)) {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_Regiao));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -7731,7 +7789,7 @@ namespace TesourariaIFV.igrejafont11DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Sigla, string Nome) {
+        public virtual int Insert(string Sigla, string Nome, string Regiao) {
             if ((Sigla == null)) {
                 throw new global::System.ArgumentNullException("Sigla");
             }
@@ -7743,6 +7801,12 @@ namespace TesourariaIFV.igrejafont11DataSetTableAdapters {
             }
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Nome));
+            }
+            if ((Regiao == null)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Regiao));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -7764,7 +7828,7 @@ namespace TesourariaIFV.igrejafont11DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Sigla, string Nome, string Original_Sigla, string Original_Nome) {
+        public virtual int Update(string Sigla, string Nome, string Regiao, string Original_Sigla, string Original_Nome, string Original_Regiao) {
             if ((Sigla == null)) {
                 throw new global::System.ArgumentNullException("Sigla");
             }
@@ -7777,17 +7841,31 @@ namespace TesourariaIFV.igrejafont11DataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Nome));
             }
+            if ((Regiao == null)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Regiao));
+            }
             if ((Original_Sigla == null)) {
                 throw new global::System.ArgumentNullException("Original_Sigla");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Original_Sigla));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_Sigla));
             }
             if ((Original_Nome == null)) {
                 throw new global::System.ArgumentNullException("Original_Nome");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_Nome));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_Nome));
+            }
+            if ((Original_Regiao == null)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_Regiao));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -7809,8 +7887,8 @@ namespace TesourariaIFV.igrejafont11DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Nome, string Original_Sigla, string Original_Nome) {
-            return this.Update(Original_Sigla, Nome, Original_Sigla, Original_Nome);
+        public virtual int Update(string Nome, string Regiao, string Original_Sigla, string Original_Nome, string Original_Regiao) {
+            return this.Update(Original_Sigla, Nome, Regiao, Original_Sigla, Original_Nome, Original_Regiao);
         }
     }
     

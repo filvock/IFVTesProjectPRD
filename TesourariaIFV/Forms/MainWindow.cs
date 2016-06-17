@@ -37,18 +37,6 @@ namespace TesourariaIFV.Forms
             financialForm.Show();
         }
 
-        private void adicionarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            TesourariaIFV.FormPlanoDeContasAdd planoDeContasAdd = new FormPlanoDeContasAdd();
-            planoDeContasAdd.Show();
-        }
-
-        private void removerToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            TesourariaIFV.FormPlanoDeContasRemove planoDeContasRemove = new FormPlanoDeContasRemove();
-            planoDeContasRemove.Show();
-        }
-
         private void adicionarGrupoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             TesourariaIFV.FormGrupoPlanoDeContasAdd grupoPlanoDeContasAdd = new FormGrupoPlanoDeContasAdd();
@@ -165,6 +153,18 @@ namespace TesourariaIFV.Forms
         private void usuáriosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             TesourariaIFV.Forms.Admin_Forms.UserAdmin window = new Admin_Forms.UserAdmin();
+            window.Show();
+        }
+
+        private void adicionarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TesourariaIFV.Forms.Admin_Forms.PlanoDeContasEntradaAdmin window = new Admin_Forms.PlanoDeContasEntradaAdmin();
+            window.Show();
+        }
+
+        private void removerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TesourariaIFV.Forms.Admin_Forms.PlanoDeContasSaidaAdmin window = new Admin_Forms.PlanoDeContasSaidaAdmin();
             window.Show();
         }
     }

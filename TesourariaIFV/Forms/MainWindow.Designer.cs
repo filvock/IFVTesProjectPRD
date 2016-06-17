@@ -34,9 +34,6 @@
             this.cidadesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.igrejasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gruposDePlanosDeContasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.adicionarGrupoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.removerGrupoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.planoDeContasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adicionarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -79,7 +76,6 @@
             this.cidadesToolStripMenuItem1,
             this.igrejasToolStripMenuItem,
             this.usuáriosToolStripMenuItem,
-            this.gruposDePlanosDeContasToolStripMenuItem,
             this.planoDeContasToolStripMenuItem});
             this.administraçãoToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 13F);
             this.administraçãoToolStripMenuItem.Name = "administraçãoToolStripMenuItem";
@@ -89,46 +85,23 @@
             // cidadesToolStripMenuItem1
             // 
             this.cidadesToolStripMenuItem1.Name = "cidadesToolStripMenuItem1";
-            this.cidadesToolStripMenuItem1.Size = new System.Drawing.Size(309, 30);
+            this.cidadesToolStripMenuItem1.Size = new System.Drawing.Size(213, 30);
             this.cidadesToolStripMenuItem1.Text = "Cidades";
             this.cidadesToolStripMenuItem1.Click += new System.EventHandler(this.cidadesToolStripMenuItem1_Click);
             // 
             // igrejasToolStripMenuItem
             // 
             this.igrejasToolStripMenuItem.Name = "igrejasToolStripMenuItem";
-            this.igrejasToolStripMenuItem.Size = new System.Drawing.Size(309, 30);
+            this.igrejasToolStripMenuItem.Size = new System.Drawing.Size(213, 30);
             this.igrejasToolStripMenuItem.Text = "Igrejas";
             this.igrejasToolStripMenuItem.Click += new System.EventHandler(this.igrejasToolStripMenuItem_Click);
             // 
             // usuáriosToolStripMenuItem
             // 
             this.usuáriosToolStripMenuItem.Name = "usuáriosToolStripMenuItem";
-            this.usuáriosToolStripMenuItem.Size = new System.Drawing.Size(309, 30);
+            this.usuáriosToolStripMenuItem.Size = new System.Drawing.Size(213, 30);
             this.usuáriosToolStripMenuItem.Text = "Usuários";
             this.usuáriosToolStripMenuItem.Click += new System.EventHandler(this.usuáriosToolStripMenuItem_Click);
-            // 
-            // gruposDePlanosDeContasToolStripMenuItem
-            // 
-            this.gruposDePlanosDeContasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.adicionarGrupoToolStripMenuItem,
-            this.removerGrupoToolStripMenuItem});
-            this.gruposDePlanosDeContasToolStripMenuItem.Name = "gruposDePlanosDeContasToolStripMenuItem";
-            this.gruposDePlanosDeContasToolStripMenuItem.Size = new System.Drawing.Size(309, 30);
-            this.gruposDePlanosDeContasToolStripMenuItem.Text = "Grupos de Planos de Contas";
-            // 
-            // adicionarGrupoToolStripMenuItem
-            // 
-            this.adicionarGrupoToolStripMenuItem.Name = "adicionarGrupoToolStripMenuItem";
-            this.adicionarGrupoToolStripMenuItem.Size = new System.Drawing.Size(214, 30);
-            this.adicionarGrupoToolStripMenuItem.Text = "Adicionar Grupo";
-            this.adicionarGrupoToolStripMenuItem.Click += new System.EventHandler(this.adicionarGrupoToolStripMenuItem_Click);
-            // 
-            // removerGrupoToolStripMenuItem
-            // 
-            this.removerGrupoToolStripMenuItem.Name = "removerGrupoToolStripMenuItem";
-            this.removerGrupoToolStripMenuItem.Size = new System.Drawing.Size(214, 30);
-            this.removerGrupoToolStripMenuItem.Text = "Remover Grupo";
-            this.removerGrupoToolStripMenuItem.Click += new System.EventHandler(this.removerGrupoToolStripMenuItem_Click);
             // 
             // planoDeContasToolStripMenuItem
             // 
@@ -136,21 +109,21 @@
             this.adicionarToolStripMenuItem,
             this.removerToolStripMenuItem});
             this.planoDeContasToolStripMenuItem.Name = "planoDeContasToolStripMenuItem";
-            this.planoDeContasToolStripMenuItem.Size = new System.Drawing.Size(309, 30);
+            this.planoDeContasToolStripMenuItem.Size = new System.Drawing.Size(213, 30);
             this.planoDeContasToolStripMenuItem.Text = "Plano de Contas";
             // 
             // adicionarToolStripMenuItem
             // 
             this.adicionarToolStripMenuItem.Name = "adicionarToolStripMenuItem";
-            this.adicionarToolStripMenuItem.Size = new System.Drawing.Size(211, 30);
-            this.adicionarToolStripMenuItem.Text = "Adicionar Conta";
+            this.adicionarToolStripMenuItem.Size = new System.Drawing.Size(202, 30);
+            this.adicionarToolStripMenuItem.Text = "Contas Crédito";
             this.adicionarToolStripMenuItem.Click += new System.EventHandler(this.adicionarToolStripMenuItem_Click);
             // 
             // removerToolStripMenuItem
             // 
             this.removerToolStripMenuItem.Name = "removerToolStripMenuItem";
-            this.removerToolStripMenuItem.Size = new System.Drawing.Size(211, 30);
-            this.removerToolStripMenuItem.Text = "Remover Conta";
+            this.removerToolStripMenuItem.Size = new System.Drawing.Size(202, 30);
+            this.removerToolStripMenuItem.Text = "Contas Débito";
             this.removerToolStripMenuItem.Click += new System.EventHandler(this.removerToolStripMenuItem_Click);
             // 
             // tesourariaToolStripMenuItem
@@ -324,9 +297,6 @@
         private System.Windows.Forms.ToolStripMenuItem loginLogoutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem adicionarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem removerToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem gruposDePlanosDeContasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem adicionarGrupoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem removerGrupoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem livroCaixaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem planoDeContasEntradaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem totaisPorPeríodoToolStripMenuItem;
