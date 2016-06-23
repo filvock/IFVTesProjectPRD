@@ -287,7 +287,7 @@
         private igrejafont11DataSet igrejafont11DataSet;
         private System.Windows.Forms.BindingSource membrosBindingSource;
         private igrejafont11DataSetTableAdapters.MembrosTableAdapter membrosTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codMembroDataGridViewTextBoxColumn;
+        //private System.Windows.Forms.DataGridViewTextBoxColumn codMembroDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button membersListAddButton;
         private System.Windows.Forms.Button membersListEditButton;
         private System.Windows.Forms.Button membersListDeleteButton;
