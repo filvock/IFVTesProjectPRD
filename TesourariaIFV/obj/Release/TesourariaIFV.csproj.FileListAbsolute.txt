@@ -132,6 +132,7 @@ D:\drive\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Release\pt\Microsoft.SqlServe
 D:\drive\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Release\ru\Microsoft.SqlServer.Types.resources.dll
 D:\drive\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Release\zh-Hans\Microsoft.SqlServer.Types.resources.dll
 D:\drive\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Release\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+D:\drive\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Release\TesourariaIFV.csprojResolveAssemblyReference.cache
 D:\drive\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Release\TesourariaIFV.Forms.Admin_Forms.PlanoDeContasSaidaAdmin.resources
 D:\drive\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Release\TesourariaIFV.Forms.AdminEntriesDataGridView.resources
 D:\drive\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Release\TesourariaIFV.Forms.AdminEntriesForm.resources
@@ -169,4 +170,3 @@ D:\drive\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Release\TesourariaIFV.exe.man
 D:\drive\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Release\TesourariaIFV.application
 D:\drive\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Release\TesourariaIFV.exe
 D:\drive\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Release\TesourariaIFV.pdb
-D:\drive\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Release\TesourariaIFV.csprojResolveAssemblyReference.cache
