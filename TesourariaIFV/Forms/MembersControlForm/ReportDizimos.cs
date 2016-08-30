@@ -41,7 +41,7 @@ namespace TesourariaIFV.Forms.MembersControlForm
         {
             // TODO: This line of code loads data into the 'igrejafont11DataSet.Membros' table. You can move, or remove it, as needed.
             this.membrosTableAdapter.Fill(this.igrejafont11DataSet.Membros);
-            this.controleIndividualTableAdapter.Fill(this.igrejafont11DataSet.ControleIndividual);
+            this.controleIndividualTableAdapter.FillBy(this.igrejafont11DataSet.ControleIndividual1);
             this.igrejasTableAdapter.FillBy(this.igrejafont11DataSet.Igrejas);
 
             loginInfo info = new loginInfo();
@@ -51,6 +51,7 @@ namespace TesourariaIFV.Forms.MembersControlForm
                 reportDizimoComboBox.Visible = false;
                 label1.Visible = false;
                 membrosBindingSource.Filter = "Igreja = '" + info.GetIgreja() + "'";
+                controleIndividualBindingSource.Filter = "Igreja = '" + info.GetIgreja() + "'";
             }
             else
             {

@@ -31,7 +31,7 @@
     <ProductName>IFV Controle Financeiro</ProductName>
     <PublisherName>IFV</PublisherName>
     <SuiteName>IFV</SuiteName>
-    <ApplicationRevision>44</ApplicationRevision>
+    <ApplicationRevision>45</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -375,6 +375,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MembersControlForm\EditContrib.resx">
       <DependentUpon>EditContrib.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MembersControlForm\MembersAdminForm.resx">
       <DependentUpon>MembersAdminForm.cs</DependentUpon>

@@ -122,7 +122,6 @@ D:\drive\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\TesourariaIFV.pdb
 D:\drive\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\Microsoft.ReportViewer.Common.dll
 D:\drive\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\Microsoft.ReportViewer.WebForms.dll
 D:\drive\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\Microsoft.SqlServer.Types.dll
-D:\drive\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\Microsoft.ReportViewer.WebForms.xml
 D:\drive\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
 D:\drive\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
 D:\drive\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
@@ -171,3 +170,6 @@ D:\drive\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.exe.manif
 D:\drive\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.application
 D:\drive\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.exe
 D:\drive\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.pdb
+D:\drive\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\Microsoft.ReportViewer.DataVisualization.DLL
+D:\drive\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+D:\drive\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\Microsoft.ReportViewer.WinForms.DLL

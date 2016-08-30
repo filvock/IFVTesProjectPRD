@@ -52,7 +52,7 @@
             this.Novembro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Dezembro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.controleIndividualBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.controleIndividualTableAdapter = new TesourariaIFV.igrejafont11DataSetTableAdapters.ControleIndividualTableAdapter();
+            this.controleIndividualTableAdapter = new TesourariaIFV.igrejafont11DataSetTableAdapters.ControleIndividual1TableAdapter();
             this.membrosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.membrosTableAdapter = new TesourariaIFV.igrejafont11DataSetTableAdapters.MembrosTableAdapter();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -233,7 +233,7 @@
             // 
             // controleIndividualBindingSource
             // 
-            this.controleIndividualBindingSource.DataMember = "ControleIndividual";
+            this.controleIndividualBindingSource.DataMember = "ControleIndividual1";
             this.controleIndividualBindingSource.DataSource = this.igrejafont11DataSet;
             // 
             // controleIndividualTableAdapter
@@ -306,7 +306,7 @@
         private igrejafont11DataSetTableAdapters.IgrejasTableAdapter igrejasTableAdapter;
         private System.Windows.Forms.DataGridView reportDizimosDataGridView;
         private System.Windows.Forms.BindingSource controleIndividualBindingSource;
-        private igrejafont11DataSetTableAdapters.ControleIndividualTableAdapter controleIndividualTableAdapter;
+        private igrejafont11DataSetTableAdapters.ControleIndividual1TableAdapter controleIndividualTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn Janeiro;

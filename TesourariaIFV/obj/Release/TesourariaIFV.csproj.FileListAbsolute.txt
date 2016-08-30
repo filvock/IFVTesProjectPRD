@@ -169,3 +169,4 @@ D:\drive\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Release\TesourariaIFV.exe.man
 D:\drive\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Release\TesourariaIFV.application
 D:\drive\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Release\TesourariaIFV.exe
 D:\drive\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Release\TesourariaIFV.pdb
+D:\drive\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Release\TesourariaIFV.csprojResolveAssemblyReference.cache
