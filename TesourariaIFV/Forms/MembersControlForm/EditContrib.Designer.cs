@@ -173,7 +173,7 @@
             // 
             // controleIndividual1BindingSource
             // 
-            this.controleIndividual1BindingSource.DataMember = "ControleIndividual1";
+            this.controleIndividual1BindingSource.DataMember = "ControleIndividual";
             this.controleIndividual1BindingSource.DataSource = this.igrejafont11DataSet;
             // 
             // igrejafont11DataSet
@@ -277,7 +277,7 @@
             // 
             // controleIndividualBindingSource
             // 
-            this.controleIndividualBindingSource.DataMember = "ControleIndividual";
+            this.controleIndividualBindingSource.DataMember = "ControleIndividual1";
             this.controleIndividualBindingSource.DataSource = this.igrejafont11DataSet;
             // 
             // controleIndividual1TableAdapter
