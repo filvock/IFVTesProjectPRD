@@ -17,6 +17,18 @@ namespace TesourariaIFV.Forms
         public MainWindow()
         {
             InitializeComponent();
+
+            //float widthRatio = Screen.PrimaryScreen.Bounds.Width / 1366F;
+            //float heightRatio = Screen.PrimaryScreen.Bounds.Height / 768F;
+            //SizeF scale = new SizeF(widthRatio, heightRatio);
+            //this.Scale(scale);
+
+            //mainWindowMenuStrip.Font = new Font("Microsoft Sans Serif", administraçãoToolStripMenuItem.Font.SizeInPoints * heightRatio * widthRatio);
+            //administraçãoToolStripMenuItem.Font = new Font("Microsoft Sans Serif", administraçãoToolStripMenuItem.Font.SizeInPoints * heightRatio * widthRatio);
+            //tesourariaToolStripMenuItem.Font = new Font("Microsoft Sans Serif", administraçãoToolStripMenuItem.Font.SizeInPoints * heightRatio * widthRatio);
+            //ControleMembroToolStripMenuItem.Font = new Font("Microsoft Sans Serif", administraçãoToolStripMenuItem.Font.SizeInPoints * heightRatio * widthRatio);
+            //logoutToolStripMenuItem.Font = new Font("Microsoft Sans Serif", administraçãoToolStripMenuItem.Font.SizeInPoints * heightRatio * widthRatio);
+            
             SetWindowToRole();
         }
 

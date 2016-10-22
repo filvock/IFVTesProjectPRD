@@ -45,7 +45,7 @@
             this.planoDeContasEntradaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.totaisPorPeríodoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.excluirLançamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.loginLogoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ControleMembroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listaDeMembrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lançarContribuiçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatóriosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -62,7 +62,7 @@
             this.mainWindowMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.administraçãoToolStripMenuItem,
             this.tesourariaToolStripMenuItem,
-            this.loginLogoutToolStripMenuItem,
+            this.ControleMembroToolStripMenuItem,
             this.logoutToolStripMenuItem});
             this.mainWindowMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.mainWindowMenuStrip.Name = "mainWindowMenuStrip";
@@ -190,17 +190,17 @@
             this.excluirLançamentosToolStripMenuItem.Text = "Excluir Lançamentos";
             this.excluirLançamentosToolStripMenuItem.Click += new System.EventHandler(this.excluirLançamentosToolStripMenuItem_Click);
             // 
-            // loginLogoutToolStripMenuItem
+            // ControleMembroToolStripMenuItem
             // 
-            this.loginLogoutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ControleMembroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.listaDeMembrosToolStripMenuItem,
             this.lançarContribuiçõesToolStripMenuItem,
             this.relatóriosToolStripMenuItem1,
             this.editarLançamentosToolStripMenuItem});
-            this.loginLogoutToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 13F);
-            this.loginLogoutToolStripMenuItem.Name = "loginLogoutToolStripMenuItem";
-            this.loginLogoutToolStripMenuItem.Size = new System.Drawing.Size(199, 29);
-            this.loginLogoutToolStripMenuItem.Text = "Controle por Membro";
+            this.ControleMembroToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 13F);
+            this.ControleMembroToolStripMenuItem.Name = "ControleMembroToolStripMenuItem";
+            this.ControleMembroToolStripMenuItem.Size = new System.Drawing.Size(199, 29);
+            this.ControleMembroToolStripMenuItem.Text = "Controle por Membro";
             // 
             // listaDeMembrosToolStripMenuItem
             // 
@@ -294,7 +294,7 @@
         private System.Windows.Forms.ToolStripMenuItem tesourariaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem entradaSaídaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem relatóriosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem loginLogoutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ControleMembroToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem adicionarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem removerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem livroCaixaToolStripMenuItem;

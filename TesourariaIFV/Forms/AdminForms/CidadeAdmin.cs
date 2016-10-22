@@ -29,6 +29,15 @@ namespace TesourariaIFV.Forms.Admin_Forms
             // TODO: This line of code loads data into the 'igrejafont11DataSet.Estados' table. You can move, or remove it, as needed.
             this.estadosTableAdapter.Fill(this.igrejafont11DataSet.Estados);
             cellMembersLabel.Text = cidadesAdminDataGridView.RowCount.ToString();
+
+            float widthRatio = Screen.PrimaryScreen.Bounds.Width / 1366F;
+            float heightRatio = Screen.PrimaryScreen.Bounds.Height / 768F;
+            SizeF scale = new SizeF(widthRatio, heightRatio);
+            this.Scale(scale);
+            foreach (Control control in this.Controls)
+            {
+                control.Font = new Font("Microsoft Sans Serif", control.Font.SizeInPoints * heightRatio * widthRatio);
+            }
         }
 
         private void formCidadesAddCancelButton_Click(object sender, EventArgs e)

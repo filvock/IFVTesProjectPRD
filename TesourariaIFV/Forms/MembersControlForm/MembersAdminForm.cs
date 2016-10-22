@@ -16,6 +16,15 @@ namespace TesourariaIFV.Forms.MembersControlForm
         {
             InitializeComponent();
 
+            float widthRatio = Screen.PrimaryScreen.Bounds.Width / 1366F;
+            float heightRatio = Screen.PrimaryScreen.Bounds.Height / 768F;
+            SizeF scale = new SizeF(widthRatio, heightRatio);
+            this.Scale(scale);
+            foreach (Control control in this.Controls)
+            {
+                control.Font = new Font("Microsoft Sans Serif", control.Font.SizeInPoints * heightRatio * widthRatio);
+            }
+
             membersListDataGridView.DefaultCellStyle.Font = new Font("Arial", 14);
 
             
@@ -94,6 +103,11 @@ namespace TesourariaIFV.Forms.MembersControlForm
 
         private void membersListSaveButton_Click(object sender, EventArgs e)
         {
+            AddMember();
+        }
+
+        private void AddMember()
+        {
             igrejafont11DataSetTableAdapters.MembrosTableAdapter adapter = new igrejafont11DataSetTableAdapters.MembrosTableAdapter();
             loginInfo info = new loginInfo();
 
@@ -113,7 +127,7 @@ namespace TesourariaIFV.Forms.MembersControlForm
                     adapter.Update(igrejafont11DataSet.Membros);
 
                     membersListCodeTextBox.Enabled = false;
-                    membersListNameTextBox.Enabled = false;
+                    //membersListNameTextBox.Enabled = false;
 
                     membersListCodeTextBox.Text = "";
                     membersListNameTextBox.Text = "";
@@ -130,7 +144,7 @@ namespace TesourariaIFV.Forms.MembersControlForm
                     adapter.Update(igrejafont11DataSet.Membros);
 
                     membersListCodeTextBox.Enabled = false;
-                    membersListNameTextBox.Enabled = false;
+                    //membersListNameTextBox.Enabled = false;
 
                     membersListCodeTextBox.Text = "";
                     membersListNameTextBox.Text = "";
@@ -139,7 +153,6 @@ namespace TesourariaIFV.Forms.MembersControlForm
                 catch { MessageBox.Show("Edição Falhou!"); }
             }
         }
-
         private void membersListDeleteButton_Click(object sender, EventArgs e)
         {
             igrejafont11DataSetTableAdapters.MembrosTableAdapter adapter = new igrejafont11DataSetTableAdapters.MembrosTableAdapter();
@@ -178,6 +191,17 @@ namespace TesourariaIFV.Forms.MembersControlForm
         {
             if (membersListComboBox.SelectedValue != null)
                 membrosBindingSource.Filter = "Igreja = '" + membersListComboBox.SelectedValue.ToString() + "'";
+        }
+
+        private void membersListNameTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                AddMember();
+                MessageBox.Show("Membro adicionado.");
+                membersListNameTextBox.Focus();
+            }
+            
         }
     }
 }

@@ -226,6 +226,7 @@
             this.membersListNameTextBox.Name = "membersListNameTextBox";
             this.membersListNameTextBox.Size = new System.Drawing.Size(416, 29);
             this.membersListNameTextBox.TabIndex = 6;
+            this.membersListNameTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.membersListNameTextBox_KeyDown);
             // 
             // membersListSaveButton
             // 

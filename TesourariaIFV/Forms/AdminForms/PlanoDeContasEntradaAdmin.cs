@@ -22,7 +22,16 @@ namespace TesourariaIFV.Forms.Admin_Forms
 
         private void FormPlanoDeContasAdd_Load(object sender, EventArgs e)
         {            
-            this.planoDeContasCreditoTableAdapter.Fill(this.igrejafont11DataSet.PlanoDeContasCredito);            
+            this.planoDeContasCreditoTableAdapter.Fill(this.igrejafont11DataSet.PlanoDeContasCredito);
+
+            float widthRatio = Screen.PrimaryScreen.Bounds.Width / 1366F;
+            float heightRatio = Screen.PrimaryScreen.Bounds.Height / 768F;
+            SizeF scale = new SizeF(widthRatio, heightRatio);
+            this.Scale(scale);
+            foreach (Control control in this.Controls)
+            {
+                control.Font = new Font("Microsoft Sans Serif", control.Font.SizeInPoints * heightRatio * widthRatio);
+            }
         }
 
         private void formPlanoDeContasAddOkButton_Click(object sender, EventArgs e)
