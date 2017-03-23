@@ -104,19 +104,19 @@ namespace TesourariaIFV.Forms.MembersControlForm
                     if (ano.ToString().Equals(dateTimePicker1.Value.Year.ToString()))
                     {
                         bool notfound = true;
-                        int valor = 0;
+                        double valor = 0;
                         int j = 0;
-                        while (notfound)
+                        while (notfound && (j < reportDizimosDataGridView.Rows.Count))
                         {
                             if (reportDizimosDataGridView.Rows[j].Cells[0].Value.ToString().Equals(row["CodMembro"].ToString()))
                             {
                                 notfound = false;
                                 if (reportDizimosDataGridView.Rows[j].Cells[mes + 1].Value != null && !reportDizimosDataGridView.Rows[j].Cells[mes + 1].Value.ToString().Equals(""))
                                 {
-                                    valor = Convert.ToInt32(reportDizimosDataGridView.Rows[j].Cells[mes + 1].Value.ToString());
+                                    valor = Convert.ToDouble(reportDizimosDataGridView.Rows[j].Cells[mes + 1].Value.ToString());
                                     if (row[5] != null && row[5].ToString().Length != 0)
                                     {
-                                        valor = valor + Convert.ToInt32(row[5].ToString());
+                                        valor = valor + Convert.ToDouble(row[5].ToString());
                                         reportDizimosDataGridView.Rows[j].Cells[mes + 1].Value = valor.ToString();
                                     }
                                 }

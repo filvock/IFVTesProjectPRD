@@ -108,14 +108,14 @@ namespace TesourariaIFV.Forms.MembersControlForm
                         bool notfound = true;
                         Double valor = 0;
                         int j = 0;
-                        while (notfound)
+                        while (notfound && (j < reportDizimosDataGridView.Rows.Count))
                         {
                             if (reportDizimosDataGridView.Rows[j].Cells[0].Value.ToString().Equals(row["CodMembro"].ToString()))
                             {
                                 notfound = false;
                                 if (reportDizimosDataGridView.Rows[j].Cells[mes + 1].Value != null && !reportDizimosDataGridView.Rows[j].Cells[mes + 1].Value.ToString().Equals(""))
                                 {
-                                    valor = Convert.ToInt32(reportDizimosDataGridView.Rows[j].Cells[mes + 1].Value.ToString());
+                                    valor = Convert.ToDouble(reportDizimosDataGridView.Rows[j].Cells[mes + 1].Value.ToString());
                                     if (row[3] != null && row[3].ToString().Length != 0)
                                     {
                                         valor = valor + Convert.ToDouble(row[3].ToString());

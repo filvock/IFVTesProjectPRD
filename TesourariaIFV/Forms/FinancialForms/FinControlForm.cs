@@ -342,7 +342,7 @@ namespace TesourariaIFV.Forms
             if (finControlFormInRadioButton.Checked == true)
             {
                 planoDeContasCreditoBindingSource.Position = planoDeContasCreditoBindingSource.Find("Codigo", Code);
-                if (planoDeContasCreditoBindingSource.Position < 1)
+                if (planoDeContasCreditoBindingSource.Position < 0)
                 {
                     MessageBox.Show("Conta não existe para esse código, por favor entre novo código.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -355,7 +355,7 @@ namespace TesourariaIFV.Forms
             else if (finControlFormOutRadioButton.Checked == true)
             {
                 planoDeContasDebitoBindingSource.Position = planoDeContasDebitoBindingSource.Find("Codigo", Code);
-                if (planoDeContasDebitoBindingSource.Position < 1)
+                if (planoDeContasDebitoBindingSource.Position < 0)
                 {
                     MessageBox.Show("Conta não existe para esse código, por favor entre novo código.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
