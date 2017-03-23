@@ -15,10 +15,10 @@
     <SccLocalPath>SAK</SccLocalPath>
     <SccAuxPath>SAK</SccAuxPath>
     <SccProvider>SAK</SccProvider>
-    <IsWebBootstrapper>true</IsWebBootstrapper>
-    <PublishUrl>D:\drive\GitHub\IFVTesProjectPRD\TesourariaIFV\Publish\</PublishUrl>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>D:\Users\Documents\IFVTesProjectPRD\TesourariaIFV\Publish\</PublishUrl>
     <Install>true</Install>
-    <InstallFrom>Web</InstallFrom>
+    <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateMode>Foreground</UpdateMode>
     <UpdateInterval>7</UpdateInterval>
@@ -26,13 +26,12 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <InstallUrl>https://raw.githubusercontent.com/filvock/IFVTesProjectPRD/master/TesourariaIFV/Publish/</InstallUrl>
     <UpdateUrl>https://raw.githubusercontent.com/filvock/IFVTesProjectPRD/master/TesourariaIFV/Publish/</UpdateUrl>
     <TargetCulture>pt-BR</TargetCulture>
     <ProductName>IFV Controle Financeiro</ProductName>
     <PublisherName>IFV</PublisherName>
     <SuiteName>IFV</SuiteName>
-    <ApplicationRevision>48</ApplicationRevision>
+    <ApplicationRevision>49</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
