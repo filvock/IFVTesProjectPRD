@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <PublishUrlHistory>D:\Users\Documents\GitHub\IFVTesProjectPRD\TesourariaIFV\Publish\|D:\Users\Documents\IFVTesProjectPRD\TesourariaIFV\Publish\|D:\drive\GitHub\IFVTesProjectPRD\TesourariaIFV\Publish\|C:\Users\filvock\Documents\GitHub\IFVTesProjectPRD\TesourariaIFV\Publish\|D:\Drive\FDV\IFV Sistemas\TesProject\</PublishUrlHistory>
+    <PublishUrlHistory>D:\GitHub\IFVTesProjectPRD\TesourariaIFV\Publish\|D:\Users\Documents\GitHub\IFVTesProjectPRD\TesourariaIFV\Publish\|D:\Users\Documents\IFVTesProjectPRD\TesourariaIFV\Publish\|D:\drive\GitHub\IFVTesProjectPRD\TesourariaIFV\Publish\|C:\Users\filvock\Documents\GitHub\IFVTesProjectPRD\TesourariaIFV\Publish\</PublishUrlHistory>
     <InstallUrlHistory>https://raw.githubusercontent.com/filvock/IFVTesProjectPRD/master/TesourariaIFV/Publish/</InstallUrlHistory>
     <SupportUrlHistory />
     <UpdateUrlHistory>https://raw.githubusercontent.com/filvock/IFVTesProjectPRD/master/TesourariaIFV/Publish/|https://raw.githubusercontent.com/filvock/IFVTesProjectPRD/master/TesourariaIFV/publish/</UpdateUrlHistory>
