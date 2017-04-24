@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.igrejafont11DataSet = new TesourariaIFV.igrejafont11DataSet();
+            //this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.tesourariaGeralBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tesourariaGeralTableAdapter = new TesourariaIFV.igrejafont11DataSetTableAdapters.TesourariaGeralTableAdapter();

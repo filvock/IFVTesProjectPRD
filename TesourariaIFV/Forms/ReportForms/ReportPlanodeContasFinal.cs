@@ -24,10 +24,12 @@ namespace TesourariaIFV.Forms.Reports_Forms
             {
                 control.Font = new Font("Microsoft Sans Serif", control.Font.SizeInPoints * heightRatio * widthRatio);
             }
+            
             reportViewer1.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("DataInicial", dataInicial.ToString()));
             reportViewer1.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("DataFinal", dataFinal.ToString()));
             reportViewer1.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("Igreja", igreja));
-            
+
+
         }
 
         private void ReportPlanodeContasFinal_Load(object sender, EventArgs e)
