@@ -369,3 +369,5 @@ D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\zh-HANT\Microsoft.ReportViewe
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\pt-BR\Microsoft.VisualStudio.Data.Services.resources.dll
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\pt-BR\Microsoft.VisualStudio.Data.Core.resources.dll
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\pt-BR\Microsoft.VisualStudio.GraphModel.resources.dll
+D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\Microsoft.VisualStudio.Shell.Immutable.10.0.dll
+D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\Microsoft.VisualStudio.Shell.Immutable.10.0.xml
