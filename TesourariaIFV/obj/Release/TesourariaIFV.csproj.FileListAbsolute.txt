@@ -269,7 +269,6 @@ D:\Users\Documents\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Release\Microsoft.S
 D:\Users\Documents\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Release\System.Collections.Immutable.dll
 D:\Users\Documents\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Release\System.Collections.Immutable.xml
 D:\Users\Documents\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Release\TesourariaIFV.application
-D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Release\System.Collections.Immutable.dll
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Release\Microsoft.ReportViewer.Common.dll
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Release\Microsoft.ReportViewer.Common.resources.dll
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Release\Microsoft.ReportViewer.DataVisualization.dll

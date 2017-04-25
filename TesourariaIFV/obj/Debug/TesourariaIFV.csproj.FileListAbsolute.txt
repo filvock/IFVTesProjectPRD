@@ -280,7 +280,6 @@ D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\SqlServerTypes\x64\SqlServerS
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\SqlServerTypes\x86\msvcr120.dll
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\Microsoft.SqlServer.Types.dll
-D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\System.Collections.Immutable.dll
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\Microsoft.ReportViewer.Common.dll
