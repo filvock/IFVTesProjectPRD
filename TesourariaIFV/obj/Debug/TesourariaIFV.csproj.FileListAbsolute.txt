@@ -371,3 +371,8 @@ D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\pt-BR\Microsoft.VisualStudio.
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\pt-BR\Microsoft.VisualStudio.GraphModel.resources.dll
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\Microsoft.VisualStudio.Shell.Immutable.10.0.dll
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\Microsoft.VisualStudio.Shell.Immutable.10.0.xml
+D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\Microsoft.VisualStudio.Shell.Immutable.11.0.dll
+D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\Microsoft.VisualStudio.OLE.Interop.xml
+D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\Microsoft.VisualStudio.Shell.Immutable.11.0.xml
+D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\Microsoft.VisualStudio.Shell.Interop.xml
+D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.xml

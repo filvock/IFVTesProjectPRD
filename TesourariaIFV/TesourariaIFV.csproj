@@ -31,7 +31,7 @@
     <ProductName>IFV Controle Financeiro</ProductName>
     <PublisherName>IFV</PublisherName>
     <SuiteName>IFV</SuiteName>
-    <ApplicationRevision>57</ApplicationRevision>
+    <ApplicationRevision>58</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -113,8 +113,24 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualStudio.OLE.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>..\packages\Microsoft.VisualStudio.OLE.Interop.7.10.6070\lib\Microsoft.VisualStudio.OLE.Interop.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.VisualStudio.Shell.Immutable.10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.VisualStudio.Shell.Immutable.10.0.10.0.30319\lib\net40\Microsoft.VisualStudio.Shell.Immutable.10.0.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Immutable.11.0, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.VisualStudio.Shell.Immutable.11.0.11.0.50727\lib\net45\Microsoft.VisualStudio.Shell.Immutable.11.0.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>..\packages\Microsoft.VisualStudio.Shell.Interop.7.10.6071\lib\Microsoft.VisualStudio.Shell.Interop.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TextManager.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>..\packages\Microsoft.VisualStudio.TextManager.Interop.7.10.6070\lib\Microsoft.VisualStudio.TextManager.Interop.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
