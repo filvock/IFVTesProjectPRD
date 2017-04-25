@@ -380,3 +380,9 @@ D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\Microsoft.VisualStudio.Shell.
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\Microsoft.VisualStudio.Shell.Immutable.14.0.dll
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\Microsoft.VisualStudio.Shell.Immutable.12.0.xml
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\Microsoft.VisualStudio.Shell.Immutable.14.0.xml
+D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\Microsoft.VisualStudio.CoreUtility.dll
+D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\Microsoft.VisualStudio.Text.Data.dll
+D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\Microsoft.VisualStudio.Text.Logic.dll
+D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\Microsoft.VisualStudio.CoreUtility.xml
+D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\Microsoft.VisualStudio.Text.Data.xml
+D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\Microsoft.VisualStudio.Text.Logic.xml
