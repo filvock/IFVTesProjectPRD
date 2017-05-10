@@ -32,7 +32,7 @@
     <ProductName>IFV Controle Financeiro</ProductName>
     <PublisherName>IFV</PublisherName>
     <SuiteName>IFV</SuiteName>
-    <ApplicationRevision>62</ApplicationRevision>
+    <ApplicationRevision>63</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -215,6 +215,12 @@
     <Compile Include="Forms\MembersControlForm\ReportDizimos.Designer.cs">
       <DependentUpon>ReportDizimos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ReportForms\ManagementReport\ReportCaixaMgnt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReportForms\ManagementReport\ReportCaixaMgnt.Designer.cs">
+      <DependentUpon>ReportCaixaMgnt.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ReportForms\ReportCaixa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -239,17 +245,29 @@
     <Compile Include="Forms\ReportForms\ReportLivroCaixaBanco.Designer.cs">
       <DependentUpon>ReportLivroCaixaBanco.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ReportForms\ReportPlanoDeContas.cs">
+    <Compile Include="Forms\ReportForms\ReportPlanoDeContasDetalhes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ReportForms\ReportPlanoDeContas.Designer.cs">
-      <DependentUpon>ReportPlanoDeContas.cs</DependentUpon>
+    <Compile Include="Forms\ReportForms\ReportPlanoDeContasDetalhes.Designer.cs">
+      <DependentUpon>ReportPlanoDeContasDetalhes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ReportForms\ReportPlanodeContasFinal.cs">
+    <Compile Include="Forms\ReportForms\ReportPlanoDeContasTotais.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ReportForms\ReportPlanodeContasFinal.Designer.cs">
-      <DependentUpon>ReportPlanodeContasFinal.cs</DependentUpon>
+    <Compile Include="Forms\ReportForms\ReportPlanoDeContasTotais.Designer.cs">
+      <DependentUpon>ReportPlanoDeContasTotais.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReportForms\ReportPlanoDeContasDetalhesFinal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReportForms\ReportPlanoDeContasDetalhesFinal.Designer.cs">
+      <DependentUpon>ReportPlanoDeContasDetalhesFinal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReportForms\ReportPlanoDeContasTotaisFinal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReportForms\ReportPlanoDeContasTotaisFinal.Designer.cs">
+      <DependentUpon>ReportPlanoDeContasTotaisFinal.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ReportForms\ReportTotals.cs">
       <SubType>Form</SubType>
@@ -378,6 +396,9 @@
     <EmbeddedResource Include="Forms\MembersControlForm\ReportDizimos.resx">
       <DependentUpon>ReportDizimos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReportForms\ManagementReport\ReportCaixaMgnt.resx">
+      <DependentUpon>ReportCaixaMgnt.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ReportForms\ReportCaixa.resx">
       <DependentUpon>ReportCaixa.cs</DependentUpon>
     </EmbeddedResource>
@@ -390,11 +411,17 @@
     <EmbeddedResource Include="Forms\ReportForms\ReportLivroCaixaBanco.resx">
       <DependentUpon>ReportLivroCaixaBanco.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ReportForms\ReportPlanoDeContas.resx">
-      <DependentUpon>ReportPlanoDeContas.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\ReportForms\ReportPlanoDeContasDetalhes.resx">
+      <DependentUpon>ReportPlanoDeContasDetalhes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ReportForms\ReportPlanodeContasFinal.resx">
-      <DependentUpon>ReportPlanodeContasFinal.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\ReportForms\ReportPlanoDeContasTotais.resx">
+      <DependentUpon>ReportPlanoDeContasTotais.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReportForms\ReportPlanoDeContasDetalhesFinal.resx">
+      <DependentUpon>ReportPlanoDeContasDetalhesFinal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReportForms\ReportPlanoDeContasTotaisFinal.resx">
+      <DependentUpon>ReportPlanoDeContasTotaisFinal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ReportForms\ReportTotals.resx">
       <DependentUpon>ReportTotals.cs</DependentUpon>
@@ -413,8 +440,9 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Reports\ReportLivroCaixaBanco.rdlc" />
+    <EmbeddedResource Include="Reports\ReportPlanoDeContasDetalhes.rdlc" />
     <EmbeddedResource Include="Reports\ReportTotals.rdlc" />
-    <EmbeddedResource Include="Reports\ReportPlanoDeContas.rdlc" />
+    <EmbeddedResource Include="Reports\ReportPlanoDeContasTotais.rdlc" />
     <EmbeddedResource Include="Reports\ReportLivroBanco.rdlc" />
     <EmbeddedResource Include="Reports\ReportLivroCaixa.rdlc" />
     <None Include="igrejafont11DataSet.xsc">

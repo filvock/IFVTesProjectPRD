@@ -39,7 +39,7 @@ namespace TesourariaIFV.Forms
             if (info.GetRole() == "Igreja Local")
             {
                 administraçãoToolStripMenuItem.Enabled = false;
-
+                relatóriosGerenciaisToolStripMenuItem.Enabled = false;
             }
         }
 
@@ -79,8 +79,8 @@ namespace TesourariaIFV.Forms
 
         private void planoDeContasEntradaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            TesourariaIFV.Forms.Reports_Forms.ReportPlanoDeContas planoDeContas = new Reports_Forms.ReportPlanoDeContas();
-            planoDeContas.Show();
+            TesourariaIFV.Forms.Reports_Forms.ReportPlanoDeContasTotais planoDeContasTotais = new Reports_Forms.ReportPlanoDeContasTotais();
+            planoDeContasTotais.Show();
         }
 
         private void livroCaixaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -178,6 +178,23 @@ namespace TesourariaIFV.Forms
         {
             TesourariaIFV.Forms.Admin_Forms.PlanoDeContasSaidaAdmin window = new Admin_Forms.PlanoDeContasSaidaAdmin();
             window.Show();
+        }
+
+        private void planoDeContasDetalhadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TesourariaIFV.Forms.Reports_Forms.ReportPlanoDeContasDetalhes planoDeContasDetalhes = new Reports_Forms.ReportPlanoDeContasDetalhes();
+            planoDeContasDetalhes.Show();
+        }
+
+        private void totaisEntradasSaidasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Para fazer mais tarde.
+        }
+
+        private void livroCaixaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            TesourariaIFV.Forms.ReportCaixaMgnt mgntReport = new ReportCaixaMgnt();
+            mgntReport.Show();
         }
     }
 }

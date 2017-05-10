@@ -203,8 +203,6 @@ D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Release\TesourariaIFV.Forms.ReportC
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Release\TesourariaIFV.Forms.ReportLivroBanco.resources
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Release\TesourariaIFV.Forms.ReportLivroCaixa.resources
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Release\TesourariaIFV.Forms.ReportForms.ReportLivroCaixaBanco.resources
-D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Release\TesourariaIFV.Forms.Reports_Forms.ReportPlanoDeContas.resources
-D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Release\TesourariaIFV.Forms.Reports_Forms.ReportPlanodeContasFinal.resources
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Release\TesourariaIFV.Forms.ReportForms.ReportTotals.resources
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Release\TesourariaIFV.Forms.ReportForms.ReportTotalsFinal.resources
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Release\TesourariaIFV.Properties.Resources.resources
@@ -309,3 +307,7 @@ D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Release\zh-CHS\Microsoft.ReportView
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Release\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Release\zh-HANS\Microsoft.ReportViewer.WinForms.resources.dll
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Release\zh-HANT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Release\TesourariaIFV.Forms.Reports_Forms.ReportPlanoDeContasDetalhes.resources
+D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Release\TesourariaIFV.Forms.Reports_Forms.ReportPlanoDeContasTotais.resources
+D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Release\TesourariaIFV.Forms.Reports_Forms.ReportPlanoDeContasDetalhesFinal.resources
+D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Release\TesourariaIFV.Forms.Reports_Forms.ReportPlanoDeContasTotaisFinal.resources
