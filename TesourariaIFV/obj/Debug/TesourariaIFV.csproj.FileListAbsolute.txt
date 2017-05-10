@@ -255,7 +255,6 @@ D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.Forms.MembersCo
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.Forms.MembersControlForm.ReportMissoes.resources
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.Forms.MembersControlForm.ReportPrimicias.resources
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.Forms.MembersControlForm.ReportDizimos.resources
-D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.Forms.ReportCaixaMgnt.resources
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.Forms.ReportCaixa.resources
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.Forms.ReportLivroBanco.resources
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.Forms.ReportLivroCaixa.resources
@@ -322,3 +321,11 @@ D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.application
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.exe
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.pdb
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.csprojResolveAssemblyReference.cache
+D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.Forms.ReportForms.ManagementReport.ReportCaixaMgnt.resources
+D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.Forms.ReportForms.ManagementReport.ReportPlanoDeContasDetalhesMgnt.resources
+D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.Forms.ReportForms.ManagementReport.ReportPlanoDeContasTotaisMgnt.resources
+D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.Forms.ReportForms.ManagementReport.ReportTotalsMgnt.resources
+D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.Forms.ReportForms.ManagementReport.ReportPlanoDeContasDetalhesMgntFinal.resources
+D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.Forms.ReportForms.ManagementReport.ReportPlanoDeContasTotaisMgntFinal.resources
+D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.Forms.ReportForms.ManagementReport.ReportTotalsMgntFinal.resources

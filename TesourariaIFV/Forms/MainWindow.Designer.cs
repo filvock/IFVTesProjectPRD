@@ -45,6 +45,11 @@
             this.planoDeContasEntradaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.planoDeContasDetalhadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.totaisPorPeríodoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.relatóriosGerenciaisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.livroCaixaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.planoDeContasTotaisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.planoDeContasDetalhadoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.totaisEntradasSaidasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.excluirLançamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ControleMembroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listaDeMembrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,11 +60,6 @@
             this.missõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editarLançamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.relatóriosGerenciaisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.livroCaixaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.planoDeContasTotaisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.planoDeContasDetalhadoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.totaisEntradasSaidasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainWindowMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -198,6 +198,45 @@
             this.totaisPorPeríodoToolStripMenuItem.Text = "Totais Entrada/Saída";
             this.totaisPorPeríodoToolStripMenuItem.Click += new System.EventHandler(this.totaisPorPeríodoToolStripMenuItem_Click);
             // 
+            // relatóriosGerenciaisToolStripMenuItem
+            // 
+            this.relatóriosGerenciaisToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.livroCaixaToolStripMenuItem1,
+            this.planoDeContasTotaisToolStripMenuItem,
+            this.planoDeContasDetalhadoToolStripMenuItem1,
+            this.totaisEntradasSaidasToolStripMenuItem});
+            this.relatóriosGerenciaisToolStripMenuItem.Name = "relatóriosGerenciaisToolStripMenuItem";
+            this.relatóriosGerenciaisToolStripMenuItem.Size = new System.Drawing.Size(246, 30);
+            this.relatóriosGerenciaisToolStripMenuItem.Text = "Relatórios Gerenciais";
+            // 
+            // livroCaixaToolStripMenuItem1
+            // 
+            this.livroCaixaToolStripMenuItem1.Name = "livroCaixaToolStripMenuItem1";
+            this.livroCaixaToolStripMenuItem1.Size = new System.Drawing.Size(309, 30);
+            this.livroCaixaToolStripMenuItem1.Text = "Livro Caixa";
+            this.livroCaixaToolStripMenuItem1.Click += new System.EventHandler(this.livroCaixaToolStripMenuItem1_Click);
+            // 
+            // planoDeContasTotaisToolStripMenuItem
+            // 
+            this.planoDeContasTotaisToolStripMenuItem.Name = "planoDeContasTotaisToolStripMenuItem";
+            this.planoDeContasTotaisToolStripMenuItem.Size = new System.Drawing.Size(309, 30);
+            this.planoDeContasTotaisToolStripMenuItem.Text = "Plano de contas - Totais";
+            this.planoDeContasTotaisToolStripMenuItem.Click += new System.EventHandler(this.planoDeContasTotaisToolStripMenuItem_Click);
+            // 
+            // planoDeContasDetalhadoToolStripMenuItem1
+            // 
+            this.planoDeContasDetalhadoToolStripMenuItem1.Name = "planoDeContasDetalhadoToolStripMenuItem1";
+            this.planoDeContasDetalhadoToolStripMenuItem1.Size = new System.Drawing.Size(309, 30);
+            this.planoDeContasDetalhadoToolStripMenuItem1.Text = "Plano de contas - Detalhado";
+            this.planoDeContasDetalhadoToolStripMenuItem1.Click += new System.EventHandler(this.planoDeContasDetalhadoToolStripMenuItem1_Click);
+            // 
+            // totaisEntradasSaidasToolStripMenuItem
+            // 
+            this.totaisEntradasSaidasToolStripMenuItem.Name = "totaisEntradasSaidasToolStripMenuItem";
+            this.totaisEntradasSaidasToolStripMenuItem.Size = new System.Drawing.Size(309, 30);
+            this.totaisEntradasSaidasToolStripMenuItem.Text = "Totais Entradas/Saídas";
+            this.totaisEntradasSaidasToolStripMenuItem.Click += new System.EventHandler(this.totaisEntradasSaidasToolStripMenuItem_Click);
+            // 
             // excluirLançamentosToolStripMenuItem
             // 
             this.excluirLançamentosToolStripMenuItem.Name = "excluirLançamentosToolStripMenuItem";
@@ -276,43 +315,6 @@
             this.logoutToolStripMenuItem.Size = new System.Drawing.Size(83, 29);
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
-            // 
-            // relatóriosGerenciaisToolStripMenuItem
-            // 
-            this.relatóriosGerenciaisToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.livroCaixaToolStripMenuItem1,
-            this.planoDeContasTotaisToolStripMenuItem,
-            this.planoDeContasDetalhadoToolStripMenuItem1,
-            this.totaisEntradasSaidasToolStripMenuItem});
-            this.relatóriosGerenciaisToolStripMenuItem.Name = "relatóriosGerenciaisToolStripMenuItem";
-            this.relatóriosGerenciaisToolStripMenuItem.Size = new System.Drawing.Size(246, 30);
-            this.relatóriosGerenciaisToolStripMenuItem.Text = "Relatórios Gerenciais";
-            // 
-            // livroCaixaToolStripMenuItem1
-            // 
-            this.livroCaixaToolStripMenuItem1.Name = "livroCaixaToolStripMenuItem1";
-            this.livroCaixaToolStripMenuItem1.Size = new System.Drawing.Size(309, 30);
-            this.livroCaixaToolStripMenuItem1.Text = "Livro Caixa";
-            this.livroCaixaToolStripMenuItem1.Click += new System.EventHandler(this.livroCaixaToolStripMenuItem1_Click);
-            // 
-            // planoDeContasTotaisToolStripMenuItem
-            // 
-            this.planoDeContasTotaisToolStripMenuItem.Name = "planoDeContasTotaisToolStripMenuItem";
-            this.planoDeContasTotaisToolStripMenuItem.Size = new System.Drawing.Size(309, 30);
-            this.planoDeContasTotaisToolStripMenuItem.Text = "Plano de contas - Totais";
-            // 
-            // planoDeContasDetalhadoToolStripMenuItem1
-            // 
-            this.planoDeContasDetalhadoToolStripMenuItem1.Name = "planoDeContasDetalhadoToolStripMenuItem1";
-            this.planoDeContasDetalhadoToolStripMenuItem1.Size = new System.Drawing.Size(309, 30);
-            this.planoDeContasDetalhadoToolStripMenuItem1.Text = "Plano de contas - Detalhado";
-            // 
-            // totaisEntradasSaidasToolStripMenuItem
-            // 
-            this.totaisEntradasSaidasToolStripMenuItem.Name = "totaisEntradasSaidasToolStripMenuItem";
-            this.totaisEntradasSaidasToolStripMenuItem.Size = new System.Drawing.Size(309, 30);
-            this.totaisEntradasSaidasToolStripMenuItem.Text = "Totais Entradas/Saídas";
-            this.totaisEntradasSaidasToolStripMenuItem.Click += new System.EventHandler(this.totaisEntradasSaidasToolStripMenuItem_Click);
             // 
             // MainWindow
             // 

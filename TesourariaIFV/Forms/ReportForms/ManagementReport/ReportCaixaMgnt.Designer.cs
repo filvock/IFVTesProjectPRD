@@ -1,4 +1,4 @@
-﻿namespace TesourariaIFV.Forms
+﻿namespace TesourariaIFV.Forms.ReportForms.ManagementReport
 {
     partial class ReportCaixaMgnt
     {

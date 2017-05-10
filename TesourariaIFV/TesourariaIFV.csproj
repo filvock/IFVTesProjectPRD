@@ -82,6 +82,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
@@ -220,6 +224,42 @@
     </Compile>
     <Compile Include="Forms\ReportForms\ManagementReport\ReportCaixaMgnt.Designer.cs">
       <DependentUpon>ReportCaixaMgnt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReportForms\ManagementReport\ReportPlanoDeContasDetalhesMgntFinal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReportForms\ManagementReport\ReportPlanoDeContasDetalhesMgntFinal.Designer.cs">
+      <DependentUpon>ReportPlanoDeContasDetalhesMgntFinal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReportForms\ManagementReport\ReportPlanoDeContasDetalhesMgnt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReportForms\ManagementReport\ReportPlanoDeContasDetalhesMgnt.Designer.cs">
+      <DependentUpon>ReportPlanoDeContasDetalhesMgnt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReportForms\ManagementReport\ReportPlanoDeContasTotaisMgnt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReportForms\ManagementReport\ReportPlanoDeContasTotaisMgnt.Designer.cs">
+      <DependentUpon>ReportPlanoDeContasTotaisMgnt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReportForms\ManagementReport\ReportPlanoDeContasTotaisMgntFinal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReportForms\ManagementReport\ReportPlanoDeContasTotaisMgntFinal.Designer.cs">
+      <DependentUpon>ReportPlanoDeContasTotaisMgntFinal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReportForms\ManagementReport\ReportTotalsMgnt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReportForms\ManagementReport\ReportTotalsMgnt.Designer.cs">
+      <DependentUpon>ReportTotalsMgnt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReportForms\ManagementReport\ReportTotalsMgntFinal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReportForms\ManagementReport\ReportTotalsMgntFinal.Designer.cs">
+      <DependentUpon>ReportTotalsMgntFinal.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ReportForms\ReportCaixa.cs">
       <SubType>Form</SubType>
@@ -398,6 +438,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ReportForms\ManagementReport\ReportCaixaMgnt.resx">
       <DependentUpon>ReportCaixaMgnt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReportForms\ManagementReport\ReportPlanoDeContasDetalhesMgntFinal.resx">
+      <DependentUpon>ReportPlanoDeContasDetalhesMgntFinal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReportForms\ManagementReport\ReportPlanoDeContasDetalhesMgnt.resx">
+      <DependentUpon>ReportPlanoDeContasDetalhesMgnt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReportForms\ManagementReport\ReportPlanoDeContasTotaisMgnt.resx">
+      <DependentUpon>ReportPlanoDeContasTotaisMgnt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReportForms\ManagementReport\ReportPlanoDeContasTotaisMgntFinal.resx">
+      <DependentUpon>ReportPlanoDeContasTotaisMgntFinal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReportForms\ManagementReport\ReportTotalsMgnt.resx">
+      <DependentUpon>ReportTotalsMgnt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReportForms\ManagementReport\ReportTotalsMgntFinal.resx">
+      <DependentUpon>ReportTotalsMgntFinal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ReportForms\ReportCaixa.resx">
       <DependentUpon>ReportCaixa.cs</DependentUpon>

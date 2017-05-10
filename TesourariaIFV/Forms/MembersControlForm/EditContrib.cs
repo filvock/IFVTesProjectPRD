@@ -100,12 +100,11 @@ namespace TesourariaIFV.Forms.MembersControlForm
 
 
                 row["Data"] = dateTimePicker.Text;
-                if (dizimoTextBox.Text.Length == 0) row["Dizimo"] = 0;
-                else if (Convert.ToInt32(dizimoTextBox.Text) == 0) row["Dizimo"] = 0;
-                    else row["Dizimo"] = GetValue(dizimoTextBox.Text);
-                if (primiciaTextBox.Text.Length == 0 || Convert.ToInt32(primiciaTextBox.Text) == 0) row["Primicia"] = 0;
+                if (dizimoTextBox.Text.Length == 0 || ConvertMoneyToInt(dizimoTextBox.Text) == 0) row["Dizimo"] = 0;
+                else row["Dizimo"] = GetValue(dizimoTextBox.Text);
+                if (primiciaTextBox.Text.Length == 0 || ConvertMoneyToInt(primiciaTextBox.Text) == 0) row["Primicia"] = 0;
                 else row["Primicia"] = GetValue(primiciaTextBox.Text);
-                if (missoesTextBox.Text.Length == 0 || Convert.ToInt32(missoesTextBox.Text) == 0) row["Missoes"] = 0;
+                if (missoesTextBox.Text.Length == 0 || ConvertMoneyToInt(missoesTextBox.Text) == 0) row["Missoes"] = 0;
                 else row["Missoes"] = GetValue(missoesTextBox.Text);
                 try
                 {
@@ -122,6 +121,25 @@ namespace TesourariaIFV.Forms.MembersControlForm
                 catch { MessageBox.Show("Edição Falhou!"); }
             }
             //SetValuesToMoney();
+        }
+
+        private int ConvertMoneyToInt(String money)
+        {
+            int valor=0;
+
+            if (money.Length == 1)
+            {
+                valor = Convert.ToInt32(money);
+            }
+            else if (money.Length == 0)
+            {
+                valor = 0;
+            }
+            else
+            {
+                valor = Convert.ToInt32(money.Substring(3, money.Length - 6));
+            }
+            return valor;
         }
 
         private float GetValue(String valueStr)

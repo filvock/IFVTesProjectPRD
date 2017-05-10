@@ -11,15 +11,14 @@ using System.Data.Sql;
 using System.Data.SqlClient;
 
 
-namespace TesourariaIFV.Forms
+namespace TesourariaIFV.Forms.ReportForms.ManagementReport
 {
     public partial class ReportCaixaMgnt : Form
     {
         public ReportCaixaMgnt()
         {
             InitializeComponent();
-            //comboBox1.SelectedIndex = 0;
-            //comboBox2.SelectedIndex = 0;
+            
             float widthRatio = Screen.PrimaryScreen.Bounds.Width / 1366F;
             float heightRatio = Screen.PrimaryScreen.Bounds.Height / 768F;
             SizeF scale = new SizeF(widthRatio, heightRatio);
@@ -40,7 +39,33 @@ namespace TesourariaIFV.Forms
             {
                 FillIgrejasDropDown();
             }
+            
         }
+
+        private void ReportCaixa_Load(object sender, EventArgs e)
+        {
+            // TODO: esta linha de código carrega dados na tabela 'igrejafont11DataSet.Estados'. Você pode movê-la ou removê-la conforme necessário.
+            this.estadosTableAdapter.Fill(this.igrejafont11DataSet.Estados);
+            // TODO: This line of code loads data into the 'igrejafont11DataSet.Igrejas' table. You can move, or remove it, as needed.
+            this.igrejasTableAdapter.FillBy(this.igrejafont11DataSet.Igrejas);
+
+            comboBox1.SelectedIndex = 0;
+        }
+
+        private void FillIgrejasDropDown()
+        {
+            loginInfo info = new loginInfo();
+
+            if (info.GetRole() == "Presidente Estadual")
+            {
+                igrejasBindingSource.Filter = "Estado = '" + info.GetEstado() + "'";
+            }
+            else if (info.GetRole() == "Presidente Regional")
+            {
+                igrejasBindingSource.Filter = "Regiao = '" + info.GetRegiao() + "'";
+            }
+        }
+
 
         private void reportCaixaCancelButton_Click(object sender, EventArgs e)
         {
@@ -68,20 +93,7 @@ namespace TesourariaIFV.Forms
             }
         }
 
-        private void FillIgrejasDropDown()
-        {
-            loginInfo info = new loginInfo();
-
-            if (info.GetRole() == "Presidente Estadual")
-            {
-                igrejasBindingSource.Filter = "Estado = '" + info.GetEstado() + "'";
-            }
-            else if (info.GetRole() == "Presidente Regional")
-            {
-                igrejasBindingSource.Filter = "Regiao = '" + info.GetRegiao() + "'";
-            }
-        }
-
+       
         private void createReportCaixaBanco()
         {
             loginInfo info = new loginInfo();
@@ -91,38 +103,74 @@ namespace TesourariaIFV.Forms
             DateTime dataInicial = new DateTime(reportCaixaInitialDateTimePicker.Value.Year, reportCaixaInitialDateTimePicker.Value.Month, reportCaixaInitialDateTimePicker.Value.Day);
             DateTime dataFinal = new DateTime(reportCaixaFinalDateTimePicker.Value.Year, reportCaixaFinalDateTimePicker.Value.Month, reportCaixaFinalDateTimePicker.Value.Day);
 
-            if (info.GetRole() == "Igreja Local")
+            if (reportCaixaMonthRadioButton.Checked == true)
             {
-                if (reportCaixaMonthRadioButton.Checked == true)
-                {
-                    TesourariaIFV.Forms.ReportForms.ReportLivroCaixaBanco report = new ReportForms.ReportLivroCaixaBanco(dataInicialMonth, dataFinalMonth, info.GetIgreja(), CalculaSaldoInicialGeral(info.GetIgreja(), dataInicialMonth));
-                    report.Show();
-                }
-                else
-                    if (reportCaixaPeriodRadioButton.Checked == true)
-                    {
-                        TesourariaIFV.Forms.ReportForms.ReportLivroCaixaBanco report = new ReportForms.ReportLivroCaixaBanco(dataInicial, dataFinal, info.GetIgreja(), CalculaSaldoInicialGeral(info.GetIgreja(), dataInicial));
-                        report.Show();
-                    }
-
-                    else MessageBox.Show("Por favor, selecione Mês/Ano ou Período.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                TesourariaIFV.Forms.ReportForms.ReportLivroCaixaBanco report = new ReportForms.ReportLivroCaixaBanco(dataInicialMonth, dataFinalMonth, formReportCaixaComboBox.SelectedValue.ToString(), CalculaSaldoInicialGeral(formReportCaixaComboBox.SelectedValue.ToString(), dataInicialMonth));
+                report.Show();
             }
             else
-            {
-                if (reportCaixaMonthRadioButton.Checked == true)
+            { 
+                if (reportCaixaPeriodRadioButton.Checked == true)
                 {
-                    TesourariaIFV.Forms.ReportForms.ReportLivroCaixaBanco report = new ReportForms.ReportLivroCaixaBanco(dataInicialMonth, dataFinalMonth, formReportCaixaComboBox.SelectedValue.ToString(), CalculaSaldoInicialGeral(formReportCaixaComboBox.SelectedValue.ToString(), dataInicialMonth));
+                    TesourariaIFV.Forms.ReportForms.ReportLivroCaixaBanco report = new ReportForms.ReportLivroCaixaBanco(dataInicial, dataFinal, formReportCaixaComboBox.SelectedValue.ToString(), CalculaSaldoInicialGeral(formReportCaixaComboBox.SelectedValue.ToString(), dataInicial));
                     report.Show();
                 }
-                else
-                    if (reportCaixaPeriodRadioButton.Checked == true)
-                    {
-                        TesourariaIFV.Forms.ReportForms.ReportLivroCaixaBanco report = new ReportForms.ReportLivroCaixaBanco(dataInicial, dataFinal, formReportCaixaComboBox.SelectedValue.ToString(), CalculaSaldoInicialGeral(formReportCaixaComboBox.SelectedValue.ToString(), dataInicial));
-                        report.Show();
-                    }
 
-                    else MessageBox.Show("Por favor, selecione Mês/Ano ou Período.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else MessageBox.Show("Por favor, selecione Mês/Ano ou Período.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+       
+        private void createReportBanco()
+        {
+            loginInfo info = new loginInfo();
+            DateTime dataInicialMonth = new DateTime(reportCaixaMonthDateTimePicker.Value.Year, reportCaixaMonthDateTimePicker.Value.Month, 01);
+            DateTime dataFinalMonth = new DateTime(reportCaixaMonthDateTimePicker.Value.Year, reportCaixaMonthDateTimePicker.Value.Month, DateTime.DaysInMonth(reportCaixaMonthDateTimePicker.Value.Year, reportCaixaMonthDateTimePicker.Value.Month));
+
+            DateTime dataInicial = new DateTime(reportCaixaInitialDateTimePicker.Value.Year, reportCaixaInitialDateTimePicker.Value.Month, reportCaixaInitialDateTimePicker.Value.Day);
+            DateTime dataFinal = new DateTime(reportCaixaFinalDateTimePicker.Value.Year, reportCaixaFinalDateTimePicker.Value.Month, reportCaixaFinalDateTimePicker.Value.Day);
+
+
+            
+            if (reportCaixaMonthRadioButton.Checked == true)
+            {
+                TesourariaIFV.Forms.ReportLivroBanco reportBanco = new ReportLivroBanco(dataInicialMonth, dataFinalMonth, formReportCaixaComboBox.SelectedValue.ToString(), CalculaSaldoInicialBanco(formReportCaixaComboBox.SelectedValue.ToString(), dataInicialMonth));
+                reportBanco.Show();
+            }
+            else
+                if (reportCaixaPeriodRadioButton.Checked == true)
+                {
+                    TesourariaIFV.Forms.ReportLivroBanco reportBanco = new ReportLivroBanco(dataInicial, dataFinal, formReportCaixaComboBox.SelectedValue.ToString(), CalculaSaldoInicialBanco(formReportCaixaComboBox.SelectedValue.ToString(), dataInicial));
+                    reportBanco.Show();
+                }
+
+                else MessageBox.Show("Por favor, selecione Mês/Ano ou Período.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        
+        }
+
+        private void createReportCaixa()
+        {
+            loginInfo info = new loginInfo();
+            DateTime dataInicialMonth = new DateTime(reportCaixaMonthDateTimePicker.Value.Year, reportCaixaMonthDateTimePicker.Value.Month, 01);
+            DateTime dataFinalMonth = new DateTime(reportCaixaMonthDateTimePicker.Value.Year, reportCaixaMonthDateTimePicker.Value.Month, DateTime.DaysInMonth(reportCaixaMonthDateTimePicker.Value.Year, reportCaixaMonthDateTimePicker.Value.Month));
+
+            DateTime dataInicial = new DateTime(reportCaixaInitialDateTimePicker.Value.Year, reportCaixaInitialDateTimePicker.Value.Month, reportCaixaInitialDateTimePicker.Value.Day);
+            DateTime dataFinal = new DateTime(reportCaixaFinalDateTimePicker.Value.Year, reportCaixaFinalDateTimePicker.Value.Month, reportCaixaFinalDateTimePicker.Value.Day);
+
+            
+            if (reportCaixaMonthRadioButton.Checked == true)
+            {
+                TesourariaIFV.Forms.ReportLivroCaixa reportCaixa = new ReportLivroCaixa(dataInicialMonth, dataFinalMonth, formReportCaixaComboBox.SelectedValue.ToString(), CalculaSaldoInicialCaixa(formReportCaixaComboBox.SelectedValue.ToString(), dataInicialMonth));
+                reportCaixa.Show();
+            }
+            else
+                if (reportCaixaPeriodRadioButton.Checked == true)
+                {
+                    TesourariaIFV.Forms.ReportLivroCaixa reportCaixa = new ReportLivroCaixa(dataInicial, dataFinal, formReportCaixaComboBox.SelectedValue.ToString(), CalculaSaldoInicialCaixa(formReportCaixaComboBox.SelectedValue.ToString(), dataInicial));
+                    reportCaixa.Show();
+                }
+
+                else MessageBox.Show("Por favor, selecione Mês/Ano ou Período.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);                        
         }
 
         private string CalculaSaldoInicialGeral(string igreja, DateTime data)
@@ -184,128 +232,13 @@ namespace TesourariaIFV.Forms
                 return total;
 
         }
-        private void createReportBanco()
-        {
-            loginInfo info = new loginInfo();
-            DateTime dataInicialMonth = new DateTime(reportCaixaMonthDateTimePicker.Value.Year, reportCaixaMonthDateTimePicker.Value.Month, 01);
-            DateTime dataFinalMonth = new DateTime(reportCaixaMonthDateTimePicker.Value.Year, reportCaixaMonthDateTimePicker.Value.Month, DateTime.DaysInMonth(reportCaixaMonthDateTimePicker.Value.Year, reportCaixaMonthDateTimePicker.Value.Month));
-
-            DateTime dataInicial = new DateTime(reportCaixaInitialDateTimePicker.Value.Year, reportCaixaInitialDateTimePicker.Value.Month, reportCaixaInitialDateTimePicker.Value.Day);
-            DateTime dataFinal = new DateTime(reportCaixaFinalDateTimePicker.Value.Year, reportCaixaFinalDateTimePicker.Value.Month, reportCaixaFinalDateTimePicker.Value.Day);
 
 
-            if (info.GetRole() == "Igreja Local")
-            {
-
-                if (reportCaixaMonthRadioButton.Checked == true)
-                {
-                    TesourariaIFV.Forms.ReportLivroBanco reportBanco = new ReportLivroBanco(dataInicialMonth, dataFinalMonth, info.GetIgreja(), CalculaSaldoInicialBanco(info.GetIgreja(), dataInicialMonth));
-                    reportBanco.Show();
-                }
-                else
-                    if (reportCaixaPeriodRadioButton.Checked == true)
-                    {
-                        TesourariaIFV.Forms.ReportLivroBanco reportBanco = new ReportLivroBanco(dataInicial, dataFinal, info.GetIgreja(), CalculaSaldoInicialBanco(info.GetIgreja(), dataInicial));
-                        reportBanco.Show();
-                    }
-
-                    else MessageBox.Show("Por favor, selecione Mês/Ano ou Período.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            }
-            else
-            {
-                if (reportCaixaMonthRadioButton.Checked == true)
-                {
-                    TesourariaIFV.Forms.ReportLivroBanco reportBanco = new ReportLivroBanco(dataInicialMonth, dataFinalMonth, formReportCaixaComboBox.SelectedValue.ToString(), CalculaSaldoInicialBanco(formReportCaixaComboBox.SelectedValue.ToString(), dataInicialMonth));
-                    reportBanco.Show();
-                }
-                else
-                    if (reportCaixaPeriodRadioButton.Checked == true)
-                    {
-                        TesourariaIFV.Forms.ReportLivroBanco reportBanco = new ReportLivroBanco(dataInicial, dataFinal, formReportCaixaComboBox.SelectedValue.ToString(), CalculaSaldoInicialBanco(formReportCaixaComboBox.SelectedValue.ToString(), dataInicial));
-                        reportBanco.Show();
-                    }
-
-                    else MessageBox.Show("Por favor, selecione Mês/Ano ou Período.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
-
-        private void createReportCaixa()
-        {
-            loginInfo info = new loginInfo();
-            DateTime dataInicialMonth = new DateTime(reportCaixaMonthDateTimePicker.Value.Year, reportCaixaMonthDateTimePicker.Value.Month, 01);
-            DateTime dataFinalMonth = new DateTime(reportCaixaMonthDateTimePicker.Value.Year, reportCaixaMonthDateTimePicker.Value.Month, DateTime.DaysInMonth(reportCaixaMonthDateTimePicker.Value.Year, reportCaixaMonthDateTimePicker.Value.Month));
-
-            DateTime dataInicial = new DateTime(reportCaixaInitialDateTimePicker.Value.Year, reportCaixaInitialDateTimePicker.Value.Month, reportCaixaInitialDateTimePicker.Value.Day);
-            DateTime dataFinal = new DateTime(reportCaixaFinalDateTimePicker.Value.Year, reportCaixaFinalDateTimePicker.Value.Month, reportCaixaFinalDateTimePicker.Value.Day);
-
-            if (info.GetRole() == "Igreja Local")
-            {
-                if (reportCaixaMonthRadioButton.Checked == true)
-                {
-                    TesourariaIFV.Forms.ReportLivroCaixa reportCaixa = new ReportLivroCaixa(dataInicialMonth, dataFinalMonth, info.GetIgreja(), CalculaSaldoInicialCaixa(info.GetIgreja(), dataInicialMonth));
-                    reportCaixa.Show();
-                }
-                else
-                    if (reportCaixaPeriodRadioButton.Checked == true)
-                    {
-                        TesourariaIFV.Forms.ReportLivroCaixa reportCaixa = new ReportLivroCaixa(dataInicial, dataFinal, info.GetIgreja(), CalculaSaldoInicialCaixa(info.GetIgreja(), dataInicial));
-                        reportCaixa.Show();
-                    }
-
-                    else MessageBox.Show("Por favor, selecione Mês/Ano ou Período.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                if (reportCaixaMonthRadioButton.Checked == true)
-                {
-                    TesourariaIFV.Forms.ReportLivroCaixa reportCaixa = new ReportLivroCaixa(dataInicialMonth, dataFinalMonth, formReportCaixaComboBox.SelectedValue.ToString(), CalculaSaldoInicialCaixa(formReportCaixaComboBox.SelectedValue.ToString(), dataInicialMonth));
-                    reportCaixa.Show();
-                }
-                else
-                    if (reportCaixaPeriodRadioButton.Checked == true)
-                    {
-                        TesourariaIFV.Forms.ReportLivroCaixa reportCaixa = new ReportLivroCaixa(dataInicial, dataFinal, formReportCaixaComboBox.SelectedValue.ToString(), CalculaSaldoInicialCaixa(formReportCaixaComboBox.SelectedValue.ToString(), dataInicial));
-                        reportCaixa.Show();
-                    }
-
-                    else MessageBox.Show("Por favor, selecione Mês/Ano ou Período.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            }
-        }
-
-        private void ReportCaixa_Load(object sender, EventArgs e)
-        {
-            // TODO: esta linha de código carrega dados na tabela 'igrejafont11DataSet.Estados'. Você pode movê-la ou removê-la conforme necessário.
-            this.estadosTableAdapter.Fill(this.igrejafont11DataSet.Estados);
-            // TODO: This line of code loads data into the 'igrejafont11DataSet.Igrejas' table. You can move, or remove it, as needed.
-            this.igrejasTableAdapter.FillBy(this.igrejafont11DataSet.Igrejas);
-
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox1.Checked == true)
-            {
-                comboBox1.Enabled = true ;
-                comboBox2.Enabled = true ;
-                formReportCaixaComboBox.Enabled = true ;
-                checkBox2.Checked = true;
-                checkBox3.Checked = true;
-            }
-            else
-            {
-                comboBox1.Enabled = false;
-                comboBox2.Enabled = false;
-                formReportCaixaComboBox.Enabled = false;
-                checkBox2.Checked = false;
-                checkBox3.Checked = false;
-            }
-        }
+        
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox1.SelectedItem != null)
+            if (comboBox1.SelectedItem != null && comboBox2.SelectedValue != null)
             {
                 estadosBindingSource.Filter = "Regiao = '" + comboBox1.SelectedItem.ToString() + "'";
                 igrejasBindingSource.Filter = "Estado = '" + comboBox2.SelectedValue.ToString() + "'";
@@ -317,6 +250,26 @@ namespace TesourariaIFV.Forms
             if (comboBox2.SelectedValue != null)
             {
                 igrejasBindingSource.Filter = "Estado = '" + comboBox2.SelectedValue.ToString() + "'";
+            }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked == true)
+            {
+                comboBox1.Enabled = true;
+                comboBox2.Enabled = true;
+                formReportCaixaComboBox.Enabled = true;
+                checkBox2.Checked = true;
+                checkBox3.Checked = true;
+            }
+            else
+            {
+                comboBox1.Enabled = false;
+                comboBox2.Enabled = false;
+                formReportCaixaComboBox.Enabled = false;
+                checkBox2.Checked = false;
+                checkBox3.Checked = false;
             }
         }
 
