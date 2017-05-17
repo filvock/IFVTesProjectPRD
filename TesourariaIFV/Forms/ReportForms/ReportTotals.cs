@@ -59,7 +59,6 @@ namespace TesourariaIFV.Forms.ReportForms
 
         private void ReportTotals_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'igrejafont11DataSet.Igrejas' table. You can move, or remove it, as needed.
             this.igrejasTableAdapter.FillBy(this.igrejafont11DataSet.Igrejas);
 
         }

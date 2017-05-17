@@ -225,10 +225,28 @@
     <Compile Include="Forms\ReportForms\ManagementReport\ReportCaixaMgnt.Designer.cs">
       <DependentUpon>ReportCaixaMgnt.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ReportForms\ManagementReport\ReportPlanoDeContasDetalhesMgntFinal.cs">
+    <Compile Include="Forms\ReportForms\ManagementReport\ReportForms\PCMTotaisPais .cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ReportForms\ManagementReport\ReportPlanoDeContasDetalhesMgntFinal.Designer.cs">
+    <Compile Include="Forms\ReportForms\ManagementReport\ReportForms\PCMTotaisPais .Designer.cs">
+      <DependentUpon>PCMTotaisPais .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReportForms\ManagementReport\ReportForms\PCMTotaisRegiao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReportForms\ManagementReport\ReportForms\PCMTotaisRegiao.Designer.cs">
+      <DependentUpon>PCMTotaisRegiao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReportForms\ManagementReport\ReportForms\PCMTotaisEstado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReportForms\ManagementReport\ReportForms\PCMTotaisEstado.Designer.cs">
+      <DependentUpon>PCMTotaisEstado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReportForms\ManagementReport\ReportForms\ReportPlanoDeContasDetalhesMgntFinal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReportForms\ManagementReport\ReportForms\ReportPlanoDeContasDetalhesMgntFinal.Designer.cs">
       <DependentUpon>ReportPlanoDeContasDetalhesMgntFinal.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ReportForms\ManagementReport\ReportPlanoDeContasDetalhesMgnt.cs">
@@ -243,11 +261,11 @@
     <Compile Include="Forms\ReportForms\ManagementReport\ReportPlanoDeContasTotaisMgnt.Designer.cs">
       <DependentUpon>ReportPlanoDeContasTotaisMgnt.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ReportForms\ManagementReport\ReportPlanoDeContasTotaisMgntFinal.cs">
+    <Compile Include="Forms\ReportForms\ManagementReport\ReportForms\PCMTotaisIgreja.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ReportForms\ManagementReport\ReportPlanoDeContasTotaisMgntFinal.Designer.cs">
-      <DependentUpon>ReportPlanoDeContasTotaisMgntFinal.cs</DependentUpon>
+    <Compile Include="Forms\ReportForms\ManagementReport\ReportForms\PCMTotaisIgreja.Designer.cs">
+      <DependentUpon>PCMTotaisIgreja.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ReportForms\ManagementReport\ReportTotalsMgnt.cs">
       <SubType>Form</SubType>
@@ -255,10 +273,10 @@
     <Compile Include="Forms\ReportForms\ManagementReport\ReportTotalsMgnt.Designer.cs">
       <DependentUpon>ReportTotalsMgnt.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ReportForms\ManagementReport\ReportTotalsMgntFinal.cs">
+    <Compile Include="Forms\ReportForms\ManagementReport\ReportForms\ReportTotalsMgntFinal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ReportForms\ManagementReport\ReportTotalsMgntFinal.Designer.cs">
+    <Compile Include="Forms\ReportForms\ManagementReport\ReportForms\ReportTotalsMgntFinal.Designer.cs">
       <DependentUpon>ReportTotalsMgntFinal.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ReportForms\ReportCaixa.cs">
@@ -439,7 +457,16 @@
     <EmbeddedResource Include="Forms\ReportForms\ManagementReport\ReportCaixaMgnt.resx">
       <DependentUpon>ReportCaixaMgnt.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ReportForms\ManagementReport\ReportPlanoDeContasDetalhesMgntFinal.resx">
+    <EmbeddedResource Include="Forms\ReportForms\ManagementReport\ReportForms\PCMTotaisPais .resx">
+      <DependentUpon>PCMTotaisPais .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReportForms\ManagementReport\ReportForms\PCMTotaisRegiao.resx">
+      <DependentUpon>PCMTotaisRegiao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReportForms\ManagementReport\ReportForms\PCMTotaisEstado.resx">
+      <DependentUpon>PCMTotaisEstado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReportForms\ManagementReport\ReportForms\ReportPlanoDeContasDetalhesMgntFinal.resx">
       <DependentUpon>ReportPlanoDeContasDetalhesMgntFinal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ReportForms\ManagementReport\ReportPlanoDeContasDetalhesMgnt.resx">
@@ -448,13 +475,13 @@
     <EmbeddedResource Include="Forms\ReportForms\ManagementReport\ReportPlanoDeContasTotaisMgnt.resx">
       <DependentUpon>ReportPlanoDeContasTotaisMgnt.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ReportForms\ManagementReport\ReportPlanoDeContasTotaisMgntFinal.resx">
-      <DependentUpon>ReportPlanoDeContasTotaisMgntFinal.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\ReportForms\ManagementReport\ReportForms\PCMTotaisIgreja.resx">
+      <DependentUpon>PCMTotaisIgreja.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ReportForms\ManagementReport\ReportTotalsMgnt.resx">
       <DependentUpon>ReportTotalsMgnt.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ReportForms\ManagementReport\ReportTotalsMgntFinal.resx">
+    <EmbeddedResource Include="Forms\ReportForms\ManagementReport\ReportForms\ReportTotalsMgntFinal.resx">
       <DependentUpon>ReportTotalsMgntFinal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ReportForms\ReportCaixa.resx">
@@ -497,6 +524,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reports\MgntReports\PCTotaisPais.rdlc" />
+    <EmbeddedResource Include="Reports\MgntReports\PCTotaisRegiao.rdlc" />
+    <EmbeddedResource Include="Reports\MgntReports\PCTotaisEstado.rdlc" />
+    <EmbeddedResource Include="Reports\MgntReports\PCTotaisIgreja.rdlc" />
     <EmbeddedResource Include="Reports\ReportLivroCaixaBanco.rdlc" />
     <EmbeddedResource Include="Reports\ReportPlanoDeContasDetalhes.rdlc" />
     <EmbeddedResource Include="Reports\ReportTotals.rdlc" />

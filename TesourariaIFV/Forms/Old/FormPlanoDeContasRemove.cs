@@ -21,9 +21,7 @@ namespace TesourariaIFV
 
         private void FormPlanoDeContasRemove_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'igrejafont11DataSet.PlanoDeContasDebito' table. You can move, or remove it, as needed.
             this.planoDeContasDebitoTableAdapter.Fill(this.igrejafont11DataSet.PlanoDeContasDebito);
-            // TODO: This line of code loads data into the 'igrejafont11DataSet.PlanoDeContasCredito' table. You can move, or remove it, as needed.
             this.planoDeContasCreditoTableAdapter.Fill(this.igrejafont11DataSet.PlanoDeContasCredito);
 
         }

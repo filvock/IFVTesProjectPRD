@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TesourariaIFV.Forms.ReportForms.ManagementReport
+namespace TesourariaIFV.Forms.ReportForms.ManagementReport.ReportForms
 {
-    public partial class ReportPlanoDeContasTotaisMgntFinal : Form
+    public partial class PCMTotaisEstado : Form
     {
-        public ReportPlanoDeContasTotaisMgntFinal(DateTime dataInicial, DateTime dataFinal, string igreja)
+        public PCMTotaisEstado(DateTime dataInicial, DateTime dataFinal, string estado)
         {
             InitializeComponent();
 
@@ -27,7 +27,7 @@ namespace TesourariaIFV.Forms.ReportForms.ManagementReport
             
             reportViewer1.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("DataInicial", dataInicial.ToString()));
             reportViewer1.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("DataFinal", dataFinal.ToString()));
-            reportViewer1.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("Igreja", igreja));
+            reportViewer1.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("Estado", estado));
 
 
         }
@@ -35,7 +35,7 @@ namespace TesourariaIFV.Forms.ReportForms.ManagementReport
         private void ReportPlanodeContasFinal_Load(object sender, EventArgs e)
         {
             
-            this.tesourariaGeralTableAdapter.Fill(this.igrejafont11DataSet.TesourariaGeral);
+            this.tesourariaGeral1TableAdapter.Fill(this.igrejafont11DataSet.TesourariaGeral1);
             this.reportViewer1.RefreshReport();
         }
 

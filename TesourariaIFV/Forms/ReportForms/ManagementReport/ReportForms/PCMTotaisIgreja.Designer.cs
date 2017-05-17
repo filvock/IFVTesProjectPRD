@@ -1,6 +1,6 @@
-﻿namespace TesourariaIFV.Forms.ReportForms.ManagementReport
+﻿namespace TesourariaIFV.Forms.ReportForms.ManagementReport.ReportForms
 {
-    partial class ReportPlanoDeContasDetalhesMgntFinal
+    partial class PCMTotaisIgreja
     {
         /// <summary>
         /// Required designer variable.
@@ -29,19 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.tesourariaGeralBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.igrejafont11DataSet = new TesourariaIFV.igrejafont11DataSet();
+            //this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.tesourariaGeralBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tesourariaGeralTableAdapter = new TesourariaIFV.igrejafont11DataSetTableAdapters.TesourariaGeralTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.tesourariaGeralBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.igrejafont11DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tesourariaGeralBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // tesourariaGeralBindingSource
-            // 
-            this.tesourariaGeralBindingSource.DataMember = "TesourariaGeral";
-            this.tesourariaGeralBindingSource.DataSource = this.igrejafont11DataSet;
             // 
             // igrejafont11DataSet
             // 
@@ -51,34 +47,38 @@
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource2.Name = "DataSet1";
-            reportDataSource2.Value = this.tesourariaGeralBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "TesourariaIFV.Reports.ReportPlanoDeContasDetalhes.rdlc";
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.tesourariaGeralBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "TesourariaIFV.Reports.MgntReports.PCTotaisIgreja.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(818, 280);
+            this.reportViewer1.Size = new System.Drawing.Size(758, 406);
             this.reportViewer1.TabIndex = 0;
+            // 
+            // tesourariaGeralBindingSource
+            // 
+            this.tesourariaGeralBindingSource.DataMember = "TesourariaGeral";
+            this.tesourariaGeralBindingSource.DataSource = this.igrejafont11DataSet;
             // 
             // tesourariaGeralTableAdapter
             // 
             this.tesourariaGeralTableAdapter.ClearBeforeFill = true;
             // 
-            // ReportPlanoDeContasDetalhesFinal
+            // ReportPlanodeContasFinal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(818, 280);
+            this.ClientSize = new System.Drawing.Size(758, 406);
             this.Controls.Add(this.reportViewer1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(6);
-            this.Name = "ReportPlanoDeContasDetalhesFinal";
-            this.Text = "Relatório Plano de Contas - Detalhado";
+            this.Name = "ReportPlanodeContasFinal";
+            this.Text = "ReportPlanodeContasFinal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ReportPlanodeContasFinal_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.tesourariaGeralBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.igrejafont11DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tesourariaGeralBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

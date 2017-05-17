@@ -44,9 +44,7 @@ namespace TesourariaIFV.Forms.ReportForms.ManagementReport
 
         private void ReportCaixa_Load(object sender, EventArgs e)
         {
-            // TODO: esta linha de código carrega dados na tabela 'igrejafont11DataSet.Estados'. Você pode movê-la ou removê-la conforme necessário.
             this.estadosTableAdapter.Fill(this.igrejafont11DataSet.Estados);
-            // TODO: This line of code loads data into the 'igrejafont11DataSet.Igrejas' table. You can move, or remove it, as needed.
             this.igrejasTableAdapter.FillBy(this.igrejafont11DataSet.Igrejas);
 
             comboBox1.SelectedIndex = 0;
@@ -105,14 +103,14 @@ namespace TesourariaIFV.Forms.ReportForms.ManagementReport
 
             if (reportCaixaMonthRadioButton.Checked == true)
             {
-                TesourariaIFV.Forms.ReportForms.ReportLivroCaixaBanco report = new ReportForms.ReportLivroCaixaBanco(dataInicialMonth, dataFinalMonth, formReportCaixaComboBox.SelectedValue.ToString(), CalculaSaldoInicialGeral(formReportCaixaComboBox.SelectedValue.ToString(), dataInicialMonth));
+                TesourariaIFV.Forms.ReportForms.ManagementReport.ReportForms.ReportTotalsMgntFinal report = new ReportForms.ReportTotalsMgntFinal(dataInicialMonth, dataFinalMonth, formReportCaixaComboBox.SelectedValue.ToString());//, CalculaSaldoInicialGeral(formReportCaixaComboBox.SelectedValue.ToString(), dataInicialMonth));
                 report.Show();
             }
             else
             { 
                 if (reportCaixaPeriodRadioButton.Checked == true)
                 {
-                    TesourariaIFV.Forms.ReportForms.ReportLivroCaixaBanco report = new ReportForms.ReportLivroCaixaBanco(dataInicial, dataFinal, formReportCaixaComboBox.SelectedValue.ToString(), CalculaSaldoInicialGeral(formReportCaixaComboBox.SelectedValue.ToString(), dataInicial));
+                    TesourariaIFV.Forms.ReportForms.ManagementReport.ReportForms.ReportTotalsMgntFinal report = new ReportForms.ReportTotalsMgntFinal(dataInicial, dataFinal, formReportCaixaComboBox.SelectedValue.ToString());//, CalculaSaldoInicialGeral(formReportCaixaComboBox.SelectedValue.ToString(), dataInicial));
                     report.Show();
                 }
 

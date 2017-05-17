@@ -27,9 +27,7 @@ namespace TesourariaIFV.Forms
 
         private void AdminEntriesDataGridView_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'igrejafont11DataSet.TesourariaGeral' table. You can move, or remove it, as needed.
             this.tesourariaGeralTableAdapter.Fill(this.igrejafont11DataSet.TesourariaGeral);
-
             float widthRatio = Screen.PrimaryScreen.Bounds.Width / 1366F;
             float heightRatio = Screen.PrimaryScreen.Bounds.Height / 768F;
             SizeF scale = new SizeF(widthRatio, heightRatio);

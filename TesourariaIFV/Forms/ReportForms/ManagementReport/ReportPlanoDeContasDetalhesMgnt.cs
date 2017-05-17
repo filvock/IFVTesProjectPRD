@@ -40,9 +40,7 @@ namespace TesourariaIFV.Forms.ReportForms.ManagementReport
 
         private void ReportPlanoDeContas_Load(object sender, EventArgs e)
         {
-            // TODO: esta linha de código carrega dados na tabela 'igrejafont11DataSet.Estados'. Você pode movê-la ou removê-la conforme necessário.
             this.estadosTableAdapter.Fill(this.igrejafont11DataSet.Estados);
-            // TODO: This line of code loads data into the 'igrejafont11DataSet.Igrejas' table. You can move, or remove it, as needed.
             this.igrejasTableAdapter.FillBy(this.igrejafont11DataSet.Igrejas);
             comboBox1.SelectedIndex = 0;
         }
@@ -73,7 +71,7 @@ namespace TesourariaIFV.Forms.ReportForms.ManagementReport
                 DateTime dataInicial = new DateTime(reportPlanoDeContasMonthDateTimePicker.Value.Year, reportPlanoDeContasMonthDateTimePicker.Value.Month, 01);
                 DateTime dataFinal = new DateTime(reportPlanoDeContasMonthDateTimePicker.Value.Year, reportPlanoDeContasMonthDateTimePicker.Value.Month, DateTime.DaysInMonth(reportPlanoDeContasMonthDateTimePicker.Value.Year, reportPlanoDeContasMonthDateTimePicker.Value.Month));
 
-                TesourariaIFV.Forms.ReportForms.ManagementReport.ReportPlanoDeContasDetalhesMgntFinal report = new ReportPlanoDeContasDetalhesMgntFinal(dataInicial, dataFinal, reportPlanoDeContasComboBox.SelectedValue.ToString());
+                TesourariaIFV.Forms.ReportForms.ManagementReport.ReportForms.ReportPlanoDeContasDetalhesMgntFinal report = new ReportForms.ReportPlanoDeContasDetalhesMgntFinal(dataInicial, dataFinal, reportPlanoDeContasComboBox.SelectedValue.ToString());
                 report.Show();
 
             }
@@ -81,7 +79,7 @@ namespace TesourariaIFV.Forms.ReportForms.ManagementReport
                 if (reportPlanoDeContasPeriodRadioButton.Checked == true)
                 {
 
-                    TesourariaIFV.Forms.ReportForms.ManagementReport.ReportPlanoDeContasDetalhesMgntFinal report = new ReportPlanoDeContasDetalhesMgntFinal(reportPlanoDeContasInitialDateTimePicker.Value, reportPlanoDeContasFinalDateTimePicker.Value, reportPlanoDeContasComboBox.SelectedValue.ToString());
+                    TesourariaIFV.Forms.ReportForms.ManagementReport.ReportForms.ReportPlanoDeContasDetalhesMgntFinal report = new ReportForms.ReportPlanoDeContasDetalhesMgntFinal(reportPlanoDeContasInitialDateTimePicker.Value, reportPlanoDeContasFinalDateTimePicker.Value, reportPlanoDeContasComboBox.SelectedValue.ToString());
                     report.Show();
 
                 }

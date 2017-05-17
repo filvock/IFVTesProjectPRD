@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TesourariaIFV.Forms.ReportForms.ManagementReport
+namespace TesourariaIFV.Forms.ReportForms.ManagementReport.ReportForms
 {
     public partial class ReportTotalsMgntFinal : Form
     {

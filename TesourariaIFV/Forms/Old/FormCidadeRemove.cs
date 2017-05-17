@@ -26,7 +26,6 @@ namespace TesourariaIFV.Forms.Admin_Forms
 
         private void FormCidadeRemove_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'igrejafont11DataSet.Cidades' table. You can move, or remove it, as needed.
             this.cidadesTableAdapter.Fill(this.igrejafont11DataSet.Cidades);
 
         }

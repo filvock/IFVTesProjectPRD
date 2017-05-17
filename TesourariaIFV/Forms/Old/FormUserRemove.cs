@@ -27,7 +27,6 @@ namespace TesourariaIFV.Forms.Admin_Forms
 
         private void FormUserRemove_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'igrejafont11DataSet.Usuarios' table. You can move, or remove it, as needed.
             this.usuariosTableAdapter.Fill(this.igrejafont11DataSet.Usuarios);
 
         }

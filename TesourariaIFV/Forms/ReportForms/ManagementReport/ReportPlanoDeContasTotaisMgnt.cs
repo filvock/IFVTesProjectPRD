@@ -40,9 +40,7 @@ namespace TesourariaIFV.Forms.ReportForms.ManagementReport
 
         private void ReportPlanoDeContas_Load(object sender, EventArgs e)
         {
-            // TODO: esta linha de código carrega dados na tabela 'igrejafont11DataSet.Estados'. Você pode movê-la ou removê-la conforme necessário.
             this.estadosTableAdapter.Fill(this.igrejafont11DataSet.Estados);
-            // TODO: This line of code loads data into the 'igrejafont11DataSet.Igrejas' table. You can move, or remove it, as needed.
             this.igrejasTableAdapter.FillBy(this.igrejafont11DataSet.Igrejas);
             comboBox1.SelectedIndex = 0;
 
@@ -69,29 +67,98 @@ namespace TesourariaIFV.Forms.ReportForms.ManagementReport
 
         private void reportPlanoDeContasOkButton_Click(object sender, EventArgs e)
         {
-            loginInfo info = new loginInfo();
-
-            
-            if (reportPlanoDeContasMonthRadioButton.Checked == true)
+            if (checkBox3.Checked == true)
             {
-                DateTime dataInicial = new DateTime(reportPlanoDeContasMonthDateTimePicker.Value.Year, reportPlanoDeContasMonthDateTimePicker.Value.Month, 01);
-                DateTime dataFinal = new DateTime(reportPlanoDeContasMonthDateTimePicker.Value.Year, reportPlanoDeContasMonthDateTimePicker.Value.Month, DateTime.DaysInMonth(reportPlanoDeContasMonthDateTimePicker.Value.Year, reportPlanoDeContasMonthDateTimePicker.Value.Month));
+                if (reportPlanoDeContasMonthRadioButton.Checked == true)
+                {
+                    DateTime dataInicial = new DateTime(reportPlanoDeContasMonthDateTimePicker.Value.Year, reportPlanoDeContasMonthDateTimePicker.Value.Month, 01);
+                    DateTime dataFinal = new DateTime(reportPlanoDeContasMonthDateTimePicker.Value.Year, reportPlanoDeContasMonthDateTimePicker.Value.Month, DateTime.DaysInMonth(reportPlanoDeContasMonthDateTimePicker.Value.Year, reportPlanoDeContasMonthDateTimePicker.Value.Month));
 
-                TesourariaIFV.Forms.ReportForms.ManagementReport.ReportPlanoDeContasTotaisMgntFinal report = new ReportPlanoDeContasTotaisMgntFinal(dataInicial, dataFinal, reportPlanoDeContasComboBox.SelectedValue.ToString());
-                report.Show();
+                    TesourariaIFV.Forms.ReportForms.ManagementReport.ReportForms.PCMTotaisIgreja report = new ReportForms.PCMTotaisIgreja(dataInicial, dataFinal, reportPlanoDeContasComboBox.SelectedValue.ToString());
+                    report.Show();
 
-            }
-            else
+                }
+                else
                 if (reportPlanoDeContasPeriodRadioButton.Checked == true)
                 {
 
-                TesourariaIFV.Forms.ReportForms.ManagementReport.ReportPlanoDeContasTotaisMgntFinal report = new ReportPlanoDeContasTotaisMgntFinal(reportPlanoDeContasInitialDateTimePicker.Value, reportPlanoDeContasFinalDateTimePicker.Value, reportPlanoDeContasComboBox.SelectedValue.ToString());
+                    TesourariaIFV.Forms.ReportForms.ManagementReport.ReportForms.PCMTotaisIgreja report = new ReportForms.PCMTotaisIgreja(reportPlanoDeContasInitialDateTimePicker.Value, reportPlanoDeContasFinalDateTimePicker.Value, reportPlanoDeContasComboBox.SelectedValue.ToString());
                     report.Show();
 
                 }
 
                 else MessageBox.Show("Por favor, selecione Mês/Ano ou Período.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+            }
+            else if (checkBox2.Checked == true)
+            {
+                if (reportPlanoDeContasMonthRadioButton.Checked == true)
+                {
+                    DateTime dataInicial = new DateTime(reportPlanoDeContasMonthDateTimePicker.Value.Year, reportPlanoDeContasMonthDateTimePicker.Value.Month, 01);
+                    DateTime dataFinal = new DateTime(reportPlanoDeContasMonthDateTimePicker.Value.Year, reportPlanoDeContasMonthDateTimePicker.Value.Month, DateTime.DaysInMonth(reportPlanoDeContasMonthDateTimePicker.Value.Year, reportPlanoDeContasMonthDateTimePicker.Value.Month));
+
+                    TesourariaIFV.Forms.ReportForms.ManagementReport.ReportForms.PCMTotaisEstado report = new ReportForms.PCMTotaisEstado(dataInicial, dataFinal, comboBox2.SelectedValue.ToString());
+                    report.Show();
+
+                }
+                else
+                if (reportPlanoDeContasPeriodRadioButton.Checked == true)
+                {
+
+                    TesourariaIFV.Forms.ReportForms.ManagementReport.ReportForms.PCMTotaisEstado report = new ReportForms.PCMTotaisEstado(reportPlanoDeContasInitialDateTimePicker.Value, reportPlanoDeContasFinalDateTimePicker.Value, comboBox2.SelectedValue.ToString());
+                    report.Show();
+
+                }
+
+                else MessageBox.Show("Por favor, selecione Mês/Ano ou Período.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            else if (checkBox1.Checked == true)
+            {
+                if (reportPlanoDeContasMonthRadioButton.Checked == true)
+                {
+                    DateTime dataInicial = new DateTime(reportPlanoDeContasMonthDateTimePicker.Value.Year, reportPlanoDeContasMonthDateTimePicker.Value.Month, 01);
+                    DateTime dataFinal = new DateTime(reportPlanoDeContasMonthDateTimePicker.Value.Year, reportPlanoDeContasMonthDateTimePicker.Value.Month, DateTime.DaysInMonth(reportPlanoDeContasMonthDateTimePicker.Value.Year, reportPlanoDeContasMonthDateTimePicker.Value.Month));
+
+                    TesourariaIFV.Forms.ReportForms.ManagementReport.ReportForms.PCMTotaisRegiao report = new TesourariaIFV.Forms.ReportForms.ManagementReport.ReportForms.PCMTotaisRegiao(dataInicial, dataFinal, comboBox1.SelectedItem.ToString());
+                    report.Show();
+
+                }
+                else
+                if (reportPlanoDeContasPeriodRadioButton.Checked == true)
+                {
+
+                    TesourariaIFV.Forms.ReportForms.ManagementReport.ReportForms.PCMTotaisRegiao report = new TesourariaIFV.Forms.ReportForms.ManagementReport.ReportForms.PCMTotaisRegiao(reportPlanoDeContasInitialDateTimePicker.Value, reportPlanoDeContasFinalDateTimePicker.Value, comboBox1.SelectedItem.ToString());
+                    report.Show();
+
+                }
+
+                else MessageBox.Show("Por favor, selecione Mês/Ano ou Período.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            else
+            {
+                if (reportPlanoDeContasMonthRadioButton.Checked == true)
+                {
+                    DateTime dataInicial = new DateTime(reportPlanoDeContasMonthDateTimePicker.Value.Year, reportPlanoDeContasMonthDateTimePicker.Value.Month, 01);
+                    DateTime dataFinal = new DateTime(reportPlanoDeContasMonthDateTimePicker.Value.Year, reportPlanoDeContasMonthDateTimePicker.Value.Month, DateTime.DaysInMonth(reportPlanoDeContasMonthDateTimePicker.Value.Year, reportPlanoDeContasMonthDateTimePicker.Value.Month));
+
+                    TesourariaIFV.Forms.ReportForms.ManagementReport.ReportForms.PCMTotaisPais report = new ReportForms.PCMTotaisPais(dataInicial, dataFinal);
+                    report.Show();
+
+                }
+                else
+                if (reportPlanoDeContasPeriodRadioButton.Checked == true)
+                {
+
+                    TesourariaIFV.Forms.ReportForms.ManagementReport.ReportForms.PCMTotaisPais report = new ReportForms.PCMTotaisPais(reportPlanoDeContasInitialDateTimePicker.Value, reportPlanoDeContasFinalDateTimePicker.Value);
+                    report.Show();
+
+                }
+
+                else MessageBox.Show("Por favor, selecione Mês/Ano ou Período.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
             
         }
 

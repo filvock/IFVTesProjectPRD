@@ -326,6 +326,9 @@ D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.Forms.ReportFor
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.Forms.ReportForms.ManagementReport.ReportPlanoDeContasDetalhesMgnt.resources
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.Forms.ReportForms.ManagementReport.ReportPlanoDeContasTotaisMgnt.resources
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.Forms.ReportForms.ManagementReport.ReportTotalsMgnt.resources
-D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.Forms.ReportForms.ManagementReport.ReportPlanoDeContasDetalhesMgntFinal.resources
-D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.Forms.ReportForms.ManagementReport.ReportPlanoDeContasTotaisMgntFinal.resources
-D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.Forms.ReportForms.ManagementReport.ReportTotalsMgntFinal.resources
+D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.Forms.ReportForms.ManagementReport.ReportForms.PCMTotaisRegiao.resources
+D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.Forms.ReportForms.ManagementReport.ReportForms.PCMTotaisEstado.resources
+D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.Forms.ReportForms.ManagementReport.ReportForms.ReportPlanoDeContasDetalhesMgntFinal.resources
+D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.Forms.ReportForms.ManagementReport.ReportForms.PCMTotaisIgreja.resources
+D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.Forms.ReportForms.ManagementReport.ReportForms.ReportTotalsMgntFinal.resources
+D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.Forms.ReportForms.ManagementReport.ReportForms.PCMTotaisPais.resources
