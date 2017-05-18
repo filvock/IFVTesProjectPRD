@@ -311,3 +311,13 @@ D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Release\TesourariaIFV.Forms.Reports
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Release\TesourariaIFV.Forms.Reports_Forms.ReportPlanoDeContasTotais.resources
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Release\TesourariaIFV.Forms.Reports_Forms.ReportPlanoDeContasDetalhesFinal.resources
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Release\TesourariaIFV.Forms.Reports_Forms.ReportPlanoDeContasTotaisFinal.resources
+D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Release\TesourariaIFV.Forms.ReportForms.ManagementReport.ReportCaixaMgnt.resources
+D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Release\TesourariaIFV.Forms.ReportForms.ManagementReport.ReportForms.PCMTotaisPais.resources
+D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Release\TesourariaIFV.Forms.ReportForms.ManagementReport.ReportForms.PCMTotaisRegiao.resources
+D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Release\TesourariaIFV.Forms.ReportForms.ManagementReport.ReportForms.PCMTotaisEstado.resources
+D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Release\TesourariaIFV.Forms.ReportForms.ManagementReport.ReportForms.ReportPlanoDeContasDetalhesMgntFinal.resources
+D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Release\TesourariaIFV.Forms.ReportForms.ManagementReport.ReportPlanoDeContasDetalhesMgnt.resources
+D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Release\TesourariaIFV.Forms.ReportForms.ManagementReport.ReportPlanoDeContasTotaisMgnt.resources
+D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Release\TesourariaIFV.Forms.ReportForms.ManagementReport.ReportForms.PCMTotaisIgreja.resources
+D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Release\TesourariaIFV.Forms.ReportForms.ManagementReport.ReportTotalsMgnt.resources
+D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Release\TesourariaIFV.Forms.ReportForms.ManagementReport.ReportForms.ReportTotalsMgntFinal.resources

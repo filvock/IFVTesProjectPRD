@@ -189,6 +189,7 @@
                                     <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>'R$'0.00;('R$'0.00)</Format>
+                                    <Color>=IIF(Fields!Valor.Value&lt;0, "Red", "Black")</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -231,6 +232,7 @@
                                     <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>'R$'0.00;('R$'0.00)</Format>
+                                    <Color>=IIF(Fields!Valor.Value&lt;0, "Red", "Black")</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -282,6 +284,7 @@
                                     <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>'R$'0.00;('R$'0.00)</Format>
+                                    <Color>=IIF(Fields!Valor.Value&lt;0, "Red", "Black")</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -294,26 +297,6 @@
                               <Style>Solid</Style>
                               <Width>2.25pt</Width>
                             </Border>
-                            <TopBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>2.25pt</Width>
-                            </TopBorder>
-                            <BottomBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>2.25pt</Width>
-                            </BottomBorder>
-                            <LeftBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>2.25pt</Width>
-                            </LeftBorder>
-                            <RightBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>2.25pt</Width>
-                            </RightBorder>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -536,7 +519,7 @@
                             <FilterExpression>=Fields!Conta.Value</FilterExpression>
                             <Operator>NotEqual</Operator>
                             <FilterValues>
-                              <FilterValue>Transferência Caixa/Banco</FilterValue>
+                              <FilterValue>Transferência Caixa / Banco</FilterValue>
                             </FilterValues>
                           </Filter>
                         </Filters>
@@ -600,6 +583,7 @@
                                   <PaddingBottom>2pt</PaddingBottom>
                                 </Style>
                               </Textbox>
+                              <rd:Selected>true</rd:Selected>
                             </CellContents>
                           </TablixHeader>
                           <TablixMembers>

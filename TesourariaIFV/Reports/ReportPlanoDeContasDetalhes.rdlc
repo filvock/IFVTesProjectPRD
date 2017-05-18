@@ -273,7 +273,6 @@
                             <rd:FormatSymbolCulture>pt-BR</rd:FormatSymbolCulture>
                           </Style>
                         </Textbox>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
@@ -298,7 +297,7 @@
                           <Paragraph>
                             <TextRuns>
                               <TextRun>
-                                <Value>Natureza</Value>
+                                <Value>Conta</Value>
                                 <Style>
                                   <FontSize>14pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
@@ -430,7 +429,7 @@
                                   <Paragraph>
                                     <TextRuns>
                                       <TextRun>
-                                        <Value>Conta</Value>
+                                        <Value>Descrição</Value>
                                         <Style>
                                           <FontSize>14pt</FontSize>
                                           <FontWeight>Bold</FontWeight>
@@ -561,7 +560,7 @@
                             <FilterExpression>=Fields!Conta.Value</FilterExpression>
                             <Operator>NotEqual</Operator>
                             <FilterValues>
-                              <FilterValue>Transferência Caixa/Banco</FilterValue>
+                              <FilterValue>Transferência Caixa / Banco</FilterValue>
                             </FilterValues>
                           </Filter>
                         </Filters>
@@ -605,6 +604,7 @@
                                   <PaddingBottom>2pt</PaddingBottom>
                                 </Style>
                               </Textbox>
+                              <rd:Selected>true</rd:Selected>
                             </CellContents>
                           </TablixHeader>
                           <TablixMembers>
