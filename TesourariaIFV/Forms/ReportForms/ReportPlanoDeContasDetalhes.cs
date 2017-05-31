@@ -113,5 +113,11 @@ namespace TesourariaIFV.Forms.Reports_Forms
             this.igrejasTableAdapter.FillBy(this.igrejafont11DataSet.Igrejas);
 
         }
+
+        private void reportPlanoDeContasMonthDateTimePicker_Enter(object sender, EventArgs e)
+        {
+            if (reportPlanoDeContasMonthDateTimePicker.Value.Day > 28)
+                reportPlanoDeContasMonthDateTimePicker.Value = DateTime.Now.AddDays(-5);
+        }
     }
 }

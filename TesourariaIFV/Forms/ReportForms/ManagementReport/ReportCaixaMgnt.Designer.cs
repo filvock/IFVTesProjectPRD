@@ -53,11 +53,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.estadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label7 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.estadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.estadosTableAdapter = new TesourariaIFV.igrejafont11DataSetTableAdapters.EstadosTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.igrejasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.igrejafont11DataSet)).BeginInit();
@@ -83,6 +83,7 @@
             this.reportCaixaMonthDateTimePicker.Name = "reportCaixaMonthDateTimePicker";
             this.reportCaixaMonthDateTimePicker.Size = new System.Drawing.Size(200, 29);
             this.reportCaixaMonthDateTimePicker.TabIndex = 5;
+            this.reportCaixaMonthDateTimePicker.Enter += new System.EventHandler(this.reportCaixaMonthDateTimePicker_Enter);
             // 
             // reportCaixaMonthRadioButton
             // 
@@ -282,6 +283,11 @@
             this.comboBox2.ValueMember = "Sigla";
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
+            // estadosBindingSource
+            // 
+            this.estadosBindingSource.DataMember = "Estados";
+            this.estadosBindingSource.DataSource = this.igrejafont11DataSet;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -326,11 +332,6 @@
             this.checkBox3.TabIndex = 51;
             this.checkBox3.UseVisualStyleBackColor = true;
             this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
-            // 
-            // estadosBindingSource
-            // 
-            this.estadosBindingSource.DataMember = "Estados";
-            this.estadosBindingSource.DataSource = this.igrejafont11DataSet;
             // 
             // estadosTableAdapter
             // 

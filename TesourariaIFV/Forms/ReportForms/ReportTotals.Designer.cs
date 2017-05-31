@@ -162,6 +162,7 @@
             this.reportTotalsMonthDateTimePicker.Name = "reportTotalsMonthDateTimePicker";
             this.reportTotalsMonthDateTimePicker.Size = new System.Drawing.Size(200, 29);
             this.reportTotalsMonthDateTimePicker.TabIndex = 1;
+            this.reportTotalsMonthDateTimePicker.Enter += new System.EventHandler(this.reportTotalsMonthDateTimePicker_Enter);
             // 
             // label1
             // 

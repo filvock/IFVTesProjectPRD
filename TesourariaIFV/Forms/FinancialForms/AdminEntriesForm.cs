@@ -220,6 +220,13 @@ namespace TesourariaIFV.Forms
                     else MessageBox.Show("Por favor, selecione Mês/Ano ou Período.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-            
+
+        
+        private void adminEntriesMonthDateTimePicker_Enter(object sender, EventArgs e)
+        {
+            if (adminEntriesMonthDateTimePicker.Value.Day > 28)
+                adminEntriesMonthDateTimePicker.Value = DateTime.Now.AddDays(-5);
+
+        }
     }
 }

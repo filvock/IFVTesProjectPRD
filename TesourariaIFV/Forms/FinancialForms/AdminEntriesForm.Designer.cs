@@ -223,6 +223,7 @@
             this.adminEntriesMonthDateTimePicker.Name = "adminEntriesMonthDateTimePicker";
             this.adminEntriesMonthDateTimePicker.Size = new System.Drawing.Size(200, 29);
             this.adminEntriesMonthDateTimePicker.TabIndex = 5;
+            this.adminEntriesMonthDateTimePicker.Enter += new System.EventHandler(this.adminEntriesMonthDateTimePicker_Enter);
             // 
             // label1
             // 

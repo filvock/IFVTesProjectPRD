@@ -298,5 +298,11 @@ namespace TesourariaIFV.Forms.ReportForms.ManagementReport
                 formReportCaixaComboBox.Enabled = false;
             }
         }
+
+        private void reportCaixaMonthDateTimePicker_Enter(object sender, EventArgs e)
+        {
+            if (reportCaixaMonthDateTimePicker.Value.Day > 28)
+                reportCaixaMonthDateTimePicker.Value = DateTime.Now.AddDays(-5);
+        }
     }
 }

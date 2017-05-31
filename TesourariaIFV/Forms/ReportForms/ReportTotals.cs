@@ -107,6 +107,10 @@ namespace TesourariaIFV.Forms.ReportForms
             }
         }
 
-       
+        private void reportTotalsMonthDateTimePicker_Enter(object sender, EventArgs e)
+        {
+            if (reportTotalsMonthDateTimePicker.Value.Day > 28)
+                reportTotalsMonthDateTimePicker.Value = DateTime.Now.AddDays(-5);
+        }
     }
 }

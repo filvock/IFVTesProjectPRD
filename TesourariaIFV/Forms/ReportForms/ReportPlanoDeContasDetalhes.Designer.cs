@@ -162,6 +162,7 @@
             this.reportPlanoDeContasMonthDateTimePicker.Name = "reportPlanoDeContasMonthDateTimePicker";
             this.reportPlanoDeContasMonthDateTimePicker.Size = new System.Drawing.Size(200, 29);
             this.reportPlanoDeContasMonthDateTimePicker.TabIndex = 1;
+            this.reportPlanoDeContasMonthDateTimePicker.Enter += new System.EventHandler(this.reportPlanoDeContasMonthDateTimePicker_Enter);
             // 
             // label1
             // 

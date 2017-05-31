@@ -228,5 +228,12 @@ namespace TesourariaIFV.Forms.ReportForms.ManagementReport
                 igrejasBindingSource.Filter = "Estado = '" + comboBox2.SelectedValue.ToString() + "'";
             }
         }
+
+        private void reportPlanoDeContasMonthDateTimePicker_Enter(object sender, EventArgs e)
+        {
+            if (reportPlanoDeContasMonthDateTimePicker.Value.Day > 28)
+                reportPlanoDeContasMonthDateTimePicker.Value = DateTime.Now.AddDays(-5);
+
+        }
     }
 }
