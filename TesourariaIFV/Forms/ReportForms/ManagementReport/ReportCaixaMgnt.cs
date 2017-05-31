@@ -103,14 +103,14 @@ namespace TesourariaIFV.Forms.ReportForms.ManagementReport
 
             if (reportCaixaMonthRadioButton.Checked == true)
             {
-                TesourariaIFV.Forms.ReportForms.ManagementReport.ReportForms.ReportTotalsMgntFinal report = new ReportForms.ReportTotalsMgntFinal(dataInicialMonth, dataFinalMonth, formReportCaixaComboBox.SelectedValue.ToString());//, CalculaSaldoInicialGeral(formReportCaixaComboBox.SelectedValue.ToString(), dataInicialMonth));
+                TesourariaIFV.Forms.ReportForms.ManagementReport.ReportForms.ESIgreja report = new ReportForms.ESIgreja(dataInicialMonth, dataFinalMonth, formReportCaixaComboBox.SelectedValue.ToString());//, CalculaSaldoInicialGeral(formReportCaixaComboBox.SelectedValue.ToString(), dataInicialMonth));
                 report.Show();
             }
             else
             { 
                 if (reportCaixaPeriodRadioButton.Checked == true)
                 {
-                    TesourariaIFV.Forms.ReportForms.ManagementReport.ReportForms.ReportTotalsMgntFinal report = new ReportForms.ReportTotalsMgntFinal(dataInicial, dataFinal, formReportCaixaComboBox.SelectedValue.ToString());//, CalculaSaldoInicialGeral(formReportCaixaComboBox.SelectedValue.ToString(), dataInicial));
+                    TesourariaIFV.Forms.ReportForms.ManagementReport.ReportForms.ESIgreja report = new ReportForms.ESIgreja(dataInicial, dataFinal, formReportCaixaComboBox.SelectedValue.ToString());//, CalculaSaldoInicialGeral(formReportCaixaComboBox.SelectedValue.ToString(), dataInicial));
                     report.Show();
                 }
 

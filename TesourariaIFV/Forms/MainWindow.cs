@@ -188,7 +188,7 @@ namespace TesourariaIFV.Forms
 
         private void totaisEntradasSaidasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            TesourariaIFV.Forms.ReportForms.ManagementReport.ReportTotalsMgnt mgntReport = new TesourariaIFV.Forms.ReportForms.ManagementReport.ReportTotalsMgnt();
+            TesourariaIFV.Forms.ReportForms.ManagementReport.ReportEntradaSaida mgntReport = new TesourariaIFV.Forms.ReportForms.ManagementReport.ReportEntradaSaida();
             mgntReport.Show();
         }
 
@@ -206,7 +206,7 @@ namespace TesourariaIFV.Forms
 
         private void planoDeContasDetalhadoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            TesourariaIFV.Forms.ReportForms.ManagementReport.ReportPlanoDeContasDetalhesMgnt mgntReport = new TesourariaIFV.Forms.ReportForms.ManagementReport.ReportPlanoDeContasDetalhesMgnt();
+            TesourariaIFV.Forms.ReportForms.ManagementReport.ReportPlanoDeContasIgrejasMgnt mgntReport = new TesourariaIFV.Forms.ReportForms.ManagementReport.ReportPlanoDeContasIgrejasMgnt();
             mgntReport.Show();
         }
     }

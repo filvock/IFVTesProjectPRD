@@ -253,7 +253,7 @@
                                     <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>'R$'0.00;('R$'0.00)</Format>
-                                    <Color>=IIF(Fields!Valor.Value&lt;0, "Red", "Black")</Color>
+                                    <Color>=IIF((Sum(Fields!Valor.Value))&lt;0, "Red", "Black")</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -604,7 +604,6 @@
                                   <PaddingBottom>2pt</PaddingBottom>
                                 </Style>
                               </Textbox>
-                              <rd:Selected>true</rd:Selected>
                             </CellContents>
                           </TablixHeader>
                           <TablixMembers>
@@ -827,6 +826,20 @@
                 <FilterValues>
                   <FilterValue>=Parameters!DataInicial.Value</FilterValue>
                   <FilterValue>=Parameters!DataFinal.Value</FilterValue>
+                </FilterValues>
+              </Filter>
+              <Filter>
+                <FilterExpression>=Fields!Conta.Value</FilterExpression>
+                <Operator>NotEqual</Operator>
+                <FilterValues>
+                  <FilterValue>Transferência Caixa/Banco</FilterValue>
+                </FilterValues>
+              </Filter>
+              <Filter>
+                <FilterExpression>=Fields!Conta.Value</FilterExpression>
+                <Operator>NotEqual</Operator>
+                <FilterValues>
+                  <FilterValue>Transferência Banco/Caixa</FilterValue>
                 </FilterValues>
               </Filter>
             </Filters>
