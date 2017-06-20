@@ -338,3 +338,12 @@ D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.Forms.ReportFor
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.Forms.ReportForms.ManagementReport.ReportForms.ESPais.resources
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.Forms.ReportForms.ManagementReport.ReportEntradaSaida.resources
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.Forms.ReportForms.ManagementReport.ReportForms.ESIgreja.resources
+D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.Forms.ReportForms.ManagementReport.ReportEntradaSaidaIgreja.resources
+D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.Forms.ReportForms.ManagementReport.ReportForms.ESEstadoPorIgreja.resources
+D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.Forms.ReportForms.ManagementReport.ReportForms.ESPaisPorIgreja.resources
+D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.Forms.ReportForms.ManagementReport.ReportForms.ESRegiaoPorIgreja.resources
+D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.Forms.ReportForms.Charts.ChartPlanoDeContasTotaisMgnt.resources
+D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.Forms.ReportForms.Charts.ChartReports.PCCTotaisEstado.resources
+D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.Forms.ReportForms.Charts.ChartReports.PCCTotaisIgreja.resources
+D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.Forms.ReportForms.Charts.ChartReports.PCCTotaisPais.resources
+D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.Forms.ReportForms.Charts.ChartReports.PCCTotaisRegiao.resources

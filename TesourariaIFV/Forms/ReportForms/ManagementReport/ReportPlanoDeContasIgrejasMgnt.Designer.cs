@@ -308,7 +308,7 @@ partial class ReportPlanoDeContasIgrejasMgnt
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "ReportPlanoDeContasIgrejasMgnt";
-            this.Text = "Relatório Plano de Contas - Totais";
+            this.Text = "Relatório Plano de Contas  por Igreja";
             this.Load += new System.EventHandler(this.ReportPlanoDeContas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.igrejasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.igrejafont11DataSet)).EndInit();

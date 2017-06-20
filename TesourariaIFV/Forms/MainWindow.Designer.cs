@@ -51,6 +51,8 @@
             this.planoDeContasDetalhadoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.totaisEntradasSaidasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.gráficosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.planoDeContasTotaisToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.excluirLançamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ControleMembroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listaDeMembrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -206,7 +208,8 @@
             this.planoDeContasTotaisToolStripMenuItem,
             this.planoDeContasDetalhadoToolStripMenuItem1,
             this.totaisEntradasSaidasToolStripMenuItem,
-            this.toolStripMenuItem1});
+            this.toolStripMenuItem1,
+            this.gráficosToolStripMenuItem});
             this.relatóriosGerenciaisToolStripMenuItem.Name = "relatóriosGerenciaisToolStripMenuItem";
             this.relatóriosGerenciaisToolStripMenuItem.Size = new System.Drawing.Size(246, 30);
             this.relatóriosGerenciaisToolStripMenuItem.Text = "Relatórios Gerenciais";
@@ -244,6 +247,22 @@
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(342, 30);
             this.toolStripMenuItem1.Text = "Totais Entradas/Saídas por Igreja";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
+            // gráficosToolStripMenuItem
+            // 
+            this.gráficosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.planoDeContasTotaisToolStripMenuItem1});
+            this.gráficosToolStripMenuItem.Name = "gráficosToolStripMenuItem";
+            this.gráficosToolStripMenuItem.Size = new System.Drawing.Size(342, 30);
+            this.gráficosToolStripMenuItem.Text = "Gráficos";
+            // 
+            // planoDeContasTotaisToolStripMenuItem1
+            // 
+            this.planoDeContasTotaisToolStripMenuItem1.Name = "planoDeContasTotaisToolStripMenuItem1";
+            this.planoDeContasTotaisToolStripMenuItem1.Size = new System.Drawing.Size(275, 30);
+            this.planoDeContasTotaisToolStripMenuItem1.Text = "Plano de Contas - Totais";
+            this.planoDeContasTotaisToolStripMenuItem1.Click += new System.EventHandler(this.planoDeContasTotaisToolStripMenuItem1_Click);
             // 
             // excluirLançamentosToolStripMenuItem
             // 
@@ -379,6 +398,8 @@
         private System.Windows.Forms.ToolStripMenuItem planoDeContasDetalhadoToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem totaisEntradasSaidasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem gráficosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem planoDeContasTotaisToolStripMenuItem1;
     }
 }
 

@@ -3254,13 +3254,13 @@ namespace TesourariaIFV {
             
             private global::System.Data.DataColumn columnRole;
             
-            private global::System.Data.DataColumn columnIsLogged;
-            
             private global::System.Data.DataColumn columnFirstLogin;
             
             private global::System.Data.DataColumn columnCidade;
             
             private global::System.Data.DataColumn columnEstado;
+            
+            private global::System.Data.DataColumn columnRegiao;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -3329,14 +3329,6 @@ namespace TesourariaIFV {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn IsLoggedColumn {
-                get {
-                    return this.columnIsLogged;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn FirstLoginColumn {
                 get {
                     return this.columnFirstLogin;
@@ -3356,6 +3348,14 @@ namespace TesourariaIFV {
             public global::System.Data.DataColumn EstadoColumn {
                 get {
                     return this.columnEstado;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn RegiaoColumn {
+                get {
+                    return this.columnRegiao;
                 }
             }
             
@@ -3396,17 +3396,17 @@ namespace TesourariaIFV {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public UsuariosRow AddUsuariosRow(string Nome, string Senha, string Igreja, string Role, string IsLogged, string FirstLogin, string Cidade, string Estado) {
+            public UsuariosRow AddUsuariosRow(string Nome, string Senha, string Igreja, string Role, string FirstLogin, string Cidade, string Estado, string Regiao) {
                 UsuariosRow rowUsuariosRow = ((UsuariosRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Nome,
                         Senha,
                         Igreja,
                         Role,
-                        IsLogged,
                         FirstLogin,
                         Cidade,
-                        Estado};
+                        Estado,
+                        Regiao};
                 rowUsuariosRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowUsuariosRow);
                 return rowUsuariosRow;
@@ -3440,10 +3440,10 @@ namespace TesourariaIFV {
                 this.columnSenha = base.Columns["Senha"];
                 this.columnIgreja = base.Columns["Igreja"];
                 this.columnRole = base.Columns["Role"];
-                this.columnIsLogged = base.Columns["IsLogged"];
                 this.columnFirstLogin = base.Columns["FirstLogin"];
                 this.columnCidade = base.Columns["Cidade"];
                 this.columnEstado = base.Columns["Estado"];
+                this.columnRegiao = base.Columns["Regiao"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3457,14 +3457,14 @@ namespace TesourariaIFV {
                 base.Columns.Add(this.columnIgreja);
                 this.columnRole = new global::System.Data.DataColumn("Role", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRole);
-                this.columnIsLogged = new global::System.Data.DataColumn("IsLogged", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnIsLogged);
                 this.columnFirstLogin = new global::System.Data.DataColumn("FirstLogin", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFirstLogin);
                 this.columnCidade = new global::System.Data.DataColumn("Cidade", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCidade);
                 this.columnEstado = new global::System.Data.DataColumn("Estado", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEstado);
+                this.columnRegiao = new global::System.Data.DataColumn("Regiao", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRegiao);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnNome}, true));
                 this.columnNome.AllowDBNull = false;
@@ -3476,13 +3476,13 @@ namespace TesourariaIFV {
                 this.columnIgreja.MaxLength = 50;
                 this.columnRole.AllowDBNull = false;
                 this.columnRole.MaxLength = 50;
-                this.columnIsLogged.AllowDBNull = false;
-                this.columnIsLogged.MaxLength = 50;
                 this.columnFirstLogin.MaxLength = 10;
                 this.columnCidade.AllowDBNull = false;
                 this.columnCidade.MaxLength = 50;
                 this.columnEstado.AllowDBNull = false;
                 this.columnEstado.MaxLength = 50;
+                this.columnRegiao.AllowDBNull = false;
+                this.columnRegiao.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6454,17 +6454,6 @@ namespace TesourariaIFV {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string IsLogged {
-                get {
-                    return ((string)(this[this.tableUsuarios.IsLoggedColumn]));
-                }
-                set {
-                    this[this.tableUsuarios.IsLoggedColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string FirstLogin {
                 get {
                     try {
@@ -6498,6 +6487,17 @@ namespace TesourariaIFV {
                 }
                 set {
                     this[this.tableUsuarios.EstadoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Regiao {
+                get {
+                    return ((string)(this[this.tableUsuarios.RegiaoColumn]));
+                }
+                set {
+                    this[this.tableUsuarios.RegiaoColumn] = value;
                 }
             }
             
@@ -11282,59 +11282,59 @@ SELECT Data, NumDocumento, Descricao, Conta, Igreja, Valor, Obs, CodLancamento, 
             tableMapping.ColumnMappings.Add("Senha", "Senha");
             tableMapping.ColumnMappings.Add("Igreja", "Igreja");
             tableMapping.ColumnMappings.Add("Role", "Role");
-            tableMapping.ColumnMappings.Add("IsLogged", "IsLogged");
             tableMapping.ColumnMappings.Add("FirstLogin", "FirstLogin");
             tableMapping.ColumnMappings.Add("Cidade", "Cidade");
             tableMapping.ColumnMappings.Add("Estado", "Estado");
+            tableMapping.ColumnMappings.Add("Regiao", "Regiao");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Usuarios] WHERE (([Nome] = @Original_Nome) AND ([Senha] = @Original_Senha) AND ([Igreja] = @Original_Igreja) AND ([Role] = @Original_Role) AND ([IsLogged] = @Original_IsLogged) AND ((@IsNull_FirstLogin = 1 AND [FirstLogin] IS NULL) OR ([FirstLogin] = @Original_FirstLogin)) AND ([Cidade] = @Original_Cidade) AND ([Estado] = @Original_Estado))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Usuarios] WHERE (([Nome] = @Original_Nome) AND ([Senha] = @Original_Senha) AND ([Igreja] = @Original_Igreja) AND ([Role] = @Original_Role) AND ((@IsNull_FirstLogin = 1 AND [FirstLogin] IS NULL) OR ([FirstLogin] = @Original_FirstLogin)) AND ([Cidade] = @Original_Cidade) AND ([Estado] = @Original_Estado) AND ([Regiao] = @Original_Regiao))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nome", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nome", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Senha", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Senha", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Igreja", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Igreja", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Role", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Role", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IsLogged", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsLogged", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FirstLogin", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FirstLogin", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FirstLogin", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FirstLogin", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Cidade", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cidade", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Estado", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Estado", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Regiao", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Regiao", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Usuarios] ([Nome], [Senha], [Igreja], [Role], [IsLogged], [FirstLogin], [Cidade], [Estado]) VALUES (@Nome, @Senha, @Igreja, @Role, @IsLogged, @FirstLogin, @Cidade, @Estado);
-SELECT Nome, Senha, Igreja, Role, IsLogged, FirstLogin, Cidade, Estado FROM Usuarios WHERE (Nome = @Nome)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Usuarios] ([Nome], [Senha], [Igreja], [Role], [FirstLogin], [Cidade], [Estado], [Regiao]) VALUES (@Nome, @Senha, @Igreja, @Role, @FirstLogin, @Cidade, @Estado, @Regiao);
+SELECT Nome, Senha, Igreja, Role, FirstLogin, Cidade, Estado, Regiao FROM Usuarios WHERE (Nome = @Nome)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nome", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nome", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Senha", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Senha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Igreja", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Igreja", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Role", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Role", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsLogged", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsLogged", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FirstLogin", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FirstLogin", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cidade", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cidade", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Estado", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Estado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Regiao", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Regiao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Usuarios] SET [Nome] = @Nome, [Senha] = @Senha, [Igreja] = @Igreja, [Role] = @Role, [IsLogged] = @IsLogged, [FirstLogin] = @FirstLogin, [Cidade] = @Cidade, [Estado] = @Estado WHERE (([Nome] = @Original_Nome) AND ([Senha] = @Original_Senha) AND ([Igreja] = @Original_Igreja) AND ([Role] = @Original_Role) AND ([IsLogged] = @Original_IsLogged) AND ((@IsNull_FirstLogin = 1 AND [FirstLogin] IS NULL) OR ([FirstLogin] = @Original_FirstLogin)) AND ([Cidade] = @Original_Cidade) AND ([Estado] = @Original_Estado));
-SELECT Nome, Senha, Igreja, Role, IsLogged, FirstLogin, Cidade, Estado FROM Usuarios WHERE (Nome = @Nome)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Usuarios] SET [Nome] = @Nome, [Senha] = @Senha, [Igreja] = @Igreja, [Role] = @Role, [FirstLogin] = @FirstLogin, [Cidade] = @Cidade, [Estado] = @Estado, [Regiao] = @Regiao WHERE (([Nome] = @Original_Nome) AND ([Senha] = @Original_Senha) AND ([Igreja] = @Original_Igreja) AND ([Role] = @Original_Role) AND ((@IsNull_FirstLogin = 1 AND [FirstLogin] IS NULL) OR ([FirstLogin] = @Original_FirstLogin)) AND ([Cidade] = @Original_Cidade) AND ([Estado] = @Original_Estado) AND ([Regiao] = @Original_Regiao));
+SELECT Nome, Senha, Igreja, Role, FirstLogin, Cidade, Estado, Regiao FROM Usuarios WHERE (Nome = @Nome)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nome", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nome", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Senha", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Senha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Igreja", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Igreja", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Role", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Role", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsLogged", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsLogged", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FirstLogin", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FirstLogin", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cidade", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cidade", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Estado", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Estado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Regiao", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Regiao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nome", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nome", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Senha", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Senha", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Igreja", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Igreja", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Role", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Role", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IsLogged", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsLogged", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FirstLogin", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FirstLogin", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FirstLogin", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FirstLogin", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Cidade", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cidade", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Estado", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Estado", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Regiao", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Regiao", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11350,8 +11350,8 @@ SELECT Nome, Senha, Igreja, Role, IsLogged, FirstLogin, Cidade, Estado FROM Usua
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Nome, Senha, Igreja, Role, IsLogged, FirstLogin, Cidade, Estado FROM dbo.U" +
-                "suarios";
+            this._commandCollection[0].CommandText = "SELECT Nome, Senha, Igreja, Role, FirstLogin, Cidade, Estado, Regiao FROM Usuario" +
+                "s";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -11412,7 +11412,7 @@ SELECT Nome, Senha, Igreja, Role, IsLogged, FirstLogin, Cidade, Estado FROM Usua
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_Nome, string Original_Senha, string Original_Igreja, string Original_Role, string Original_IsLogged, string Original_FirstLogin, string Original_Cidade, string Original_Estado) {
+        public virtual int Delete(string Original_Nome, string Original_Senha, string Original_Igreja, string Original_Role, string Original_FirstLogin, string Original_Cidade, string Original_Estado, string Original_Regiao) {
             if ((Original_Nome == null)) {
                 throw new global::System.ArgumentNullException("Original_Nome");
             }
@@ -11437,31 +11437,31 @@ SELECT Nome, Senha, Igreja, Role, IsLogged, FirstLogin, Cidade, Estado FROM Usua
             else {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_Role));
             }
-            if ((Original_IsLogged == null)) {
-                throw new global::System.ArgumentNullException("Original_IsLogged");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_IsLogged));
-            }
             if ((Original_FirstLogin == null)) {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_FirstLogin));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_FirstLogin));
             }
             if ((Original_Cidade == null)) {
                 throw new global::System.ArgumentNullException("Original_Cidade");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((string)(Original_Cidade));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_Cidade));
             }
             if ((Original_Estado == null)) {
                 throw new global::System.ArgumentNullException("Original_Estado");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_Estado));
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((string)(Original_Estado));
+            }
+            if ((Original_Regiao == null)) {
+                throw new global::System.ArgumentNullException("Original_Regiao");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_Regiao));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -11483,7 +11483,7 @@ SELECT Nome, Senha, Igreja, Role, IsLogged, FirstLogin, Cidade, Estado FROM Usua
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Nome, string Senha, string Igreja, string Role, string IsLogged, string FirstLogin, string Cidade, string Estado) {
+        public virtual int Insert(string Nome, string Senha, string Igreja, string Role, string FirstLogin, string Cidade, string Estado, string Regiao) {
             if ((Nome == null)) {
                 throw new global::System.ArgumentNullException("Nome");
             }
@@ -11508,29 +11508,29 @@ SELECT Nome, Senha, Igreja, Role, IsLogged, FirstLogin, Cidade, Estado FROM Usua
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Role));
             }
-            if ((IsLogged == null)) {
-                throw new global::System.ArgumentNullException("IsLogged");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(IsLogged));
-            }
             if ((FirstLogin == null)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(FirstLogin));
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(FirstLogin));
             }
             if ((Cidade == null)) {
                 throw new global::System.ArgumentNullException("Cidade");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(Cidade));
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(Cidade));
             }
             if ((Estado == null)) {
                 throw new global::System.ArgumentNullException("Estado");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(Estado));
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(Estado));
+            }
+            if ((Regiao == null)) {
+                throw new global::System.ArgumentNullException("Regiao");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(Regiao));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -11557,18 +11557,18 @@ SELECT Nome, Senha, Igreja, Role, IsLogged, FirstLogin, Cidade, Estado FROM Usua
                     string Senha, 
                     string Igreja, 
                     string Role, 
-                    string IsLogged, 
                     string FirstLogin, 
                     string Cidade, 
                     string Estado, 
+                    string Regiao, 
                     string Original_Nome, 
                     string Original_Senha, 
                     string Original_Igreja, 
                     string Original_Role, 
-                    string Original_IsLogged, 
                     string Original_FirstLogin, 
                     string Original_Cidade, 
-                    string Original_Estado) {
+                    string Original_Estado, 
+                    string Original_Regiao) {
             if ((Nome == null)) {
                 throw new global::System.ArgumentNullException("Nome");
             }
@@ -11593,29 +11593,29 @@ SELECT Nome, Senha, Igreja, Role, IsLogged, FirstLogin, Cidade, Estado FROM Usua
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Role));
             }
-            if ((IsLogged == null)) {
-                throw new global::System.ArgumentNullException("IsLogged");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(IsLogged));
-            }
             if ((FirstLogin == null)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(FirstLogin));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(FirstLogin));
             }
             if ((Cidade == null)) {
                 throw new global::System.ArgumentNullException("Cidade");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Cidade));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Cidade));
             }
             if ((Estado == null)) {
                 throw new global::System.ArgumentNullException("Estado");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Estado));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Estado));
+            }
+            if ((Regiao == null)) {
+                throw new global::System.ArgumentNullException("Regiao");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Regiao));
             }
             if ((Original_Nome == null)) {
                 throw new global::System.ArgumentNullException("Original_Nome");
@@ -11641,31 +11641,31 @@ SELECT Nome, Senha, Igreja, Role, IsLogged, FirstLogin, Cidade, Estado FROM Usua
             else {
                 this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_Role));
             }
-            if ((Original_IsLogged == null)) {
-                throw new global::System.ArgumentNullException("Original_IsLogged");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_IsLogged));
-            }
             if ((Original_FirstLogin == null)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_FirstLogin));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_FirstLogin));
             }
             if ((Original_Cidade == null)) {
                 throw new global::System.ArgumentNullException("Original_Cidade");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_Cidade));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_Cidade));
             }
             if ((Original_Estado == null)) {
                 throw new global::System.ArgumentNullException("Original_Estado");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_Estado));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_Estado));
+            }
+            if ((Original_Regiao == null)) {
+                throw new global::System.ArgumentNullException("Original_Regiao");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_Regiao));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -11687,8 +11687,8 @@ SELECT Nome, Senha, Igreja, Role, IsLogged, FirstLogin, Cidade, Estado FROM Usua
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Senha, string Igreja, string Role, string IsLogged, string FirstLogin, string Cidade, string Estado, string Original_Nome, string Original_Senha, string Original_Igreja, string Original_Role, string Original_IsLogged, string Original_FirstLogin, string Original_Cidade, string Original_Estado) {
-            return this.Update(Original_Nome, Senha, Igreja, Role, IsLogged, FirstLogin, Cidade, Estado, Original_Nome, Original_Senha, Original_Igreja, Original_Role, Original_IsLogged, Original_FirstLogin, Original_Cidade, Original_Estado);
+        public virtual int Update(string Senha, string Igreja, string Role, string FirstLogin, string Cidade, string Estado, string Regiao, string Original_Nome, string Original_Senha, string Original_Igreja, string Original_Role, string Original_FirstLogin, string Original_Cidade, string Original_Estado, string Original_Regiao) {
+            return this.Update(Original_Nome, Senha, Igreja, Role, FirstLogin, Cidade, Estado, Regiao, Original_Nome, Original_Senha, Original_Igreja, Original_Role, Original_FirstLogin, Original_Cidade, Original_Estado, Original_Regiao);
         }
     }
     

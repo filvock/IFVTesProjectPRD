@@ -159,7 +159,7 @@ namespace TesourariaIFV.Forms.Admin_Forms
                 newRow.Role = usersAdminRoleComboBox.Text;
                 newRow.Cidade = usersAdminCidadeComboBox.Text;
                 newRow.Estado = usersAdminEstadoComboBox.Text;
-                newRow.IsLogged = "No";
+                newRow.Regiao = "No";
                 newRow.FirstLogin = "yes";
 
                 try

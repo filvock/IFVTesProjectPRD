@@ -32,7 +32,7 @@
     <ProductName>IFV Controle Financeiro</ProductName>
     <PublisherName>IFV</PublisherName>
     <SuiteName>IFV</SuiteName>
-    <ApplicationRevision>65</ApplicationRevision>
+    <ApplicationRevision>66</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -219,17 +219,71 @@
     <Compile Include="Forms\MembersControlForm\ReportDizimos.Designer.cs">
       <DependentUpon>ReportDizimos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ReportForms\Charts\ChartPlanoDeContasTotaisMgnt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReportForms\Charts\ChartPlanoDeContasTotaisMgnt.Designer.cs">
+      <DependentUpon>ChartPlanoDeContasTotaisMgnt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReportForms\Charts\ChartReports\PCCTotaisEstado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReportForms\Charts\ChartReports\PCCTotaisEstado.Designer.cs">
+      <DependentUpon>PCCTotaisEstado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReportForms\Charts\ChartReports\PCCTotaisIgreja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReportForms\Charts\ChartReports\PCCTotaisIgreja.Designer.cs">
+      <DependentUpon>PCCTotaisIgreja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReportForms\Charts\ChartReports\PCCTotaisPais .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReportForms\Charts\ChartReports\PCCTotaisPais .Designer.cs">
+      <DependentUpon>PCCTotaisPais .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReportForms\Charts\ChartReports\PCCTotaisRegiao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReportForms\Charts\ChartReports\PCCTotaisRegiao.Designer.cs">
+      <DependentUpon>PCCTotaisRegiao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ReportForms\ManagementReport\ReportCaixaMgnt.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\ReportForms\ManagementReport\ReportCaixaMgnt.Designer.cs">
       <DependentUpon>ReportCaixaMgnt.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ReportForms\ManagementReport\ReportEntradaSaidaIgreja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReportForms\ManagementReport\ReportEntradaSaidaIgreja.Designer.cs">
+      <DependentUpon>ReportEntradaSaidaIgreja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReportForms\ManagementReport\ReportForms\ESEstadoPorIgreja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReportForms\ManagementReport\ReportForms\ESEstadoPorIgreja.Designer.cs">
+      <DependentUpon>ESEstadoPorIgreja.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ReportForms\ManagementReport\ReportForms\ESEstado.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\ReportForms\ManagementReport\ReportForms\ESEstado.Designer.cs">
       <DependentUpon>ESEstado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReportForms\ManagementReport\ReportForms\ESPaisPorIgreja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReportForms\ManagementReport\ReportForms\ESPaisPorIgreja.Designer.cs">
+      <DependentUpon>ESPaisPorIgreja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReportForms\ManagementReport\ReportForms\ESRegiaoPorIgreja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReportForms\ManagementReport\ReportForms\ESRegiaoPorIgreja.Designer.cs">
+      <DependentUpon>ESRegiaoPorIgreja.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ReportForms\ManagementReport\ReportForms\ESRegiao.cs">
       <SubType>Form</SubType>
@@ -490,11 +544,38 @@
     <EmbeddedResource Include="Forms\MembersControlForm\ReportDizimos.resx">
       <DependentUpon>ReportDizimos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReportForms\Charts\ChartPlanoDeContasTotaisMgnt.resx">
+      <DependentUpon>ChartPlanoDeContasTotaisMgnt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReportForms\Charts\ChartReports\PCCTotaisEstado.resx">
+      <DependentUpon>PCCTotaisEstado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReportForms\Charts\ChartReports\PCCTotaisIgreja.resx">
+      <DependentUpon>PCCTotaisIgreja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReportForms\Charts\ChartReports\PCCTotaisPais .resx">
+      <DependentUpon>PCCTotaisPais .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReportForms\Charts\ChartReports\PCCTotaisRegiao.resx">
+      <DependentUpon>PCCTotaisRegiao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ReportForms\ManagementReport\ReportCaixaMgnt.resx">
       <DependentUpon>ReportCaixaMgnt.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReportForms\ManagementReport\ReportEntradaSaidaIgreja.resx">
+      <DependentUpon>ReportEntradaSaidaIgreja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReportForms\ManagementReport\ReportForms\ESEstadoPorIgreja.resx">
+      <DependentUpon>ESEstadoPorIgreja.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ReportForms\ManagementReport\ReportForms\ESEstado.resx">
       <DependentUpon>ESEstado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReportForms\ManagementReport\ReportForms\ESPaisPorIgreja.resx">
+      <DependentUpon>ESPaisPorIgreja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReportForms\ManagementReport\ReportForms\ESRegiaoPorIgreja.resx">
+      <DependentUpon>ESRegiaoPorIgreja.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ReportForms\ManagementReport\ReportForms\ESRegiao.resx">
       <DependentUpon>ESRegiao.cs</DependentUpon>
@@ -578,6 +659,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reports\ChartReports\PCCTotaisIgreja.rdlc" />
+    <EmbeddedResource Include="Reports\ChartReports\PCCTotaisTeste.rdlc" />
+    <EmbeddedResource Include="Reports\MgntReports\ESEstadoPorIgreja.rdlc" />
+    <EmbeddedResource Include="Reports\MgntReports\ESPaisPorIgreja.rdlc" />
+    <EmbeddedResource Include="Reports\MgntReports\ESRegiaoPorIgreja.rdlc" />
     <EmbeddedResource Include="Reports\MgntReports\ESRegiao.rdlc" />
     <EmbeddedResource Include="Reports\MgntReports\ESPais.rdlc" />
     <EmbeddedResource Include="Reports\MgntReports\ESEstado.rdlc" />
