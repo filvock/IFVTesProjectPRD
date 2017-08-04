@@ -18,7 +18,6 @@ namespace TesourariaIFV
         public static string senha = "";
         public static string igreja = "";
         public static string role = "";
-        public static string isLogged = "";
         public static string cidade = "";
         public static string estado = "";
         public static string regiao = "";
@@ -41,10 +40,7 @@ namespace TesourariaIFV
         {
             role = text;
         }
-        public void SetIsLogged(string text)
-        {
-            isLogged = text;
-        }
+        
         public void SetCidade(string text)
         {
             cidade = text;
@@ -75,10 +71,7 @@ namespace TesourariaIFV
         {
             return role;
         }
-        public string GetIsLogged()
-        {
-            return isLogged;
-        }
+        
         public string GetCidade()
         {
             return cidade;
@@ -91,27 +84,7 @@ namespace TesourariaIFV
         {
             return regiao;
         }
-        public void SetLoggedToYes()
-        {
-            SqlConnection conn = new SqlConnection(GetStringConnection());
-            conn.Open();
-
-            SqlCommand comm1 = new SqlCommand("update Usuarios set IsLogged=@yes where nome=@Nome", conn);
-            comm1.Parameters.Add("@Yes", SqlDbType.VarChar).Value = "yes";
-            comm1.Parameters.Add("@Nome", SqlDbType.VarChar).Value = this.GetNome();
-            comm1.ExecuteReader();
-        }
-
-        public void SetLoggedToNo()
-        {
-            SqlConnection conn = new SqlConnection(GetStringConnection());
-            conn.Open();
-
-            SqlCommand comm1 = new SqlCommand("update Usuarios set IsLogged=@No where nome=@Nome", conn);
-            comm1.Parameters.Add("@No", SqlDbType.VarChar).Value = "No";
-            comm1.Parameters.Add("@Nome", SqlDbType.VarChar).Value = this.GetNome();
-            comm1.ExecuteReader();
-        }
+        
 
         public string GetStringConnection()
         {

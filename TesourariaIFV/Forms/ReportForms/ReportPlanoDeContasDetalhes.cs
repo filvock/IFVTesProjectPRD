@@ -110,9 +110,14 @@ namespace TesourariaIFV.Forms.Reports_Forms
 
         private void ReportPlanoDeContas_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'igrejafont11DataSet.Igrejas' table. You can move, or remove it, as needed.
             this.igrejasTableAdapter.FillBy(this.igrejafont11DataSet.Igrejas);
 
+        }
+
+        private void reportPlanoDeContasMonthDateTimePicker_Enter(object sender, EventArgs e)
+        {
+            if (reportPlanoDeContasMonthDateTimePicker.Value.Day > 28)
+                reportPlanoDeContasMonthDateTimePicker.Value = DateTime.Now.AddDays(-5);
         }
     }
 }

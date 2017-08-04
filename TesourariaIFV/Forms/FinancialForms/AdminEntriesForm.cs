@@ -44,9 +44,7 @@ namespace TesourariaIFV.Forms
 
         private void AdminEntriesForm_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'igrejafont11DataSet.Igrejas' table. You can move, or remove it, as needed.
             this.igrejasTableAdapter.FillBy(this.igrejafont11DataSet.Igrejas);
-            // TODO: This line of code loads data into the 'igrejafont11DataSet.TesourariaGeral' table. You can move, or remove it, as needed.
             this.tesourariaGeralTableAdapter.Fill(this.igrejafont11DataSet.TesourariaGeral);
 
             float widthRatio = Screen.PrimaryScreen.Bounds.Width / 1366F;
@@ -222,6 +220,13 @@ namespace TesourariaIFV.Forms
                     else MessageBox.Show("Por favor, selecione Mês/Ano ou Período.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-            
+
+        
+        private void adminEntriesMonthDateTimePicker_Enter(object sender, EventArgs e)
+        {
+            if (adminEntriesMonthDateTimePicker.Value.Day > 28)
+                adminEntriesMonthDateTimePicker.Value = DateTime.Now.AddDays(-5);
+
+        }
     }
 }

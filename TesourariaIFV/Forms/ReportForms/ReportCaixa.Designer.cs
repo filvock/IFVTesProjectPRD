@@ -73,6 +73,7 @@
             this.reportCaixaMonthDateTimePicker.Name = "reportCaixaMonthDateTimePicker";
             this.reportCaixaMonthDateTimePicker.Size = new System.Drawing.Size(200, 29);
             this.reportCaixaMonthDateTimePicker.TabIndex = 5;
+            this.reportCaixaMonthDateTimePicker.Enter += new System.EventHandler(this.reportCaixaMonthDateTimePicker_Enter);
             // 
             // reportCaixaMonthRadioButton
             // 

@@ -45,7 +45,7 @@ namespace TesourariaIFV.Forms
                     newRow.Data = finControlFormDateTimePicker.Value;
                     newRow.NumDocumento = finControlFormDocNumberTextBox.Text;
                     newRow.Descricao = finControlFormDescTextBox.Text;
-                    newRow.Conta = "Transferência Caixa / Banco";
+                    newRow.Conta = "Transferência Caixa/Banco";
                     newRow.Igreja = userInfo.GetIgreja();
                     newRow.Valor = GetOut();
                     newRow.Obs = finControlFormObsTextBox.Text;
@@ -60,7 +60,7 @@ namespace TesourariaIFV.Forms
                     newRow1.Data = finControlFormDateTimePicker.Value;
                     newRow1.NumDocumento = finControlFormDocNumberTextBox.Text;
                     newRow1.Descricao = finControlFormDescTextBox.Text;
-                    newRow1.Conta = "Transferência Caixa / Banco";
+                    newRow1.Conta = "Transferência Caixa/Banco";
                     newRow1.Igreja = userInfo.GetIgreja();
                     newRow1.Valor = GetEntry();
                     newRow1.Obs = finControlFormObsTextBox.Text;
@@ -84,7 +84,7 @@ namespace TesourariaIFV.Forms
                     newRow.Data = finControlFormDateTimePicker.Value;
                     newRow.NumDocumento = finControlFormDocNumberTextBox.Text;
                     newRow.Descricao = finControlFormDescTextBox.Text;
-                    newRow.Conta = "Transferência Banco / Caixa";
+                    newRow.Conta = "Transferência Banco/Caixa";
                     newRow.Igreja = userInfo.GetIgreja();
                     newRow.Valor = GetOut();
                     newRow.Obs = finControlFormObsTextBox.Text;
@@ -99,7 +99,7 @@ namespace TesourariaIFV.Forms
                     newRow1.Data = finControlFormDateTimePicker.Value;
                     newRow1.NumDocumento = finControlFormDocNumberTextBox.Text;
                     newRow1.Descricao = finControlFormDescTextBox.Text;
-                    newRow1.Conta = "Transferência Banco / Caixa";
+                    newRow1.Conta = "Transferência Banco/Caixa";
                     newRow1.Igreja = userInfo.GetIgreja();
                     newRow1.Valor = GetEntry();
                     newRow1.Obs = finControlFormObsTextBox.Text;

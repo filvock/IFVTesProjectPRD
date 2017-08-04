@@ -34,11 +34,9 @@ namespace TesourariaIFV.Forms.Admin_Forms
 
         private void FormUserAdd_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'igrejafont11DataSet.Estados' table. You can move, or remove it, as needed.
+            
             this.estadosTableAdapter.Fill(this.igrejafont11DataSet.Estados);
-            // TODO: This line of code loads data into the 'igrejafont11DataSet.Cidades' table. You can move, or remove it, as needed.
             this.cidadesTableAdapter.Fill(this.igrejafont11DataSet.Cidades);
-            // TODO: This line of code loads data into the 'igrejafont11DataSet.Igrejas' table. You can move, or remove it, as needed.
             this.igrejasTableAdapter.Fill(this.igrejafont11DataSet.Igrejas);
             this.usuariosTableAdapter.Fill(this.igrejafont11DataSet.Usuarios);
             cellMembersLabel.Text = usersAdminDataGridView.RowCount.ToString();
@@ -161,7 +159,7 @@ namespace TesourariaIFV.Forms.Admin_Forms
                 newRow.Role = usersAdminRoleComboBox.Text;
                 newRow.Cidade = usersAdminCidadeComboBox.Text;
                 newRow.Estado = usersAdminEstadoComboBox.Text;
-                newRow.IsLogged = "No";
+                newRow.Regiao = "No";
                 newRow.FirstLogin = "yes";
 
                 try

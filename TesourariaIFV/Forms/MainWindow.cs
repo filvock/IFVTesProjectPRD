@@ -39,8 +39,17 @@ namespace TesourariaIFV.Forms
             if (info.GetRole() == "Igreja Local")
             {
                 administraçãoToolStripMenuItem.Enabled = false;
-                relatóriosGerenciaisToolStripMenuItem.Enabled = false;
+                relatóriosGerenciaisToolStripMenuItem.Enabled = false;                
             }
+            else if (info.GetRole() == "Presidente Nacional" || info.GetRole() == "Presidente Estadual" || info.GetRole() == "Presidente Regional")
+            {
+                relatóriosToolStripMenuItem.Enabled = false;
+                gráficosToolStripMenuItem.Enabled = false;
+            }
+                
+
+
+
         }
 
         private void entradaSaídaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -188,7 +197,7 @@ namespace TesourariaIFV.Forms
 
         private void totaisEntradasSaidasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            TesourariaIFV.Forms.ReportForms.ManagementReport.ReportTotalsMgnt mgntReport = new TesourariaIFV.Forms.ReportForms.ManagementReport.ReportTotalsMgnt();
+            TesourariaIFV.Forms.ReportForms.ManagementReport.ReportEntradaSaida mgntReport = new TesourariaIFV.Forms.ReportForms.ManagementReport.ReportEntradaSaida();
             mgntReport.Show();
         }
 
@@ -206,7 +215,19 @@ namespace TesourariaIFV.Forms
 
         private void planoDeContasDetalhadoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            TesourariaIFV.Forms.ReportForms.ManagementReport.ReportPlanoDeContasDetalhesMgnt mgntReport = new TesourariaIFV.Forms.ReportForms.ManagementReport.ReportPlanoDeContasDetalhesMgnt();
+            TesourariaIFV.Forms.ReportForms.ManagementReport.ReportPlanoDeContasIgrejasMgnt mgntReport = new TesourariaIFV.Forms.ReportForms.ManagementReport.ReportPlanoDeContasIgrejasMgnt();
+            mgntReport.Show();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            TesourariaIFV.Forms.ReportForms.ManagementReport.ReportEntradaSaidaIgreja mgntReport = new TesourariaIFV.Forms.ReportForms.ManagementReport.ReportEntradaSaidaIgreja();
+            mgntReport.Show();
+        }
+
+        private void planoDeContasTotaisToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            TesourariaIFV.Forms.ReportForms.Charts.ChartPlanoDeContasTotaisMgnt mgntReport = new TesourariaIFV.Forms.ReportForms.Charts.ChartPlanoDeContasTotaisMgnt();
             mgntReport.Show();
         }
     }

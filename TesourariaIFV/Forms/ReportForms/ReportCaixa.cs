@@ -275,11 +275,14 @@ namespace TesourariaIFV.Forms
 
         private void ReportCaixa_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'igrejafont11DataSet.Igrejas' table. You can move, or remove it, as needed.
             this.igrejasTableAdapter.FillBy(this.igrejafont11DataSet.Igrejas);
 
         }
 
-
+        private void reportCaixaMonthDateTimePicker_Enter(object sender, EventArgs e)
+        {
+            if (reportCaixaMonthDateTimePicker.Value.Day > 28)
+                reportCaixaMonthDateTimePicker.Value = DateTime.Now.AddDays(-5);
+        }
     }
 }

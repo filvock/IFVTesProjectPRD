@@ -50,7 +50,6 @@ namespace TesourariaIFV.Forms.MembersControlForm
 
         private void ReportDizimos_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'igrejafont11DataSet.Membros' table. You can move, or remove it, as needed.
             this.membrosTableAdapter.Fill(this.igrejafont11DataSet.Membros);
             this.controleIndividualTableAdapter.FillBy(this.igrejafont11DataSet.ControleIndividual1);
             this.igrejasTableAdapter.FillBy(this.igrejafont11DataSet.Igrejas);
