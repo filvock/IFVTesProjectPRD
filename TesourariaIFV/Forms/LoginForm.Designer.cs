@@ -202,7 +202,6 @@
             this.Controls.Add(this.loginFormUserTextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "Nome", true));
             this.Name = "LoginForm";
             this.Text = "Entrar no Sistema";
             this.Load += new System.EventHandler(this.LoginForm_Load_1);

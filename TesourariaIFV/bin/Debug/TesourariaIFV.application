@@ -14,14 +14,14 @@
     <framework targetVersion="4.5" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="TesourariaIFV.exe.manifest" size="12283">
+    <dependentAssembly dependencyType="install" codebase="TesourariaIFV.exe.manifest" size="46286">
       <assemblyIdentity name="TesourariaIFV.exe" version="1.0.0.66" publicKeyToken="0000000000000000" language="pt-BR" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Orwt4+9/e6gQNrEUtjoFEScyMnGu/VST73N2A55fNtA=</dsig:DigestValue>
+        <dsig:DigestValue>D8d0oW20efLfCNCxSmXsYZqfd6J6m+5EJibTTXiDNtw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

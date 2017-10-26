@@ -26,19 +26,7 @@ namespace TesourariaIFV.Forms.ReportForms.ManagementReport
             foreach (Control control in this.Controls)
             {
                 control.Font = new Font("Microsoft Sans Serif", control.Font.SizeInPoints * heightRatio * widthRatio);
-            }
-
-            loginInfo info = new loginInfo();
-
-            if (info.GetRole() == "Igreja Local")
-            {
-                formReportCaixaComboBox.Visible = false;
-                label4.Visible = false;
-            }
-            else 
-            {
-                FillIgrejasDropDown();
-            }
+            }              
             
         }
 
@@ -47,7 +35,17 @@ namespace TesourariaIFV.Forms.ReportForms.ManagementReport
             this.estadosTableAdapter.Fill(this.igrejafont11DataSet.Estados);
             this.igrejasTableAdapter.FillBy(this.igrejafont11DataSet.Igrejas);
 
-            comboBox1.SelectedIndex = 0;
+            loginInfo info = new loginInfo();
+
+            if (info.GetRole() == "Igreja Local")
+            {
+                formReportCaixaComboBox.Visible = false;
+                label4.Visible = false;
+            }
+            else
+            {
+                FillIgrejasDropDown();
+            }
         }
 
         private void FillIgrejasDropDown()
@@ -56,12 +54,22 @@ namespace TesourariaIFV.Forms.ReportForms.ManagementReport
 
             if (info.GetRole() == "Presidente Estadual")
             {
-                igrejasBindingSource.Filter = "Estado = '" + info.GetEstado() + "'";
+                comboBox1.SelectedItem = info.GetRegiao();
+                comboBox1.Enabled = false;
+                checkBox1.Enabled = false;
+
+                comboBox2.SelectedValue = info.GetEstado();
+                comboBox2.Enabled = false;
+                checkBox2.Enabled = false;
+
             }
             else if (info.GetRole() == "Presidente Regional")
             {
-                igrejasBindingSource.Filter = "Regiao = '" + info.GetRegiao() + "'";
+                comboBox1.SelectedItem = info.GetRegiao();
+                comboBox1.Enabled = false;
+                checkBox1.Enabled = false;
             }
+
         }
 
 

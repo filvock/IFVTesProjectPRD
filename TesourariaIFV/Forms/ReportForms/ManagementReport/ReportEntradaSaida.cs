@@ -23,9 +23,7 @@ namespace TesourariaIFV.Forms.ReportForms.ManagementReport
             foreach (Control control in this.Controls)
             {
                 control.Font = new Font("Microsoft Sans Serif", control.Font.SizeInPoints * heightRatio * widthRatio);
-            }
-
-            
+            }            
         }
 
         private void ReportPlanoDeContas_Load(object sender, EventArgs e)

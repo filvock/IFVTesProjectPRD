@@ -261,5 +261,10 @@ namespace TesourariaIFV.Forms.MembersControlForm
             if (enterContribComboBox.SelectedValue != null)
                 membrosBindingSource.Filter = "Igreja = '" + enterContribComboBox.SelectedValue.ToString() + "'";
         }
+
+        private void enterContribNameTextBox_TextChanged(object sender, EventArgs e)
+        {
+            membrosBindingSource.Filter = "Igreja = '" + enterContribComboBox.SelectedValue.ToString() + "' AND Nome like '%" + enterContribNameTextBox.Text + "%'";
+        }
     }
 }
