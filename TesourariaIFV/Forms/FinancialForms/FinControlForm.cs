@@ -127,13 +127,13 @@ namespace TesourariaIFV.Forms
         {
             if (finControlFormOutRadioButton.Checked == true)
             {
-                String temp = finControlFormCaixaTextBox.Text.Substring(3, finControlFormCaixaTextBox.Text.Length - 3);
+                String temp = finControlFormCaixaTextBox.Text.Replace("R$","");
                 float temp1 = Convert.ToSingle(temp) * -1;
                 return temp1;
             }
             else
             {
-                String temp = finControlFormCaixaTextBox.Text.Substring(3, finControlFormCaixaTextBox.Text.Length - 3);
+                String temp = finControlFormCaixaTextBox.Text.Replace("R$", "");
                 float temp1 = Convert.ToSingle(temp);
                 return temp1;
             }
@@ -143,13 +143,13 @@ namespace TesourariaIFV.Forms
         {
             if (finControlFormOutRadioButton.Checked == true)
             {
-                String temp = finControlFormBankTextBox.Text.Substring(3, finControlFormBankTextBox.Text.Length - 3);
+                String temp = finControlFormBankTextBox.Text.Replace("R$", "");
                 float temp1 = Convert.ToSingle(temp) * -1;
                 return temp1;
             }
             else
             {
-                String temp = finControlFormBankTextBox.Text.Substring(3, finControlFormBankTextBox.Text.Length - 3);
+                String temp = finControlFormBankTextBox.Text.Replace("R$", "");
                 float temp1 = Convert.ToSingle(temp);
                 return temp1;
             }
