@@ -286,8 +286,6 @@ D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\pt\Microsoft.ReportViewer.Com
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
-D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\zh-HANS\Microsoft.ReportViewer.Common.resources.dll
-D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\zh-HANT\Microsoft.ReportViewer.Common.resources.dll
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
@@ -298,8 +296,6 @@ D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\pt\Microsoft.ReportViewer.Dat
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
-D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\zh-HANS\Microsoft.ReportViewer.DataVisualization.resources.dll
-D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\zh-HANT\Microsoft.ReportViewer.DataVisualization.resources.dll
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
@@ -310,8 +306,6 @@ D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\pt\Microsoft.ReportViewer.Des
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
-D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\zh-HANS\Microsoft.ReportViewer.Design.resources.dll
-D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\zh-HANT\Microsoft.ReportViewer.Design.resources.dll
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
@@ -322,8 +316,6 @@ D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\pt\Microsoft.ReportViewer.Win
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
-D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\zh-HANS\Microsoft.ReportViewer.WinForms.resources.dll
-D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\zh-HANT\Microsoft.ReportViewer.WinForms.resources.dll
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\pt-BR\Microsoft.VisualStudio.Data.Services.resources.dll
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\pt-BR\Microsoft.VisualStudio.Data.Core.resources.dll
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\pt-BR\Microsoft.VisualStudio.GraphModel.resources.dll
