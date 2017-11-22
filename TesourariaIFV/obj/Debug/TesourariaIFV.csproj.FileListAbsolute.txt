@@ -319,7 +319,6 @@ D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\zh-CHT\Microsoft.ReportViewer
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\pt-BR\Microsoft.VisualStudio.Data.Services.resources.dll
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\pt-BR\Microsoft.VisualStudio.Data.Core.resources.dll
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\bin\Debug\pt-BR\Microsoft.VisualStudio.GraphModel.resources.dll
-D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.csprojResolveAssemblyReference.cache
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.Forms.Admin_Forms.PlanoDeContasSaidaAdmin.resources
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.Forms.AdminEntriesDataGridView.resources
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.Forms.AdminEntriesForm.resources
@@ -385,3 +384,4 @@ D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.exe.manifest
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.application
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.exe
 D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.pdb
+D:\GitHub\IFVTesProjectPRD\TesourariaIFV\obj\Debug\TesourariaIFV.csprojResolveAssemblyReference.cache

@@ -54,6 +54,7 @@ namespace TesourariaIFV.Forms.MembersControlForm
                 enterContribComboBox.Visible = false;
                 label1.Visible = false;
                 membrosBindingSource.Filter = "Igreja = '" + info.GetIgreja() + "'";
+                enterContribComboBox.Enabled = false;
             }
             else
             {
@@ -264,7 +265,16 @@ namespace TesourariaIFV.Forms.MembersControlForm
 
         private void enterContribNameTextBox_TextChanged(object sender, EventArgs e)
         {
-            membrosBindingSource.Filter = "Igreja = '" + enterContribComboBox.SelectedValue.ToString() + "' AND Nome like '%" + enterContribNameTextBox.Text + "%'";
+            loginInfo info = new loginInfo();
+
+            if (info.GetRole() == "Igreja Local")
+            {
+                membrosBindingSource.Filter = "Igreja = '" + info.GetIgreja() + "' AND Nome like '%" + enterContribNameTextBox.Text + "%'";
+            }
+            else
+            {
+                membrosBindingSource.Filter = "Igreja = '" + enterContribComboBox.SelectedValue.ToString() + "' AND Nome like '%" + enterContribNameTextBox.Text + "%'";
+            }
         }
     }
 }
