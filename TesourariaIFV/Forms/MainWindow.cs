@@ -45,6 +45,12 @@ namespace TesourariaIFV.Forms
             {
                 relatóriosToolStripMenuItem.Enabled = false;
                 gráficosToolStripMenuItem.Enabled = false;
+                entradaSaídaToolStripMenuItem.Enabled = false;
+                excluirLançamentosToolStripMenuItem.Enabled = false;
+                listaDeMembrosToolStripMenuItem.Enabled = false;
+                lançarContribuiçõesToolStripMenuItem.Enabled = false;
+                editarLançamentosToolStripMenuItem.Enabled = false;
+                transferênciasToolStripMenuItem.Enabled = false;
             }
                 
 

@@ -43,6 +43,7 @@
             this.finControlFormBankTextBox = new System.Windows.Forms.TextBox();
             this.finControlFormCaixaTextBox = new System.Windows.Forms.TextBox();
             this.finControlFormObsTextBox = new System.Windows.Forms.TextBox();
+            this.finControlFormObsTextBox.MaxLength = 50;
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.finControlFormOkButton = new System.Windows.Forms.Button();

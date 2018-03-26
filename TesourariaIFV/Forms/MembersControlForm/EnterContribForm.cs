@@ -114,7 +114,7 @@ namespace TesourariaIFV.Forms.MembersControlForm
         
         private float GetValue(String valueStr)
         {
-            String temp = valueStr.Substring(3, valueStr.Length - 3);
+            String temp = valueStr.Substring(2, valueStr.Length - 2);
             float temp1 = Convert.ToSingle(temp);
             return temp1;
         }

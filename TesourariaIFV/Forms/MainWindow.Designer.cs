@@ -151,14 +151,14 @@
             // entradaSaídaToolStripMenuItem
             // 
             this.entradaSaídaToolStripMenuItem.Name = "entradaSaídaToolStripMenuItem";
-            this.entradaSaídaToolStripMenuItem.Size = new System.Drawing.Size(246, 30);
+            this.entradaSaídaToolStripMenuItem.Size = new System.Drawing.Size(294, 30);
             this.entradaSaídaToolStripMenuItem.Text = "Entrada/Saída";
             this.entradaSaídaToolStripMenuItem.Click += new System.EventHandler(this.entradaSaídaToolStripMenuItem_Click);
             // 
             // transferênciasToolStripMenuItem
             // 
             this.transferênciasToolStripMenuItem.Name = "transferênciasToolStripMenuItem";
-            this.transferênciasToolStripMenuItem.Size = new System.Drawing.Size(246, 30);
+            this.transferênciasToolStripMenuItem.Size = new System.Drawing.Size(294, 30);
             this.transferênciasToolStripMenuItem.Text = "Transferências";
             this.transferênciasToolStripMenuItem.Click += new System.EventHandler(this.transferênciasToolStripMenuItem_Click);
             // 
@@ -170,7 +170,7 @@
             this.planoDeContasDetalhadoToolStripMenuItem,
             this.totaisPorPeríodoToolStripMenuItem});
             this.relatóriosToolStripMenuItem.Name = "relatóriosToolStripMenuItem";
-            this.relatóriosToolStripMenuItem.Size = new System.Drawing.Size(246, 30);
+            this.relatóriosToolStripMenuItem.Size = new System.Drawing.Size(294, 30);
             this.relatóriosToolStripMenuItem.Text = "Relatórios";
             // 
             // livroCaixaToolStripMenuItem
@@ -211,7 +211,7 @@
             this.toolStripMenuItem1,
             this.gráficosToolStripMenuItem});
             this.relatóriosGerenciaisToolStripMenuItem.Name = "relatóriosGerenciaisToolStripMenuItem";
-            this.relatóriosGerenciaisToolStripMenuItem.Size = new System.Drawing.Size(246, 30);
+            this.relatóriosGerenciaisToolStripMenuItem.Size = new System.Drawing.Size(294, 30);
             this.relatóriosGerenciaisToolStripMenuItem.Text = "Relatórios Gerenciais";
             // 
             // livroCaixaToolStripMenuItem1
@@ -267,8 +267,8 @@
             // excluirLançamentosToolStripMenuItem
             // 
             this.excluirLançamentosToolStripMenuItem.Name = "excluirLançamentosToolStripMenuItem";
-            this.excluirLançamentosToolStripMenuItem.Size = new System.Drawing.Size(246, 30);
-            this.excluirLançamentosToolStripMenuItem.Text = "Excluir Lançamentos";
+            this.excluirLançamentosToolStripMenuItem.Size = new System.Drawing.Size(294, 30);
+            this.excluirLançamentosToolStripMenuItem.Text = "Excluir/Editar Lançamentos";
             this.excluirLançamentosToolStripMenuItem.Click += new System.EventHandler(this.excluirLançamentosToolStripMenuItem_Click);
             // 
             // ControleMembroToolStripMenuItem
